@@ -1,0 +1,4 @@
+UI_EN = {
+    UI_WRU_ShowBroadcastIndicator = "Show Broadcasting Indicator",
+    UI_WRU_ShowBroadcastIndicator_Tooltip = "Show a small indicator on the screen which is green you are broadcasting, or red if not.",
+}

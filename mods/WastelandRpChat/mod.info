@@ -2,4 +2,4 @@
 id=WastelandRpChat_DL
 poster=
 description=RP Chat for Wasteland. Consistent, persistent, and reliable. Integrates logging, typing Indicator, languages, and more.
-require=WastelandLib_DL,WastelandRadioUtilities
+require=WastelandLib_DL,WastelandRadioUtilities_DL
