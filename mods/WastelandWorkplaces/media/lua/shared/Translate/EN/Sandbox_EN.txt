@@ -1,0 +1,5 @@
+Sandbox_EN = {
+    Sandbox_WastelandWorkplaces = "Wasteland Workplaces",
+    Sandbox_WastelandWorkplaces_TownCitizenActivity = "Town Citizen Days Until Inactive",
+    Sandbox_WastelandWorkplaces_TownCitizenActivity_tooltip = "A town citizen must have been active within this number of days to count for population and voting purposes.",
+}

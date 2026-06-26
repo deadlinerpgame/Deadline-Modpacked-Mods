@@ -1,0 +1,4 @@
+Tooltip_EN = {
+    Tooltip_WRCRecorder = "A device which can be used to record and play back audio."
+    Tooltip_WRCRecorderTape = "A tape which can be used in the Tape Recorder."
+}

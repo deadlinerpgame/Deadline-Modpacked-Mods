@@ -1,0 +1,500 @@
+module Base
+{
+	item GoldCurrency
+	{
+		DisplayCategory = Misc,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	One Dollar,
+        Icon	=	Money,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = Money,
+	}
+
+	item GoldCurrencyFive
+	{
+		DisplayCategory = Misc,
+        Weight	=	0.004,
+        Type	=	Normal,
+        DisplayName	=	Five Dollars,
+        Icon	=	Money,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = Money,
+	}
+
+	item GoldCurrencyTen
+	{
+		DisplayCategory = Misc,
+        Weight	=	0.007,
+        Type	=	Normal,
+        DisplayName	=	Ten Dollars,
+        Icon	=	Money,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = Money,
+	}
+
+	item GoldCurrencyFifty
+    {
+		DisplayCategory = Misc,
+        Weight	=	0.05,
+        Type	=	Normal,
+        DisplayName	=	Fifty Dollars,
+        Icon	=	MoneyStack,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = MoneyStack,
+    }
+
+	item GoldCurrencyHundred
+    {
+		DisplayCategory = Misc,
+        Weight	=	0.09,
+        Type	=	Normal,
+        DisplayName	=	One Hundred Dollars,
+        Icon	=	MoneyStack,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = MoneyStack,
+    }
+
+	item GoldCurrencyFiveHundred
+    {
+		DisplayCategory = Misc,
+        Weight	=	0.09,
+        Type	=	Normal,
+        DisplayName	=	Five Hundred Dollars,
+        Icon	=	MoneyStack,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = MoneyStack,
+    }
+
+	item GoldCurrencyThousand
+    {
+		DisplayCategory = Misc,
+        Weight	=	0.09,
+        Type	=	Normal,
+        DisplayName	=	One Thousand Dollars,
+        Icon	=	MoneyStack,
+        Tooltip = Tooltip_GoldCurrency,
+        WorldStaticModel = MoneyStack,
+    }
+
+    item PressureVessel
+    {
+        DisplayCategory = Craft,
+        Weight	=	15,
+        Type	=	Normal,
+        DisplayName	=	Pressure Vessel,
+		Icon	=	PropaneTank,
+        Tooltip = Tooltip_PressureVessel,
+    }
+
+    item ElectricalGeneratorMechanism
+    {
+        DisplayCategory = Craft,
+        Weight	=	2,
+        Type	=	Normal,
+        DisplayName	=	Electrical Generator Mechanism,
+        Icon	=	Motor,
+        Tooltip = Tooltip_ElectricalGeneratorMechanism,
+    }
+
+    item WLFeather
+    {
+		DisplayCategory = SurCamp,
+		Weight	=	0.001,
+		Type	=	Normal,
+		DisplayName	= Feather,
+		Icon = Feather,
+		WorldStaticModel = HerbRosemary_Ground,
+    }
+
+    item FeatherPillow
+	{
+		DisplayCategory = SurCamp,
+		Weight	=	0.8,
+		Type	=	Normal,
+		DisplayName	= Feather Pillow,
+		Icon	=	FeatherPillow,
+		StaticModel = Pillow,
+		WorldStaticModel = Pillow_Ground,
+		Tooltip = This old-fashioned pillow is filled with soft feathers,
+	}
+
+	item BirdNest
+	{
+		DisplayCategory = SurCamp,
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	= Bird's Nest,
+		Icon	=	BirdNest,
+		WorldStaticModel = Twigs,
+		Tooltip = A small bird's nest made of twigs and dried grass,
+	}
+    item WITCharcoalTablet
+	{
+		DisplayCategory = SurCamp,
+		Weight	=	0.02,
+		Type	=	Normal,
+		DisplayName	= Charcoal Tablet,
+		Icon	=	CharcoalTablet,
+		WorldStaticModel = Insect_Pillbug_Ground,
+		CustomContextMenu = Take,
+		Medical = TRUE,
+		Tooltip = A pill made of charcoal that can be used to clean tainted water,
+	}
+
+    item WITCharcoalBox
+	{
+		DisplayCategory = SurCamp,
+		Weight	=	0.35,
+		Type	=	Normal,
+		DisplayName	= Box of Charcoal Tablets,
+		Icon	=	PaperclipBox,
+		WorldStaticModel = PaperclipBoxd,
+		Tooltip = A box of charcoal pills that can be used to clean tainted water,
+	}
+
+	item AluminumPotassiumSulfate
+	{
+		DisplayCategory = Med,
+		Weight = 0.1,
+		Type = Normal,
+		DisplayName = Aluminum Potassium Sulfate,
+		Icon = Salt,
+		WorldStaticModel = Salt,
+		Tooltip = A chemical compound used in water purification and wound care,
+	}
+
+	item ChainsawChain
+	{
+		DisplayCategory = Craft,
+		Weight = 1.0,
+		Type = Normal,
+		DisplayName = Chainsaw Chain,
+		Icon = ChainsawChain,
+		WorldStaticModel = ChainsawChain,
+		Tooltip = A chainsaw chain that can be used to repair a chainsaw,
+	}
+    model ChainsawChain
+    {
+        mesh = ChainsawChain,
+        texture = ChainsawChain,
+    }
+	item EmptyJerryCan
+	{
+		DisplayCategory = Container,
+		Weight	=	2.5,
+		Type	=	Normal,
+		DisplayName	=	Empty Jerrycan,
+		Icon	=	Jerrycan,
+		StaticModel = Jerrycan,
+		SurvivalGear = TRUE,
+		ReplaceInSecondHand = Bag_Jerrycan_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_Jerrycan_RHand holdingbagright,
+        WorldStaticModel = Jerrycan,
+        Tags = EmptyPetrol,
+        ReplaceTypes = PetrolSource JerryCan,
+	}
+	item JerryCan
+	{
+		DisplayCategory = Fuel,
+		Weight	=	8,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.0625,
+		DisplayName	=	Jerrycan,
+		Icon	=	Jerrycan,
+		ReplaceOnDeplete	=	EmptyJerryCan,
+		StaticModel = Jerrycan,
+		ReplaceInSecondHand = Bag_Jerrycan_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_Jerrycan_RHand holdingbagright,
+        WorldStaticModel = Jerrycan,
+		Tags = Petrol,
+	}
+	model Jerrycan
+	{
+		mesh = Jerrycan,
+		texture = Jerrycan,
+		scale = 0.70,
+	}
+	item PatchKit
+	{
+		DisplayCategory = CraftTailor,
+		Weight	=	1.0,
+		Type	=	Drainable,
+		UseDelta	=	0.25,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Patch Kit,
+		Icon	=	PatchKit,
+		WorldStaticModel = PatchKit,
+		Tooltip = Tooltip_PatchKit,
+	}
+		model PatchKit
+	{
+		mesh = WorldItems/BoxOfSparklers,
+		texture = WorldItems/BoxOfSparklers,
+		scale = 0.2,
+	}
+	item KevlarKit
+	{
+		DisplayCategory = CraftTailor,
+		Weight	=	1.0,
+		Type	=	Drainable,
+		UseDelta	=	0.25,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Kevlar Kit,
+		Icon	=	KevlarKit,
+		WorldStaticModel = KevlarKit,
+		Tooltip = Tooltip_KevlarKit,
+	}
+		model KevlarKit
+	{
+		mesh = WorldItems/BoxOfSparklers,
+		texture = WorldItems/BoxOfSparklers,
+		scale = 0.2,
+	}
+	item FabricGlue
+    {
+        DisplayCategory = CraftTailor,
+        Type	            =	        Normal,
+        UseWhileEquipped	=	        FALSE,
+        DisplayName			=		    Fabric Glue,
+        Icon				=			Woodglue,
+        Weight				=			0.1,
+        Tooltip = Tooltip_FabricGlue,
+        WorldStaticModel = WoodGlue,
+        Tags = Glue,
+    }
+	item ClipboardEmpty
+	{
+		DisplayCategory = LitW,
+		Weight = 1.0,
+		Type = Literature,
+		DisplayName = Empty Clipboard,
+		Icon = Clipboard,
+		OnCreate = WIT_CreateClipboard,
+		WorldStaticModel = ClipboardEmpty,
+		Tooltip = Tooltip_Clipboard,
+	}
+	item ClipboardPaper
+	{
+		DisplayCategory = LitW,
+		Weight = 1.0,
+		Type = Literature,
+		DisplayName = Empty Clipboard,
+		Icon = ClipboardFull,
+		OnCreate = WIT_CreateClipboard,
+		StaticModel = Clipboard,
+		WorldStaticModel = ClipboardPaper,
+		Tooltip = Tooltip_Clipboard,
+	}
+	item ClipboardWall
+	{
+		DisplayCategory = LitW,
+		Weight = 1.0,
+		Type = Literature,
+		DisplayName = Empty Clipboard,
+		Icon = ClipboardFull,
+		OnCreate = WIT_CreateClipboard,
+		StaticModel = Clipboard,
+		WorldStaticModel = ClipboardWall,
+		Tooltip = Tooltip_Clipboard,
+	}
+	item WITPager
+	{
+		DisplayCategory = Elec,
+		Weight = 0.2,
+		Type = Normal,
+		DisplayName	=	Pager,
+        Icon	=	Pager,
+        Tooltip = Tooltip_WITPager,
+        WorldStaticModel = Pager,
+		AttachmentType = Walkie,
+	}
+
+	item ZeoliteCatalyst
+	{
+		DisplayCategory = Fuel,
+		Weight = 5.0,
+		Type = Normal,
+		DisplayName = Zeolite Catalyst,
+		Icon = ZeoliteCatalyst,
+		Tooltip = Tooltip_ZeoliteCatalyst,
+	}
+
+	item BrassScrap
+	{
+		DisplayCategory = CraftAmmo,
+		Weight	=	1.0,
+		Type	=	Normal,
+		DisplayName	= Brass Scrap,
+		Icon	=	BrassScrap,
+		MetalValue = 30,
+		WorldStaticModel = DoorKnob,
+		Tooltip = Tooltip_BrassScrap,
+	}
+
+	item RationVoucher
+	{
+        Weight	=	0.01,
+        Type	=	Normal,
+        DisplayName	= Provision Voucher,
+        Icon	=	RationVoucher,
+        WorldStaticModel = CreditCard,
+		DisplayCategory = Misc,
+        Tooltip = Tooltip_RationVoucher,
+	}
+
+	item SpecialStew
+    {
+        DisplayName = Improved Stew,
+        DisplayCategory = FoodP,
+        Type = Food,
+        Weight = 1.0,
+        Icon = BowlFull,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+        HungerChange = -30,
+        ThirstChange = -15,
+        UnhappyChange = -5,
+        Calories = 387,
+        Carbohydrates = 250,
+        Proteins = 87,
+        Lipids = 15.3,
+        DaysFresh = 6,
+        DaysTotallyRotten = 16,
+        FoodType = NoExplicit,
+        ReplaceOnUse = Bowl,
+        EatType = 2handbowl,
+        StaticModel = Bowl,
+        WorldStaticModel = BowlRice_Ground,
+        OnEat = WME_EatSpecialStew,
+        Tooltip = Tooltip_SpecialStew,
+    }
+
+	item GravyLovesYouLocket
+	{
+	    DisplayCategory = Collect,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Gravy Loves You Locket,
+		Icon	=	Locket,
+		WorldStaticModel = Locket,
+	}
+
+	item MysticalPortal
+	{
+		DisplayCategory = Misc,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Mystical Portal,
+		Icon	=	MysticalPortal,
+	}
+
+	item GroundPortal
+	{
+		DisplayCategory = Misc,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Ground Portal,
+		Icon	=	GroundPortal,
+	}
+
+	item SciFiGroundPortal
+	{
+		DisplayCategory = Misc,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Sci-Fi Ground Portal,
+		Icon	=	SciFiGroundPortal,
+	}
+
+	item GrassSeed
+	{
+		DisplayCategory = SurFarm,
+		Weight	=	2.0,
+		Type	=	Drainable,
+		DisplayName	=	Bag of Grass Seed,
+		Icon	=	Sandbag,
+		UseDelta	=	0.01,
+		WorldStaticModel = DirtBag_Ground,
+		Tooltip = Tooltip_GrassSeed,
+	}
+
+	item UnwoundCassette
+	{
+		Type = Normal,
+		DisplayCategory = Entertainment,
+		Weight = 0.02,
+		Icon = Cassette1,
+		DisplayName = Unwound Tape,
+		WorldStaticModel = TCTape2,
+	}
+
+	model ClipboardEmpty
+	{
+		mesh = ClipboardEmpty,
+		texture = ClipboardEmpty,
+		scale = 0.075,
+	}
+	model ClipboardPaper
+	{
+		mesh = ClipboardPaper,
+		texture = ClipboardPaper,
+		scale = 0.075,
+	}
+	model ClipboardWall
+	{
+		mesh = ClipboardWall,
+		texture = ClipboardPaper,
+		scale = 1.0,
+	}
+	model Clipboard
+	{
+		mesh = Clipboard,
+		texture = ClipboardPaper,
+		scale = 0.35,
+	}
+	model Pager
+	{
+		mesh = Pager,
+		texture = Pager,
+		scale = 0.1,
+	}
+	model MoneyStack
+	{
+		mesh = WorldItems/MoneyBundle,
+		texture = WorldItems/MoneyBundle,
+		scale = 0.15,
+	}
+
+	model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+
+		attachment RadioBackpack
+		{
+			offset = 0.00 0.000 0.000,
+			rotate = 0.0000 0 0.0000,
+			bone = Bip01_Spine1,
+		}
+	}
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+
+		attachment RadioBackpack
+		{
+			offset = 0.00 0.000 0.000,
+			rotate = 0.0000 0 0.0000,
+			bone = Bip01_Spine1,
+		}
+	}
+
+	model TCTape1
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/TCTape1,
+		scale	=	0.0005,
+	}
+}

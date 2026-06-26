@@ -1,0 +1,7334 @@
+module Base {
+        recipe Make Alien T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_PostalDude,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Apron
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_Apron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Ash's Formal Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalAsh,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Badass T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Badass,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bandana 
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BandanaRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapPrinceBelAir,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Batemans Formal Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalBateman,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Batemans Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Bateman,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Beige Hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Hunting_Beige,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Belt with Buckle
+    {
+        LeatherStrips=3,
+        Thread;3,
+        Button=1,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Belt_AZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bikini 2
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Bikini_Pattern02,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bikini 3
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Bikini_Pattern03,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bills Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Bill,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Beret
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BeretBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bikini 4
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Bikini_Pattern04,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Gloves
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Gloves_Black,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Leggings
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.BlackLeggings_Bottoms,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Short Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalBlack_ShortSleeve,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Slippers
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_SlippersBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Stockings
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_StockingsBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Barbershop Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Barbershop_Blue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Boater hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Blue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Corset
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Corset_Jill,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_NormalBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Festive Santa Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SantaHatBluePattern,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Santa Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.JacketLong_SantaBluePattern,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Santa Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SantaBluePattern,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Formal Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalNick,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Legwarmers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_LegWarmersNeonBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue LongJohns
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Blue_LongJohns,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Open Balaclava
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BalaclavaSpyBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Padded Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_PaddedEvangelo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_BluePlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Short Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalBlue_ShortSleeve,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Stripped Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_BlueStripedWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue suit Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue SweatBand
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SweatbandBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Full_BlueSpy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Trousers
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_BarbershopBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Wedding dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.WeddingDressBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue Wedding Veil
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_WeddingVeilBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Blue and White Tank Top
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Portal_Tanktop,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bonnet
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Bonnet_Tied,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Boots
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Fat03_Boots,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Boss Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapBossTagilla,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make BrickBuster T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TShirt_BrickBuster,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Boots
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_BrownBoots,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Cowboy hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Cowboy_Freddy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Ranger Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_Grimes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Sheriff hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Grimes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Sheriff Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Grimes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Suit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitBrad,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bub's Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Bub,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bunny Ears
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.BunnyEars,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bunny Tail
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.BunnyTail,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Burger Sweater
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jumper_PoloNeckCheeseRoyale,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Buzzers Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapBuzzers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Buzzers Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_Buzzers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Captains Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_CaptainSkipper,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Casual Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Casual,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cat Ears
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.CatEarsAZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleader skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortCheerleader,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleader Uniform
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_Cheerleader,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleading White Pom Pom
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Authentic_PomPomWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleading Blue Pom Pom
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Authentic_PomPomBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleading Black Pom Pom
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Authentic_PomPomBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheerleading Red Pom Pom
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Authentic_PomPomRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cheese Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_CheeseHat,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Classic Prisoner Jumpsuit
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_PrisonerClassic,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clementines Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapClementine,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clementines Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Clementine,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_ClownSuit,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_Wrinkles,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Nose
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.ClownNoseTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Clown_Coveralls,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Party Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_ClownConeHead,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_Clown,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_ClownStriped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.ClownTopWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Clown Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.ClownTopBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Coach's T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Coach,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Combat Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitBrown,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_Coveralls,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crossing Guard Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_CrossingGuard,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cultist Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.CultistHat,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cultist Mask
+    {
+        RippedSheets=3,
+        Thread;3,
+        CottonBalls=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.CultistMask,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cultist Robe
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.CultistRobe,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cute Round Robe
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Cute,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Dark Green Long Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_DarkGreen,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Dark Red Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_Checkered,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make DayZ Hero Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapDayZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make DayZ Plaid Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalDayZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Denim Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_DenimBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Desert Bandana
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BandanaMaskDesert,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Designer Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_BelAir,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Designer Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_DesignerTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Designer Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_BillMurray,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Diamond-pattern Sweater Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jumper_DiamondBillMurray,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Donut Server Apron
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Apron_DonutAZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Donut Server Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_FastFood_Donut,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Ear Muffs
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_EarMuffs_AZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Elegant Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Elegant,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Ellie's Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapEllis,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Elli's T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Ellis,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Fancy Undershirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_UndershirtFancy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Fantasy duelist Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_RuneDuel_Back,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Fast Food T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_CheeseRoyale,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Floral Print Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Flower,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Football T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_LoganCarter,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Formal Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_FormalPants,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Francis's Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Francis,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Freddys V-Neck
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Sweater_Freddy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Frilly Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Frilly,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Furry Ears 
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_FurryEarsAZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Ghost Face Mask
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_GhostFace,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make GhostBuster Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_GhostbustersStantz,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make GhostBuster Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_GhostbustersSpengler,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make GhostBuster Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_GhostbustersVankman,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make GhostBuster Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_GhostbustersZeddemore,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Gold Rimmed suit jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketSamB,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Gold sport T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportGold,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Golden long Sports Short
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportGolden,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Barbershop Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Barbershop_Green,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Bay Packers Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_GreenBayPacker7,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Boater
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Green,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make green Clipon Bow Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_BowTieWorn_Green,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TrousersMesh_Bill,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_GreenPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Grey Beenie Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BeanyGrey,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Grey Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieDOWN_GreyPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Grey Sports T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportGrey,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Grey Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Full_Brad,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hairbow TINT
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HairBowTINT_SideLeft,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Halloween Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_Halloween,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Handbag
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Handbag2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hazmat Suit
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HazmatSuit2NoMask,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hazmat Suit
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HazmatSuit2NoShoes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hazmat Suit
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HazmatSuit2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hazmat Suit
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HazmatSuit2NoMaskNoShoes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Heart Boxers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Fat02_Boxers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make High Visibility Press Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_HighViz_Press,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make High Visibility Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_Vest_HighViz,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Holly's Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapHolly,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Holly's T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Holly,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hooded Figure T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_LogoTest,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hunters Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapHunter,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Hunting_Wally,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_DefaultJeans,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Dark
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_JeanDark,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jessies Suit Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketJessie,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jimmy Gibbs Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_JimmyGibbs,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jimmy Gibbs Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TrousersMesh_JimmyGibbs,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jogger Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_Sport,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make John Morgans T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_JohnMorgan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make JokerSuit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitJoker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jokers Formal Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalJoker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jokers Suit Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketJoker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 0
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs0,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 1
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 2
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 4
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 5
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 6
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 7
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs7,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 8
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs8,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 9
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs9,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas City Chiefs Jersey 3
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_KCChiefs3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Kansas Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Kansas,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Khaki Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_Coach,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Khaki Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_Flyboy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Killa's Jogging pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SportKilla,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Killa's Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportKillaLong,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Killa's T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportKilla,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Lavish Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Lavish,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Leg Warmers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_LegWarmers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Logo T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Icon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Black Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_LongBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Blue Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_LongBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long blue shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSport_Blue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Sport Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SportBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Floral Print Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_LongFlower,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Green Sports Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SportGreen,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make LongJohns
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_LongJohns,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Pink Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_LongPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Polka Dot Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_LongPolkadot,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Red sports Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SportRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Big_Long,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Yellow Sports Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SportYellow,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Sleeved Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_LongSleevedButtoned,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Sleeved Round Gown with apron
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_LongSleevedButtonedApron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Maid Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Maid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Maid Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Maid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Maid Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_Maid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Medical Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Doctor2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Medical Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Doctor3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Military Olive Drab Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_ArmyOliveDrab2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Military Olive Drab Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_ArmyOliveDrab,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Military Urban Combat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_ArmyCamoUrban,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mime Black Long Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_MimeBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mime Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Mime_Overalls,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mime Red Long Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_MimeRed2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mime Stockings
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_MimeLeggings,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mime Waistcoat Skirt
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Mime,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Modern Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Simple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mom's Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Mom,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Navy Blue Suit Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketGMan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Navy Blue Suit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitGMan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Navy Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_CoatNavy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Neon Long Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportNeon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Neon Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_ShortSport_Neon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Neon sports T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportNeon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots0,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots7,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots8,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make New England Patriots Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_NEPatriots9,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nuclear Biohazard Suit
+    {
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.NBHHazmatSuitNoShoes,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nuclear Biohazard Suit
+    {
+        LeatherStrips=10,
+        Thread;20,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.NBHHazmatSuit,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Numbered T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_IconNumbers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nurse Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Nurse,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nurse Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Nurse,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nurse Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_Nurse,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Nurse Stockings
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_NurseThigh,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Olive Drab Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_OliveDrab,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Olive Drab Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_OliveDrab2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make One Legged Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TrousersMesh_Rave,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Orange Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_OrangePlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Orange Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Joker_Orange,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Oven Mitts
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Gloves_OvenMitts,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_Overalls,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Packers Long Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportGold,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pale Shoes
+    {
+        LeatherStrips=5,
+        Thread;4,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shoes_Pale,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TrousersMesh_Bub,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Patriots Long Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportPatriots,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Patterned Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Pattern,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Patterned Round Gown With Apron
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_PatternApron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_NormalPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Leg Warmers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_LegWarmersNeonPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Long Sports Shorts
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportWatermelon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Short Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_Bill_Murray,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Sport T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportWatermelon,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Sweatband
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SweatbandPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Wedding Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.WeddingDressPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pink Wedding Veil
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_WeddingVeilPink,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Paid Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Plaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Paid Round Gown With Apron
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_PlaidApron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Plaid Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_Bub,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Plaid Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_LumberJackShortRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Plaid Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_LumberjackTheyLive,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Plaid Shirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_LumberJackShort,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Polka Dot Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Polkadot,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Prairie Round gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Prairie,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Prairie Round Gown with Apron
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_PrairieApron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Prince of Bel Air's T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_PrinceBelAir,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Barbershop Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Barbershop_Purple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Boater
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Purple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Clip on Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_BowTieWorn_Purple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Leg Warmers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_LegWarmersPurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Long Sports Shorts 
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportPurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Long Sports Shorts 
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportBluePurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_PurplePlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Puple Sports T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportBluePurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Puple Sports T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportPurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Striped Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_PurpleStripedWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Sweatband
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SweatbandPurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Full_GMan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purple Trousers
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_BarbershopPurple,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Purse 
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Purse_Secondary,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Rave Mask
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.RaveMask,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Bandana (Face)
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BandanaMaskRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Barbershop Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Barbershop_Red,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Beret
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BeretMime,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Boater
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Red,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Clip on Bow tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_BowTieWorn_Red,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red LongJohns
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Red_LongJohns,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Open Balaclava
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BalaclavaSpyRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_RedPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Short Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_FormalRed_ShortSleeve,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Striped Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_RedStriped01,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Striped T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.TShirt_RedStriped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Tank Top
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Rim_Duke,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Full_Red,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Trousers
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_BarbershopRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red Trousers
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitVeryRed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red and Blue Striped Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_RedStriped02,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Red and Gold Striped Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_RedStriped03,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Relaxed Round Gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Relaxed,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Rochelles T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Rochelle,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Rock T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Rock2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Santa Suit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Fat_03_Trousers_Santa,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Santas Beard
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Beard_Long_Santa,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Seahorse Coffee Apron
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Apron_GreenSeaHorse,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Seahorse Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapSeaHorse,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Security Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Fat03_TShirtLongBlart,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Shell suit pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_ShellPants,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Apron
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Apron_Short,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short beige Skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortJessie,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Black Skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortBlack,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short floral Print Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Flower_Knees,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Plaid Skirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short PolkaDot Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Polkadot_Knees,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Red Skirt
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortRedPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Red Skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Skirt_ShortXian,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Sleeveless Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Purna,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Sleeveless Dress
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_Short2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short sleeved Round gown
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_Striped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short sleeved Round gown with Apron
+    {
+        RippedSheets=18,
+        Thread;7,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Dress_BallroomDress_StripedApron,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Small Boater
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Small,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Smilie Baseball cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapSmilieFace,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Spiffo Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SpiffoNEW,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Sport T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportPinkBlackBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Sport T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportPopcicle,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Sport Tank Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Sport_Top,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Sport Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_SportShorts,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stars Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapRedDI,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stars Football Jersey
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jersey_BlueStar,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stockings
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Socks_Long_MaidStockings,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stove Pipe Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_StovePipe,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped long Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportPopcicle,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped long Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongSportPinkBlackBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_ShortSport_PinkBlackBlue,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_ShortSport_Sunset,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped Sports Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_ShortSport_Popcicle,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Striped Sports T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportSunset,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_WhiteStriped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_TShirt,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tactical Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_Tagilla,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tactical Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_JohnMorgan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tank Top
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Rim_TINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Thriller Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Thriller,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_TopHat_AZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Trenchcoat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Trenchcoat,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Turquoise Plaid hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_TurquoisePlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Umas Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Boilersuit_BlackMamba,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Varsity Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Thin01_JacketVarsity,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Varsity Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Varsity_AZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Varsity Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Varsity_Thriller,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Vegan Hoodie
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_Vegan,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Vote For Pedro
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_VotePedro,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Waldos Wooly Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_WoolyHatWaldo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Walkers Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapWalker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Walkers Long Sleeve Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shirt_Walker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Wedding Veil
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_WeddingVeil_AZ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Baseball Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_BaseballCapWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Denim Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Shorts_LongDenimWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Fedora
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_FedoraWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Gloves
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Gloves_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Long Goves
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Gloves_LongWomenGlovesWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Overalls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.DungareesWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Santa Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SantaHatWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Santa Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.JacketLong_SantaWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Santa Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SantaWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Sport T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_SportWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Suit Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Suit_JacketNick,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Suit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_SuitNick,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Summer Hat
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_SummerWhite,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Tie
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tie_Full_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Wichammer T-Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Tshirt_Wichammer,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Yellow Apron
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Apron_Yellow,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Yellow Barbershop Waistcoat
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Vest_Waistcoat_Barbershop_Yellow,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Yellow Boater
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_Boater_Yellow,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Yellow Plaid Hoodie
+    {
+        DenimStrips=14,
+        Thread;5,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_YellowPlaid,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Yellow Trousers
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Trousers_BarbershopYellow,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Zoeys black ears
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Hat_FurryEars_Zoey,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Zoeys Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.Jacket_Zoey,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Arm Warmers
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Gloves_StripedLong,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bomber Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_Bomber,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Compression Leggings
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Shorts_SpandexLong,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Compression Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Shorts_Spandex,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Denim Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_Denim,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Field Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_Field,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make flight Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_Flight,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Flight Jacket Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_FlightVest,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Compression T-shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.TShirt_CompressionLong,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Military Sweater
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jumper_Military,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Pea Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_PeaCoat,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Polo Neck Sweater Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jumper_TurtleVest,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Puffy Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Vest_Puffy,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Quilted Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_Quilted,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Quilted Shirt
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Shirt_Quilted,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Windbreaker Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Vest_Waterproof,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Winter Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_WinterCoat,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make WinterJacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Spongie.Jacket_SheepWool,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bandana Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.BandanaTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bandana Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.BandanaTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make CrissCrossTop
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CrissCrossTopNoArms_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make CrissCrossTop Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CrissCrossTopNoArms_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Skull
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Camo_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_BigCutout_BoundF_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_BigCutout_BoundF_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Cutout
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Cutout_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top cutout Bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Cutout_BoundF_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cropt Top Cutout Bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Cutout_BoundF_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top Cutout Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopNoArms_Cutout_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Deep Cutout Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.DeepCutoutTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Deep Cutout Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.DeepCutoutTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HighNeck Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.HighNeckTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HighNeck Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.HighNeckTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_Normal,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants Bound
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_BoundS,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants Ripped
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_Normal_Ripped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants Special
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_Special_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants Skull
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make HotPants Skull Ripped
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansHPants_Skull_Ripped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Bound
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansLong_BoundS,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Ripped
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansLong_Normal_Ripped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Normal 
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansLong_Normal ,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Shorts Normal
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansShorts_Normal,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Shorts Skull
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansShorts_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Shorts Skull Ripped
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansShorts_Skull_Ripped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Skull
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansLong_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Jeans Skull Ripped
+    {
+        DenimStrips=12,
+        Thread;3,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.JeansLong_Skull_Ripped,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_BigCutout_BoundF_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_BigCutout_BoundF_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Skull
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_Camo_Skull,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Cutout
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_Cutout_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Cutout Bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_Cutout_BoundF_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Cutout Bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.Croptop_Cutout_BoundF_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Crop Top Cutout Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTop_Cutout_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make MonoStrap Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopOneCarrier_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make MonoStrap Top Bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopOneCarrier_Bound_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make MonoStrap Top Bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopOneCarrier_Bound_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make MonoStrap Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopOneCarrier_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make O-RingTop
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopRing_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make O-RingTop Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CropTopRing_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make OffShoulderTop
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.OffShoulderTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make OffShoulderTop Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.OffShoulderTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Bandana Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.BandanaTopShort_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Bandana Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.BandanaTopShort_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short CrissCross Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CrissCrossTopNoArmsShort_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short CrissCross Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.CrissCrossTopNoArmsShort_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short OffShoulder Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.OffShoulderTopShort_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short OffShoulder Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.OffShoulderTopShort_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Tank Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTopShort_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Tank Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTopShort_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Tank Top Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTankTopShort_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Tank Top Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTankTopShort_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Top Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTopShort_Backstrap_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Short Top Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTopShort_Backstrap_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make SpecialTopBound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.Special_BR_Black_Red,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stripes Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.StripesTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Stripes Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.StripesTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tank Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tank Top bound
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_BoundB_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tank Top bound Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_BoundB_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TankTop Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TankTop Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTankTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TankTop Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTankTop_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TankTop Trans.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_Trans_Black,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TankTop Tans. Lace
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TankTop_Trans_Lace_Black,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_Backstrap_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_Backstrap_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top With Chain
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.ChainTopNoArms_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top With Chain Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.ChainTopNoArms_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top With Chain Trans.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.ChainTopLong_Trans_Black,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Top With Chain Trans. Lace
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.ChainTopLong_Trans_Lace_Black,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TopCutout Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_Cutout_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TopCutout Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_Cutout_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TopDoubleStrap Neckh.
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_DoubleStrap_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make TopDoubleStrap Neckh. Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.NeckholderTop_DoubleStrap_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Twisted Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TwistedTopNoArms_Cutout_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Twitsted Top Camo
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:INMS_CE.TwistedTopNoArms_Cutout_Camo,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bengal Hoodie
+    {
+        DenimStrips=10,
+        Thread;5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieDOWN_Bengal,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+
+    recipe Make Buzzers Hoodie
+    {
+        DenimStrips=10,
+        Thread;5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_Buzzers,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+
+    recipe Make Crop Top Hoodie
+    {
+        DenimStrips=10,
+        Thread;5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieDOWN_CropTopTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+
+    recipe Make Hoodie
+    {
+        DenimStrips=10,
+        Thread;5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_WhiteTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+
+    recipe Make Rave Croptop Hoodie
+    {
+        DenimStrips=10,
+        Thread;5,
+        keep Needle,
+        keep Scissors,
+
+        Result:AuthenticZClothing.HoodieUP_CropTopRave,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+
+    recipe Make Bananna Hammock
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_7,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bellbottoms
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_ST3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Biker Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_KOS,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Bomber Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Bomber,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Camo Hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Vest_Hunting_CamoOPEN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cardigan Sweater
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cargo Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_ST2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Carhartt Dungarees
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Trousers_Worker,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Chesterfield
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_10,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Classic Cloak
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_7OP,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Cold Shoulder Sweater
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_KOF2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CropTop_White,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Crop Top
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CropTop,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Desert Army Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CAPARM_3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Detective Trench Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_7_1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Foreman Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Vest_ForemanOPEN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Fuzzy Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_8,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make G-String Thong
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Camo Hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Vest_Hunting_CamoGreenOPEN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Grey hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Vest_Hunting_GreyOPEN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Leia Brazzier
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_LIF3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Long Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_RUB,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mini Skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_ST5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Mini Skirt
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_ST4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make One-piece Swimsuit
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_SK1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Orange Hunting Vest
+    {
+        LeatherStrips=6,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Vest_Hunting_OrangeOPEN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Patrol Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CAPARM_4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Running Shorts
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Samurai Bomber Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Shutter Glasses
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_OHI_6,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Sports Bra
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_LIF2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Straps Bra
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_LIF1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Swimsuit
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_kupalnuk,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tactical Coat with Hood
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_9,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Thigh-high Socks
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_SHO1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Thong
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_5,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Tracksuit Pants
+    {
+        RippedSheets=10,
+        Thread;4,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_SP2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Trench Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Two-Piece Bottoms
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Two-Piece Bottoms
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Urban Army Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CAPARM_2,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make V-Neck Sweater
+    {
+        RippedSheets=15,
+        Thread;5,
+        Button=3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_KOF1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Welder Goggles
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Glasses_1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Straps Bra
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_LIF1_1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make White Two-piece Bottoms
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_PAN_3,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Windbreaker
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_SP1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Winter Coat
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Woodland Army Cap
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_CAPARM_1,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Work Jacket
+    {
+        RippedSheets=5,
+        Thread;10,
+        LeatherStrips=10,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_Kurtk_4,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+    recipe Make Worker Coveralls
+    {
+        DenimStrips=15,
+        Thread;10,
+        Button=5,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.CBX_KOMB,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+        recipe Make Junker Pants
+    {
+        Base.Trousers_Denim,
+        SmallSheetMetal,
+        RippedSheets,
+        Thread=1,
+        keep Needle,
+        keep Scissors,
+
+        Result:Base.Makeshift_Pants_Junker,
+        Time:1200.0,
+        SkillRequired:Tailoring=5,
+        Category:Tailoring,
+    }
+    
+    recipe Convert Firefighter Jacket
+    {
+        Base.Jacket_Fireman/Base.Jacket_FiremanOPEN/Base.Jacket_FiremanROLL/Base.Jacket_FiremanOPENROLL,
+        PaintBlack=2,
+        Result:AuthenticZClothing.Jacket_FiremanNMRIH,
+        Time:1200.0,
+        SkillRequired:Tailoring=5,
+        Category:Tailoring,
+    }
+
+}

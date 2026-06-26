@@ -1,0 +1,95 @@
+module Base {
+
+	recipe Upgrade Belt (Both)
+    {
+        Belt2=1,
+        LeatherStrips=12,
+        Thread;10,
+        Button=2,
+        keep Needle,
+        keep Scissors,
+		UpgradedBeltBlueprint_Final,
+
+        Result:UpgradedBelt,
+        Time:1200.0,
+        SkillRequired:Tailoring=10,
+        Category:Tailoring,
+    }
+
+	recipe CraftRattlerMK1
+    {
+        MetalPipe=3,
+        ClipSpring=4,
+        HandCraftedRifleStock,
+        MachinedFirearmComponents=8,
+        MachinedClipSteel,
+        Screws=24,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep BallPeenHammer,
+        keep Wrench,
+		RattlerSmgBlueprints_Final,
+        Result: Base.Rattler,
+        Time:500.0,
+        Category:Gunsmith,
+        SkillRequired:Gunsmith=10,
+        AnimNode:Disassemble,
+        Sound:Dismantle,
+        Prop1:Screwdriver,
+    }
+
+    recipe CraftRattlerMK1Mag
+    {
+		MachinedClipSteel=2,
+		ClipSpring=5,
+		Screws=12,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		Result:RattlerMag,
+		Time:220.0,
+		Category:Gunsmith,
+		SkillRequired:Gunsmith=10,
+        OnTest:Recipe.OnTest.FirearmsNotImportantAndTools,
+		OnGiveXP:Recipe.OnGiveXP.Gunsmith5,
+		AnimNode:Disassemble,
+		Sound:Dismantle,
+		Prop1:Screwdriver,
+    }
+
+	recipe CraftThompson
+    {
+        MetalPipe=1,
+        ClipSpring=4,
+        HandCraftedRifleStock,
+        MachinedFirearmComponents=4,
+        MachinedClipSteel,
+        Screws=12,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep BallPeenHammer,
+        keep Wrench,
+		ThompsonSmgBlueprints_Final,
+        Result: GreysWLWeaponsFirearms.ScrapThompson45v2,
+        Time:500.0,
+        Category:Gunsmith,
+        SkillRequired:Gunsmith=10,
+        AnimNode:Disassemble,
+        Sound:Dismantle,
+        Prop1:Screwdriver,
+    }
+
+    recipe CraftScrapThompsonMag
+    {
+		MachinedClipSteel=1,
+		ClipSpring=3,
+		Screws=6,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		Result:ScrapThompsonMag,
+		Time:220.0,
+		Category:Gunsmith,
+		SkillRequired:Gunsmith=8,
+        OnTest:Recipe.OnTest.FirearmsNotImportantAndTools,
+		OnGiveXP:Recipe.OnGiveXP.Gunsmith5,
+		AnimNode:Disassemble,
+		Sound:Dismantle,
+		Prop1:Screwdriver,
+    }
+
+}

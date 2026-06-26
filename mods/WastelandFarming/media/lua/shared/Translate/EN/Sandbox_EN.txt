@@ -1,0 +1,7 @@
+Sandbox_EN = {
+    Sandbox_WastelandFarming = "Wasteland Farming",
+    Sandbox_WastelandFarming.EnableIndoorPenaltyWithoutLamp = "Indoor Penalty",
+    Sandbox_WastelandFarming.EnableIndoorPenaltyWithoutLamp_tooltip = "Enable indoor health decline of crops without lamp",
+    Sandbox_WastelandFarming.EnableFarmingTokens = "Enable Farming Tokens",
+    Sandbox_WastelandFarming.EnableFarmingTokens_tooltip = "Farming tokens limit the amount of crops players can grow.",
+}

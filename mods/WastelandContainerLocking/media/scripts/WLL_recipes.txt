@@ -1,0 +1,81 @@
+module Base
+{
+    recipe Convert To WL Padlock
+    {
+        Base.Padlock=1,
+        Result:WLLPadlock,
+        Time:1,
+        Category:Security,
+    }
+
+    recipe Craft Padlocks
+    {
+        SmallSheetMetal=1,
+        MetalBar=1,
+        ScrapMetal=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        SkillRequired: MetalWelding=6,
+
+        Result:WLLPadlock=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+
+        Time: 1100,
+        AnimNode:Disassemble,
+        Category:Security,
+        NeedToBeLearn: TRUE,
+    }
+
+    recipe Craft Combination Padlocks
+    {
+        SmallSheetMetal=1,
+        MetalBar=1,
+        ScrapMetal=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        SkillRequired: MetalWelding=6,
+
+        Result:WLLCombinationPadlock=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+
+        Time: 1300,
+        AnimNode:Disassemble,
+        Category:Security,
+        NeedToBeLearn: TRUE,
+    }
+
+    recipe Craft Slotlock
+    {
+        WLLPadlock=1,
+        SmallSheetMetal=1,
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Saw],
+
+        SkillRequired: MetalWelding=2,
+
+        Result:WLLSlotlock=1,
+
+        Time: 800,
+        AnimNode:Disassemble,
+        Category:Security,
+    }
+
+    recipe Craft Door Lock
+    {
+        Doorknob=1,
+        WLLPadlock=1,
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        Result:WLLDoorLock=1,
+
+        Time: 600,
+        AnimNode:Disassemble,
+        Category:Security,
+        NeedToBeLearn: TRUE,
+    }
+}

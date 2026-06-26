@@ -1,0 +1,9 @@
+﻿name=Wasteland Farming Tweaks Deadline
+id=WastelandFarming_DL
+requires=WastelandLib_DL
+poster=
+description=Makes Farming in Winter Wasteland impossible and adds a sprinkler.
+pack=sprinkl
+pack=wltiles_uvlights
+tiledef=sprinkl 678
+tiledef=wltiles_uvlights 951

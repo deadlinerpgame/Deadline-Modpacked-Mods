@@ -1,0 +1,4 @@
+﻿name=Wasteland Loot Respawn Deadline
+id=WastelandLootRespawn_DL
+description=Fine Grained control over loot respawning
+require=WastelandLib_DL

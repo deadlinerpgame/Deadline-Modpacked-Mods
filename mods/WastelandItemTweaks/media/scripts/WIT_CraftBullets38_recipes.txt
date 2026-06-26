@@ -1,0 +1,8 @@
+module Base {
+    recipe Convert to .38
+    {
+        Bullets357,
+        Result:Bullets38,
+        Time:0,
+    }
+}

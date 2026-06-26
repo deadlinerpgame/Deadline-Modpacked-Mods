@@ -1,0 +1,38 @@
+VERSION = 1,
+
+option WastelandSeasons.Latitude
+{
+  type = integer, min = -90, max = 90, default = 38,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.Latitude,
+}
+option WastelandSeasons.BaseTempMin
+{
+  type = integer, min = -100, max = 100, default = -5,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.BaseTempMin,
+}
+option WastelandSeasons.BaseTempMax
+{
+  type = integer, min = -100, max = 100, default = 30,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.BaseTempMax,
+}
+option WastelandSeasons.BaseTempDiff
+{
+  type = integer, min = 0, max = 20, default = 8,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.BaseTempDiff,
+}
+option WastelandSeasons.EnableEvents
+{
+  type = boolean, default = true,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.EnableEvents,
+}
+option WastelandSeasons.EventChance
+{
+  type = integer, min = 0, max = 500, default = 50,
+  page = WastelandSeasons,
+  translation = WastelandSeasons.EventChance,
+}

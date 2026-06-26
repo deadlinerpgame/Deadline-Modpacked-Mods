@@ -1,0 +1,4 @@
+﻿name=Wasteland Workplaces Deadline
+id=WastelandWorkplaces_DL
+description=Workplace zones and jobs for players to take on. Sounds are from zapsplat.com, icons from https://game-icons.net/
+require=WastelandLib_DL,WastelandItemTweaks_DL,WastelandXP,WastelandRpChat_DL,WastelandLedger,WastelandActivityTracker,modoptions

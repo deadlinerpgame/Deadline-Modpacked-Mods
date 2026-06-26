@@ -1,0 +1,4 @@
+﻿name=Wasteland Seasons and Weather Events Deadline
+id=WastelandSeasons_DL
+description=Wasteland Seasons and Weather Events
+require=WastelandLib_DL,PzWebStats

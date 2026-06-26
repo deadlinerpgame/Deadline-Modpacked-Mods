@@ -1,0 +1,13 @@
+module Base
+{
+    recipe Extract Kevlar
+        {
+            keep Scissors,
+            AuthenticZClothing.Vest_BulletBlack/AuthenticZClothing.Vest_BulletRPD/AuthenticZClothing.Vest_BulletKilla/AuthenticZClothing.Vest_BulletTagilla/AuthenticZClothing.Vest_BulletTV110_BulletVest,
+            Sound:ClothesRipping,
+            Result:KevlarSheet,
+            OnCreate:Recipe.OnCreate.extractKevlar,
+            Time:250.0,
+            AnimNode:RipSheets,
+        }
+}

@@ -1,0 +1,99 @@
+module Base {
+
+	recipe Make Shipping Pallet {
+	    keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=6,
+		Nails=4,
+        Result: ShippingPallet,
+		SkillRequired:Woodwork=2,
+		AnimNode: BuildLow,
+        Prop1: Hammer,
+        Sound: Hammering,
+        NoBrokenItems: true,
+        Time: 200,
+        Category: Workplace,
+        CanBeDoneFromFloor:true,
+	}
+
+	recipe PackLumberPallet {
+		ShippingPallet,
+        Log=20,
+        NoBrokenItems: true,
+        Result: ShippingPalletLumber,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.lumberPallet,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+	}
+
+	recipe PackLumberPalletDiscounted {
+		ShippingPallet,
+        Log=10,
+        NoBrokenItems: true,
+        Result: ShippingPalletLumber,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.lumberPalletDiscounted,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+	}
+
+	recipe PackFarmPallet {
+        ShippingPallet,
+        Broccoli/farming.Cabbage/Carrots/Corn/Lettuce/Onion/farming.Tomato/farming.Potato/farming.RedRadish/farming.Strewberrie=20,
+        NoBrokenItems: true,
+        Result: ShippingPalletFarm,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        AllowRottenItem:false,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.farmPallet,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+    }
+
+    recipe PackFarmPalletDiscounted {
+        ShippingPallet,
+        Broccoli/farming.Cabbage/Carrots/Corn/Lettuce/Onion/farming.Tomato/farming.Potato/farming.RedRadish/farming.Strewberrie=10,
+        NoBrokenItems: true,
+        Result: ShippingPalletFarm,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        AllowRottenItem:false,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.farmPalletDiscounted,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+    }
+
+    recipe PackMetalPallet {
+        ShippingPallet,
+        MetalBar/MetalPipe=16,
+        NoBrokenItems: true,
+        Result: ShippingPalletScrap,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.metalPallet,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+    }
+
+    recipe PackMetalPalletDiscounted {
+        ShippingPallet,
+        MetalBar/MetalPipe=8,
+        NoBrokenItems: true,
+        Result: ShippingPalletScrap,
+        Time: 400,
+        Category: Workplace,
+        AnimNode: BlowTorchFloor,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.metalPalletDiscounted,
+        OnCreate:Recipe.OnCreate.craftedTradePallet,
+    }
+
+}

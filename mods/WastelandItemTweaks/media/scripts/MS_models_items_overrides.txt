@@ -1,0 +1,30 @@
+module Base
+{
+    model Joint
+    {
+        mesh    =   WorldItems/Joint,
+        texture =   WorldItems/Joint,
+        scale   =   0.005,
+    }
+
+    model Blunt
+    {
+        mesh    =   WorldItems/Blunt,
+        texture =   WorldItems/Blunt,
+        scale   =   0.005,
+    }
+
+    model BluntBackwoods
+    {
+        mesh    =   WorldItems/Blunt,
+        texture =   WorldItems/BluntBackwoods,
+        scale   =   0.005,
+    }
+
+    model Grinder
+    {
+        mesh    =   WorldItems/Grinder,
+        texture =   WorldItems/Grinder,
+        scale   =   0.03,
+    }
+}

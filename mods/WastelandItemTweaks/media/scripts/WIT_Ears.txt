@@ -1,0 +1,56 @@
+module Base {
+
+    item ZombieEar
+    {
+        DisplayCategory = Junk,
+        Weight = 0.01,
+        Type = Normal,
+        DisplayName = Zombie Ear,
+        Icon = ZombieEar,
+        Tooltip = Tooltip_ZombieEar,
+        WorldStaticModel = ZombieEar,
+    }
+
+    item ZombieEarRope
+    {
+        DisplayCategory = Junk,
+        Weight = 0.1,
+        Type = Normal,
+        Tooltip = Tooltip_ZombieEarRope,
+        DisplayName = Zombie Ear Rope,
+        Icon = ZombieEarRope
+    }
+
+    recipe Make Zombie Ear Rope
+    {
+        Twine=1,
+        ZombieEar=1,
+        Result:ZombieEarRope,
+        Time:30,
+        Category:Survivalist,
+        OnCreate:WIT_recipes.OnMakeZombieEarRope,
+    }
+
+    item WITHopeBusCorpTrader {
+        DisplayCategory = Junk,
+        Weight = 50,
+        Type = Normal,
+        DisplayName = Hope Bus Corporation Trader,
+        Icon = ShopKeep,
+        WorldStaticModel = Bell,
+    }
+
+    recipe Trade 300 Ears for Gasoline
+    {
+        ZombieEarRope,
+        EmptyPetrolCan,
+        keep WITHopeBusCorpTrader,
+        Result:PetrolCan,
+        Category:Trading,
+        OnTest:Recipe.OnTest.checkZombieEarRopeForTrade,
+        Sound: CoinClink,
+        CanBeDoneFromFloor:true,
+        Time: 10.0,
+    }
+
+}

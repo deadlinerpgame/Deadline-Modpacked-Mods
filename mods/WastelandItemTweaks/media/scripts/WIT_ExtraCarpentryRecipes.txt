@@ -1,0 +1,569 @@
+module Base
+{
+	recipe Craft Wooden Stool
+    {
+        Plank=3,
+        Nails=2,
+		keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        OnGiveXP:Give15WoodworkXP,
+        Result:Mov_WoodenStool,
+        Sound:Sawing,
+        Time:400.0,
+        SkillRequired:Woodwork=5,
+        Category:Carpentry,
+    }
+
+	recipe Craft Wooden Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        OnGiveXP:Give20WoodworkXP,
+        Result:Mov_WoodenChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        Category:Carpentry,
+    }
+
+    recipe Craft Dark Wooden Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        OnGiveXP:Give20WoodworkXP,
+        Result:Mov_DarkWoodenChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        Category:Carpentry,
+    }
+
+    recipe Craft Green Wooden Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_GreenChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Red Wooden Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_RedWoodenChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft White Wooden Chair
+	{
+	    Plank=5,
+	    Nails=4,
+	    keep [Recipe.GetItemTypes.Hammer],
+	    keep [Recipe.GetItemTypes.Saw],
+
+	    Result:Mov_WhiteWoodenChair,
+	    Sound:Sawing,
+	    Time:500.0,
+	    SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+	    Category:Carpentry,
+	}
+
+	recipe Craft White Simple Chair
+	{
+	    Plank=4,
+	    Nails=3,
+	    keep [Recipe.GetItemTypes.Hammer],
+	    keep [Recipe.GetItemTypes.Saw],
+
+	    Result:Mov_WhiteSimpleChair,
+	    Sound:Sawing,
+	    Time:500.0,
+	    SkillRequired:Woodwork=4,
+        OnGiveXP:Give15WoodworkXP,
+	    Category:Carpentry,
+	}
+
+	recipe Craft Purple Wooden Chair
+	{
+	    Plank=5,
+	    Nails=4,
+	    keep [Recipe.GetItemTypes.Hammer],
+	    keep [Recipe.GetItemTypes.Saw],
+
+	    Result:Mov_PurpleWoodenChair,
+	    Sound:Sawing,
+	    Time:500.0,
+	    SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+	    Category:Carpentry,
+	}
+
+     recipe Craft Pile of Crepe Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_PileOCrepeChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give15WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Fancy White Chair
+	{
+	    Plank=5,
+	    Nails=4,
+	    RippedSheets=8,
+	    Pillow,
+	    keep [Recipe.GetItemTypes.Hammer],
+	    keep [Recipe.GetItemTypes.Saw],
+
+	    Result:Mov_FancyWhiteChair,
+	    Sound:Sawing,
+	    Time:500.0,
+	    SkillRequired:Woodwork=8,
+        OnGiveXP:Give30WoodworkXP,
+	    Category:Carpentry,
+	}
+
+	recipe Craft Fancy Black Chair
+    {
+        Plank=5,
+        Nails=4,
+        RippedSheets=8,
+        Pillow,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_FancyBlackChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=8,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Red Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_RedChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Dark Blue Chair
+    {
+        Plank=5,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_DarkBlueChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Green Comfy Chair
+    {
+        Plank=6,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_GreenComfyChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft White Comfy Chair
+    {
+        Plank=6,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_WhiteComfyChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Blue Comfy Chair
+    {
+        Plank=6,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_BlueComfyChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Grey Comfy Chair
+    {
+        Plank=6,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_GreyComfyChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Brown Comfy Chair
+    {
+        Plank=6,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_BrownComfyChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Yellow Modern Chair
+    {
+        Plank=4,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_YellowModernChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Orange Modern Chair
+    {
+        Plank=4,
+        Nails=4,
+        RippedSheets=12,
+        Pillow=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_OrangeModernChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give30WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Orange Futon
+    {
+        Plank=4,
+        Nails=2,
+        RippedSheets=6,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_OrangeFuton,
+        Sound:Sawing,
+        Time:400.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give15WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Blue Rattan Chair
+    {
+		Plank=4,
+		Nails=4,
+		RippedSheets=12,
+		Pillow=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+
+		Result:Mov_BlueRattanChair,
+		Sound:Sawing,
+		Time:500.0,
+		SkillRequired:Woodwork=7,
+        OnGiveXP:Give30WoodworkXP,
+		Category:Carpentry,
+    }
+
+    recipe Craft Purple Rattan Chair
+    {
+		Plank=4,
+		Nails=4,
+		RippedSheets=12,
+		Pillow=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+
+		Result:Mov_PurpleRattanChair,
+		Sound:Sawing,
+		Time:500.0,
+		SkillRequired:Woodwork=7,
+        OnGiveXP:Give30WoodworkXP,
+		Category:Carpentry,
+    }
+
+	recipe Craft Fancy Low Table
+	{
+		Plank=2,
+		Nails=2,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+
+		Result:Mov_FancyLowTable,
+		Sound:Sawing,
+		Time:500.0,
+		SkillRequired:Woodwork=5,
+        OnGiveXP:Give10WoodworkXP,
+		Category:Carpentry,
+	}
+
+    recipe Craft Long Table
+    {
+        Plank=3,
+        Nails=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_LongTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=5,
+        OnGiveXP:Give15WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Small Table
+    {
+        Plank=3,
+        Nails=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_SmallTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give15WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Fancy Table
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_FancyTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=8,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Fancy Dark Table
+	{
+		Plank=4,
+		Nails=4,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+
+		Result:Mov_FancyDarkTable,
+		Sound:Sawing,
+		Time:500.0,
+		SkillRequired:Woodwork=7,
+        OnGiveXP:Give20WoodworkXP,
+		Category:Carpentry,
+	}
+
+	recipe Craft Brown Low Table
+    {
+        Plank=3,
+        Nails=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_BrownLowTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=3,
+        OnGiveXP:Give15WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Round Table
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_RoundTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Oak Round Table
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_OakRoundTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=6,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+    recipe Craft Light Round Table
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_LightRoundTable,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=3,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe White Medicine Cabinet
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_CabinetMedical,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Beach Chair
+    {
+        Plank=2,
+        Nails=2,
+        RippedSheets=10,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_BeachChair,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give10WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Doggo House
+    {
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Mov_Doghouse,
+        Sound:Sawing,
+        Time:500.0,
+        SkillRequired:Woodwork=4,
+        OnGiveXP:Give20WoodworkXP,
+        Category:Carpentry,
+    }
+
+	recipe Craft Empty Beer Mug
+	{
+		SmallSheetMetal,
+		Screws=2,
+        Log,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Screwdriver],
+
+		Result:FunctionalAppliances.FABeerMug,
+        sounds: Sawing,
+		Time:10.0,
+		SkillRequired:Woodwork=5,
+		OnGiveXP:Give15WoodworkXP,
+		Category:Carpentry,
+	}
+
+}

@@ -1,0 +1,15 @@
+--- @class WLZA_Attractor
+--- @field id string Unique identifier for the attractor (username: name)
+--- @field name string Display name of the attractor
+--- @field owner string Username of who created it
+--- @field position WLZA_Point Location of the attractor
+--- @field minRange number Inner radius where sound is strongest
+--- @field maxRange number Outer radius where sound reaches
+--- @field interval number Time between sound pulses in seconds
+--- @field enabled boolean Whether the attractor is currently active
+--- @field createdAt number Timestamp when created (game time in hours)
+
+--- @class WLZA_Point
+--- @field x number
+--- @field y number
+--- @field z number

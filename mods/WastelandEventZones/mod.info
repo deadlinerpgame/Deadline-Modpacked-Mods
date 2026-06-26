@@ -1,0 +1,4 @@
+﻿name=Wasteland Event Zones Deadline
+id=WastelandEventZones_DL
+description=Event Zones to improve the Wasteland experience.
+require=WastelandLib_DL

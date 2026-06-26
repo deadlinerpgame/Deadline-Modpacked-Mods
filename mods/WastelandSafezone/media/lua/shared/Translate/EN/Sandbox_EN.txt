@@ -1,0 +1,27 @@
+Sandbox_EN = {
+    Sandbox_WastelandSafezone = "Wasteland Safezone",
+
+    Sandbox_WastelandSafezone.CanPlayersClaim = "Players Can Claim",
+    Sandbox_WastelandSafezone.CanPlayersClaim_tooltip = "Allow players to claim existing buildings.",
+
+    Sandbox_WastelandSafezone.CanCustomClaim = "Custom Claims Allowed",
+    Sandbox_WastelandSafezone.CanCustomClaim_tooltip = "Allow players to create custom safezones by selecting an area.",
+
+    Sandbox_WastelandSafezone.ClaimExpirationHours = "Claim Expiration (Hours)",
+    Sandbox_WastelandSafezone.ClaimExpirationHours_tooltip = "Hours before inactive claims expire. Default equals two weeks.",
+
+    Sandbox_WastelandSafezone.MaxClaimSizeXY = "Max Claim Size X/Y",
+    Sandbox_WastelandSafezone.MaxClaimSizeXY_tooltip = "Maximum width and length each player may claim (tiles).",
+
+    Sandbox_WastelandSafezone.MaxClaimSizeZ = "Max Claim Size Z",
+    Sandbox_WastelandSafezone.MaxClaimSizeZ_tooltip = "Maximum height each player may claim (floors).",
+
+    Sandbox_WastelandSafezone.CanClaimCommercial = "Allow Commercial Claims",
+    Sandbox_WastelandSafezone.CanClaimCommercial_tooltip = "Whether claims can include commercial zones.",
+
+    Sandbox_WastelandSafezone.MaxPlayerSafezones = "Max Player Safezones",
+    Sandbox_WastelandSafezone.MaxPlayerSafezones_tooltip = "Maximum number of top-level safezones a player can own. Nested safezones (fully enclosed within an owned safezone) are unlimited.",
+
+    Sandbox_WastelandSafezone.OverrideSafehouseClaim = "Override Safehouse Claiming",
+    Sandbox_WastelandSafezone.OverrideSafehouseClaim_tooltip = "When enabled, claiming a safehouse will open the safezone creator instead. When disabled, vanilla safehouse claiming is preserved.",
+}

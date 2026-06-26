@@ -1,0 +1,173 @@
+module Base
+{
+	recipe Extract Kevlar
+    {
+        keep Scissors,
+        Vest_BulletLight/Vest_BulletArmy/Vest_BulletCivilian/Vest_BulletPolice,
+        Sound:ClothesRipping,
+        Result:KevlarSheet,
+        OnCreate:Recipe.OnCreate.extractKevlar,
+        Time:250.0,
+        AnimNode:RipSheets,
+    }
+
+    recipe Craft Light Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=5,
+        KevlarSheet=25,
+        Result:Vest_BulletLight,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+
+    recipe Craft Military Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        PaintGreen=1,
+        Result:Vest_BulletArmy,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+
+    recipe Craft Police Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        PaintBlue=1,
+        Result:Vest_BulletPolice,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+
+    recipe Craft Civilian Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        Result:Vest_BulletCivilian,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+
+    recipe Craft Black Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        PaintBlack=1,
+        Result:AuthenticZClothing.Vest_BulletBlack,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+    recipe Craft RPD Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=2,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        PaintBlack=1,
+        Result:AuthenticZClothing.Vest_BulletRPD,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+    recipe Craft Killa's Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=4,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        Result:AuthenticZClothing.Vest_BulletKilla,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+    recipe Craft Crye Precision AVS MBAV
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=4,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        Result:AuthenticZClothing.Vest_BulletTagilla,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+    recipe Craft TV-110 Bulletproof Vest
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+        LeatherStrips=4,
+        Sheet=2,
+        Thread=8,
+        KevlarSheet=35,
+        SmallSheetMetal=1,
+        Wire=1,
+        Result:AuthenticZClothing.Vest_BulletTV110_BulletVest,
+        Time:180.0,
+        Time:800.0,
+        SkillRequired:Tailoring=9,
+        Category:Tailoring,
+        OnGiveXP:WIT_recipes.OnGiveXP_Tailoring10,
+    }
+}

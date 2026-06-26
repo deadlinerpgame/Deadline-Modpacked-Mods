@@ -1,0 +1,4 @@
+Tooltip_EN = {
+    Tooltip_Sprinkler_Crafted = "A sprinkler which can be attached to a water barrel.",
+    Tooltip_GrowLamp = "A grow lamp which gives plant a boost to grow speed.<LINE>Required for indoor farming.<LINE>Has a 1 tile range in all direction.",
+}

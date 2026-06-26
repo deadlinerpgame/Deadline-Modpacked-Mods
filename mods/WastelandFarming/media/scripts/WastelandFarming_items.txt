@@ -1,0 +1,99 @@
+module wastelandfarming
+{
+    imports
+    {
+        Base
+    }
+
+    item SprinklerCrafted
+    {
+        DisplayCategory = SurFarm,
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	= SprinklerCrafted,
+        Icon	=	sprinkler,
+        Tooltip =   Tooltip_Sprinkler_Crafted,
+    }
+
+    recipe CraftSprinkler
+    {
+        MetalPipe=1,
+        SmallSheetMetal=2,
+        BlowTorch=1,
+        Screws=5,
+        Nails=8,
+        Plank=1,
+        RubberBand=4,
+        keep Screwdriver,
+        keep Saw/GardenSaw,
+        keep BallPeenHammer,
+        NoBrokenItems: true,
+        Result: SprinklerCrafted,
+        Time: 1500,
+        Category: Farming,
+        SkillRequired: MetalWelding=2;Woodwork=2;Farming=6,
+        AnimNode: Disassemble,
+        OnGiveXP: OnCraftSprinkler,
+        Prop1: BallPeenHammer,
+        NeedToBeLearn: false,
+    }
+
+    item GrowLamp
+    {
+        DisplayCategory = SurFarm,
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	= Grow Lamp,
+        Icon	=	GrowLamp,
+        Tooltip =   Tooltip_GrowLamp,
+    }
+
+    recipe Craft Grow Lamp
+    {
+        Plank=4,
+        SmallSheetMetal=2,
+        ElectronicsScrap=16,
+        Screws=8,
+        Nails=8,
+        LightBulb=4,
+        Radio.ElectricWire=2,
+        keep Screwdriver,
+        keep Hammer,
+        keep Saw/GardenSaw,
+        NoBrokenItems: true,
+        Result: GrowLamp,
+        Time: 1500,
+        Category: Farming,
+        SkillRequired: Electricity=4;Woodwork=2;Farming=8,
+        AnimNode: BuildLow,
+        OnGiveXP: OnCraftGrowLamp,
+        Prop1: Screwdriver,
+        Sound:Hammering,
+        NeedToBeLearn: false,
+    }
+
+    recipe Make Alternate Mildew Cure
+	{
+
+		GardeningSprayEmpty,
+		BakingSoda=2,
+        Soap2=1,
+        Water=3,
+
+		Result:GardeningSprayMilk,
+		Time:40.0,
+		Category:Farming,
+	}
+
+    recipe Make Alternate Flies Cure
+	{
+        GardeningSprayEmpty,
+        Water=3,
+		WildGarlic=2,
+        Soap2=1,
+
+		Result:GardeningSprayCigarettes,
+		Time:40.0,
+		Category:Farming,
+	}
+}

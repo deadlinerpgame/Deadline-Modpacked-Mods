@@ -1,0 +1,47 @@
+module WIT_Props {
+    import {
+        Base,
+    }
+
+    item SteamrollerTank {
+        DisplayCategory = Misc,
+        Weight	=	50,
+        Type	=	Normal,
+        DisplayName	=	Steamroller Tank,
+        Icon	=	SteamrollerTank,
+        WorldStaticModel = SteamrollerTank,
+    }
+
+    item SteamrollerTankDamaged {
+        DisplayCategory = Misc,
+        Weight	=	50,
+        Type	=	Normal,
+        DisplayName	=	Steamroller Tank (Damaged),
+        Icon	=	SteamrollerTank,
+        WorldStaticModel = SteamrollerTankDamaged,
+    }
+
+    item Battle_Tower {
+        DisplayCategory = Misc,
+        Weight	=	50,
+        Type	=	Normal,
+        DisplayName	=	Battle Tower,
+        Icon	=	BattleTower,
+        WorldStaticModel = Battle_Tower,
+    }
+
+    model SteamrollerTank {
+        mesh = Steamroller_Tank,
+        texture = Steamroller_Tank,
+    }
+
+    model SteamrollerTankDamaged {
+        mesh = Steamroller_Tank_Damaged,
+        texture = Steamroller_Tank_Damaged,
+    }
+
+    model Battle_Tower {
+        mesh = Battle_Tower,
+        texture = Battle_Tower,
+    }
+}

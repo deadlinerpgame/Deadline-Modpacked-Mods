@@ -1,0 +1,275 @@
+module Base
+{
+	item Chocolate
+    {
+        DisplayName = Chocolate,
+        DisplayCategory = FoodN,
+        Type = Food,
+        Weight = 0.2,
+		Icon = ZumeoChocolateBar,
+        EvolvedRecipe = Cake:20;PieSweet:20;Bread:10;ConeIcecream:5,
+        FoodType = NoExplicit,
+        Packaged = TRUE,
+        HungerChange = -15,
+        UnhappyChange = -15,
+        Calories = 850,
+        Carbohydrates = 110,
+        Lipids = 66,
+        Proteins = 10,
+        WorldStaticModel = Chocolate,
+    }
+
+	item Crisps
+	{
+		DisplayName = Chips,
+		Tooltip = Tooltip_Crisps1,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCrispsRed,
+		CantBeFrozen = TRUE,
+		Packaged = TRUE,
+		HungerChange = -10,
+		UnhappyChange = -10,
+		Calories = 820,
+		Carbohydrates = 72,
+		Lipids = 45,
+		Proteins = 6,
+		CustomEatSound = EatingCrispy,
+		WorldStaticModel = Chips,
+	}
+
+	item Crisps2
+	{
+		DisplayName = Chips,
+		Tooltip = Tooltip_Crisps2,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCrispsYellow,
+		CantBeFrozen = TRUE,
+		Packaged = TRUE,
+		HungerChange = -10,
+        UnhappyChange = -10,
+		Calories = 820,
+		Carbohydrates = 72,
+		Lipids = 45,
+		Proteins = 1.3,
+		CustomEatSound = EatingCrispy,
+		WorldStaticModel = Chips2,
+	}
+
+	item Crisps3
+	{
+		DisplayName = Chips,
+		Tooltip = Tooltip_Crisps3,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCrispsBlue,
+		CantBeFrozen = TRUE,
+		Packaged = TRUE,
+		HungerChange = -10,
+        UnhappyChange = -10,
+		Calories = 820,
+		Carbohydrates = 72,
+		Lipids = 45,
+		Proteins = 1.3,
+		CustomEatSound = EatingCrispy,
+		WorldStaticModel = Chips3,
+	}
+
+	item Crisps4
+	{
+		DisplayName = Chips,
+		Tooltip = Tooltip_Crisps4,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCrispsGreen,
+		CantBeFrozen = TRUE,
+		Packaged = TRUE,
+		HungerChange = -10,
+        UnhappyChange = -10,
+		Calories = 820,
+		Carbohydrates = 72,
+		Lipids = 45,
+		Proteins = 1.3,
+		CustomEatSound = EatingCrispy,
+		WorldStaticModel = Chips4,
+	}
+
+	item GranolaBar
+	{
+		DisplayName = Granola Bar,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoBreakfastBar,
+		HungerChange = -12,
+		Calories = 300,
+		Carbohydrates = 120,
+		Lipids = 44,
+		Proteins = 20,
+		WorldStaticModel = GranolaBar_Ground,
+	}
+
+	item Cereal
+	{
+		DisplayName = Cereal,
+		Tooltip = Tooltip_ZCereal,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCereal,
+		Packaged = TRUE,
+		HungerChange = -40,
+		Calories = 2360,
+		Carbohydrates = 1445,
+		Lipids = 26,
+		Proteins = 52,
+		WorldStaticModel = Cereal,
+	}
+
+	item CerealBowl
+    {
+        DisplayName = Cereal Bowl,
+        DisplayCategory = FoodP,
+        Type = Food,
+        Weight = 0.8,
+        Icon = Oatmeal,
+        EatType = 2hand,
+        ReplaceOnUse = Bowl,
+        DaysFresh = 4,
+        DaysTotallyRotten = 7,
+        HungerChange = -8,
+        ThirstChange = -20,
+        Calories = 395,
+        Carbohydrates = 101.5,
+        Lipids = 3.25,
+        UnhappyChange = -10,
+        Proteins = 6.5,
+        StaticModel = Bowl,
+        WorldStaticModel = BowlRamen_Ground,
+    }
+
+	item TortillaChips
+    {
+        DisplayName = Tortilla Chips,
+        Tooltip = Tooltip_ZCrunchies,
+        DisplayCategory = FoodN,
+        Type = Food,
+        Weight = 0.2,
+        Icon = ZumeoCrunchies,
+        CantBeFrozen = TRUE,
+        Packaged = TRUE,
+        HungerChange = -10,
+        UnhappyChange = -10,
+        Calories = 742,
+        Carbohydrates = 74,
+        Lipids = 40,
+        Proteins = 1.5,
+        CustomEatSound = EatingCrispy,
+        WorldStaticModel = Chips,
+    }
+
+	item HiHis
+	{
+		DisplayName = Hi His,
+		Tooltip = Tooltip_ZCrunchLogs,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.2,
+		Icon = ZumeoCrunchLogs,
+		HungerChange = -10,
+		UnhappyChange = -10,
+		Calories = 300,
+		Carbohydrates = 30,
+		Lipids = 8,
+		Proteins = 1.8,
+        WorldStaticModel = Snackcake_HiHis,
+	}
+
+	item Pop
+	{
+		DisplayName = Pop,
+		Tooltip = Tooltip_ZEnergyDrink,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 0.3,
+		Icon = ZumeoDrink,
+		EvolvedRecipe = Beverage:4;Beverage2:4,
+		FoodType = SoftDrink,
+		CantBeFrozen = TRUE,
+		EatType = popcan,
+		Packaged = TRUE,
+		ReplaceOnUse = PopEmpty,
+		HungerChange = -8,
+		ThirstChange = -60,
+		UnhappyChange = -10,
+		EnduranceChange = 10,
+		Calories = 180,
+		Carbohydrates = 39,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		StaticModel = PopCanDietWorld,
+		WorldStaticModel = PopCanDietWorld,
+		Tags = HasMetal,
+	}
+
+	item JuiceBox
+	{
+		DisplayName = Juice Box,
+		Tooltip = Tooltip_ZJuiceBox,
+		DisplayCategory = Food - Beverage,
+		Type = Food,
+		Weight = 0.1,
+		Icon = ZumeoJuiceBox,
+		EvolvedRecipe = Beverage:2;Beverage2:2,
+		FoodType = Juice,
+		Packaged = TRUE,
+		HungerChange = -2,
+		ThirstChange = -13,
+		UnhappyChange = -10,
+		Calories = 60,
+		Carbohydrates = 14,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCarton,
+		WorldStaticModel = JuiceBox,
+		EvolvedRecipeName = Juice,
+	}
+
+	item SnoGlobes
+    {
+        DisplayName	= Sno Globes,
+        Tooltip = Tooltip_ZSpectrumBar,
+        DisplayCategory = FoodN,
+        Type = Food,
+        Weight = 0.2,
+        Icon = ZumeoSpectrumBar,
+        HungerChange = -10,
+        UnhappyChange = -10,
+        Calories = 390,
+        Carbohydrates = 10,
+        Lipids = 8,
+        Proteins = 0.8,
+        WorldStaticModel = SpectrumBar_Ground,
+    }
+
+	item PopEmpty
+    {
+        DisplayCategory = Junk,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	ZumeoPopEmpty,
+        MetalValue = 10,
+        WorldStaticModel = PopCanDietWorld,
+		Tooltip = Tooltip_ZEnergyDrinkEmpty,
+    }
+
+}

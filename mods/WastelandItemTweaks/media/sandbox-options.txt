@@ -1,0 +1,242 @@
+VERSION = 1,
+
+option WastelandItemTweaks.CurrentZombieEarEvent
+{
+  type = string,
+  default = None,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.CurrentZombieEarEvent,
+}
+
+option WastelandItemTweaks.MaxZombieEarsPerPlayer
+{
+  type = integer,
+  min = 1,max=100000,
+  default = 1000,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.MaxZombieEarsPerPlayer,
+}
+
+option WastelandItemTweaks.EarsFullDrop
+{
+  type = integer,
+  min = 1,max=100000,
+  default = 500,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.EarsFullDrop,
+}
+
+option WastelandItemTweaks.SuperBagLifespan
+{
+  type = integer,
+  default = 3600, min = 0, max = 99999999,
+
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.SuperBagLifespan,
+}
+
+option WastelandItemTweaks.BadWater
+{
+  type = boolean,
+  default = false,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.BadWater,
+}
+
+option WastelandItemTweaks.WheelbarrowBaseMult
+{
+  type = double,
+  min = 0.0, max = 10.0,
+  default = 0.35,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.WheelbarrowBaseMult,
+}
+
+option WastelandItemTweaks.WheelbarrowWeightMult
+{
+  type = double,
+  min = 0.0, max = 10.0,
+  default = 0.5,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.WheelbarrowWeightMult,
+}
+
+option WastelandItemTweaks.WheelbarrowVarietyMult
+{
+  type = double,
+  min = 0.0, max = 10.0,
+  default = 0.4,
+  page = WastelandItemTweaks,
+  translation = WastelandItemTweaks.WheelbarrowVarietyMult,
+}
+
+option WastelandItemTweaks.BlueprintWeightGeneralUpgradedBelt
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 45,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightGeneralUpgradedBelt,
+}
+
+option WastelandItemTweaks.BlueprintWeightGeneralRattlerSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 20,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightGeneralRattlerSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightGeneralThompsonSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 15,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightGeneralThompsonSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightGeneralCamoMedicClothing
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 12,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightGeneralCamoMedicClothing,
+}
+
+option WastelandItemTweaks.BlueprintWeightGeneralCautionPack
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 12,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightGeneralCautionPack,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventUpgradedBelt
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 20,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventUpgradedBelt,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventRattlerSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 22,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventRattlerSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventThompsonSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 20,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventThompsonSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventCamoMedicClothing
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 18,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventCamoMedicClothing,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventCautionPack
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 18,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventCautionPack,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventSwatClothing
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 14,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventSwatClothing,
+}
+
+option WastelandItemTweaks.BlueprintWeightEventTraumaResponder
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 14,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightEventTraumaResponder,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonUpgradedBelt
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 8,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonUpgradedBelt,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonRattlerSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 18,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonRattlerSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonThompsonSmg
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 20,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonThompsonSmg,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonCamoMedicClothing
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 10,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonCamoMedicClothing,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonCautionPack
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 10,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonCautionPack,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonSwatClothing
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 20,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonSwatClothing,
+}
+
+option WastelandItemTweaks.BlueprintWeightDungeonTraumaResponder
+{
+  type = integer,
+  min = 0, max = 100,
+  default = 22,
+  page = WastelandBlueprints,
+  translation = WastelandItemTweaks.BlueprintWeightDungeonTraumaResponder,
+}

@@ -1,0 +1,4 @@
+﻿name=Wasteland Zones Deadline
+id=WastelandZones_DL
+description=Zones to improve the Wasteland experience.
+require=WastelandLib_DL,WastelandLayoutManager_DL

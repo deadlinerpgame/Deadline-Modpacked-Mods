@@ -1,0 +1,10 @@
+Recorded_Media_EN = {
+    RM_c2d1a7e8-35af-44e5-a639-fd88b7200f01 = "Lord of the Rings: The Fellowship of the Ring (Unreleased)"
+    RM_d2f4b7d9-42c1-49b2-a29a-1ad08c120f01 = "Lord of the Rings: The Two Towers (Unreleased)"
+    RM_e3b6a7c3-43d5-4a28-bf3a-3ab9e9b3b7c7 = "Lord of the Rings: The Return of the King (Unreleased)"
+    RM_01743599-73fd-4ddd-8810-c10d8d9f13d0 = "Crimson Fury"
+    RM_7c3ba366-cefa-4f97-bea6-5b93cbe78a6c = "Chrome Assassin"
+    RM_6e2e98a5-85e6-4e6e-9472-0c27bbc8c3a8 = "Blood Hunt"
+    RM_1ed3fe35-6b4b-4090-9fda-a2453c79d239 = "Deadlock: Apocolypse"
+    RM_c0a8ce7f-6848-4ed4-8e7a-72641a5e45e9 = "Educational Tape 04: Relative Gravimeters and Their Use"
+}

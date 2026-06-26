@@ -1,0 +1,10 @@
+module Base {
+    recipe Convert Spears to Unusable Wood 
+    {
+        SpearCrafted=1,
+        Result:UnusableWood=1,
+        CanBeDoneFromFloor:true,
+        Category:Carpentry,
+        Time:50.0,
+    }
+}

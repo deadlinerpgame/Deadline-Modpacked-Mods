@@ -1,0 +1,11 @@
+UI_EN = {
+    UI_optionscreen_binding_Wasteland = "Wasteland",
+    UI_optionscreen_binding_WastelandStaff = "Wasteland Staff",
+    UI_optionscreen_binding_WIT_ToggleMask = "Toggle Mask",
+    UI_optionscreen_binding_WIT_DiceCombat = "Toggle Dice Combat",
+    UI_optionscreen_binding_WIT_ToggleLootCategoryFilter = "Toggle Loot Category Filter",
+    UI_optionscreen_binding_WIT_SoundBoard = "Toggle Soundboard",
+    UI_optionscreen_binding_WIT_LevelAnalyzer = "Toggle Level Analyzer",
+    UI_optionscreen_binding_WO_ToggleObjectiveTracker = "Toggle Objective Tracker",
+    UI_optionscreen_binding_WO_ToggleObjectiveAdmin = "Toggle Objective Admin",
+}

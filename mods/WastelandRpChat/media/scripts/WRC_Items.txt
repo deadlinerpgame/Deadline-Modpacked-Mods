@@ -1,0 +1,80 @@
+module Base {    
+    item WRCRecorder
+    {
+        Type              = Normal,
+        DisplayCategory   = Electronics,
+        Weight            = 0.4,
+        DisplayName       = Tape Recorder,
+        Tooltip           = Tooltip_WRCRecorder,
+		WorldStaticModel  = WRCRecorder,
+		StaticModel       = WRCRecorder,
+        Icon              = WRCRecorder,
+        primaryAnimMask   = HoldingUmbrellaRight,
+        secondaryAnimMask = HoldingUmbrellaLeft,
+        
+    }
+
+    item WRCRecorderTape
+    {
+        Type             = Normal,
+        DisplayCategory  = Electronics,
+        Weight           = 0.02,
+        DisplayName      = Recordable Tape,
+        Tooltip          = Tooltip_WRCRecorderTape,
+		WorldStaticModel = WRCRecorderTape,
+		StaticModel      = WRCRecorderTape,
+        Icon             = WRCRecorderTape,
+        OnCreate         = WRC_OnCreateTape,
+    }
+
+    model WRCRecorder
+	{
+		mesh = WRCRecorder,
+		texture = WRCRecorder,
+		scale = 1.0,
+	}
+
+    model WRCRecorderTape
+	{
+		mesh = WRCRecorderTape,
+		texture = WRCRecorderTape,
+		scale = 1.0,
+	}
+
+    sound WRCRecorderStart
+    {
+        category = World, loop = false, is3D = true,
+        clip {
+            file = media/sound/WRCRecorderStart.ogg,
+            distanceMin = 1,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 1.0,
+        }
+    }
+
+    sound WRCRecorderStop
+    {
+        category = World, loop = false, is3D = true,
+        clip {
+            file = media/sound/WRCRecorderStop.ogg,
+            distanceMin = 1,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 1.0,
+        }
+    }
+
+    sound WRCRecorderWhirr
+    {
+        category = World, loop = true, is3D = true,
+        clip {
+            file = media/sound/WRCRecorderWhirr.ogg,
+            distanceMin = 1,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 1.0,
+        }
+    }
+
+}

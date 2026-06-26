@@ -1,0 +1,55 @@
+VERSION = 1,
+
+option WastelandAdminTools.NagCharacterBio
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.NagCharacterBio,
+}
+
+option WastelandAdminTools.MaxTraits
+{
+  type = integer,
+  default = 0, min = 0, max = 100,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.MaxTraits,
+}
+
+option WastelandAdminTools.MaxPositiveTraitsCount
+{
+  type = integer,
+  default = 0, min = 0, max = 100,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.MaxPositiveTraitsCount,
+}
+
+option WastelandAdminTools.MaxNegativeTraitsCount
+{
+  type = integer,
+  default = 0, min = 0, max = 100,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.MaxNegativeTraitsCount,
+}
+
+option WastelandAdminTools.MaxPositiveTraitPoints
+{
+  type = integer,
+  default = 0, min = 0, max = 100,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.MaxPositiveTraitPoints,
+}
+
+option WastelandAdminTools.MaxNegativeTraitPoints
+{
+  type = integer,
+  default = 0, min = 0, max = 100,
+
+  page = WastelandAdminTools,
+  translation = WastelandAdminTools.MaxNegativeTraitPoints,
+}

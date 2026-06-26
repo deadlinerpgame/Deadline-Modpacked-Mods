@@ -1,0 +1,23 @@
+module Base {
+
+	sound Scissors {
+		category = Item,
+		is3D = true,
+        clip {
+            file = media/sound/Scissors.ogg,
+			distanceMax = 5,
+			volume = 0.7,
+        }
+	}
+
+	sound CoinClink {
+		category = Item,
+		is3D = true,
+        clip {
+            file = media/sound/CoinClink.ogg,
+			distanceMax = 10,
+			volume = 0.7,
+        }
+	}
+
+}

@@ -1,0 +1,23 @@
+module ElliesTattooParlor {
+	imports {
+		Base
+	}
+	recipe Make Tattoo Ink
+	{
+		Pen=1,
+		BluePen=1,
+		RedPen=1,
+		Newspaper=1,
+		Result:TattoosInkBox,
+		Time:300,
+		Category:Tattoo,
+	}
+	recipe Make Tattoo Needle
+	{
+		Pen=1,
+		Needle=1,
+		Result:EmptyTattooNeedle,
+		Time:300,
+		Category:Tattoo,
+	}
+}

@@ -1,0 +1,39 @@
+module Base
+{
+
+    model DriedBrown_Ground
+    {
+        mesh = WorldItems/Yeast,
+		texture = WorldItems/DriedBrown,
+        scale = 0.6,
+    }
+
+    model DriedGreen_Ground
+    {
+        mesh = WorldItems/Yeast,
+		texture = WorldItems/DriedGreen,
+        scale = 0.6,
+    }
+
+    model DriedOrange_Ground
+    {
+        mesh = WorldItems/Yeast,
+		texture = WorldItems/DriedOrange,
+        scale = 0.6,
+    }
+
+    model DriedRed_Ground
+    {
+        mesh = WorldItems/Yeast,
+		texture = WorldItems/DriedRed,
+        scale = 0.6,
+    }
+
+    model DriedYellow_Ground
+    {
+        mesh = WorldItems/Yeast,
+		texture = WorldItems/DriedYellow,
+        scale = 0.6,
+    }
+
+}

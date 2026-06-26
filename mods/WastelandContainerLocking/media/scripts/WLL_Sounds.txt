@@ -1,0 +1,38 @@
+module Base {
+
+    sound WLL_LockpickLoop
+    {
+        category = World, loop = true, is3D = true,
+        clip {
+            file = media/sound/WLL_LockpickLoop.ogg,
+            distanceMin = 1,
+            distanceMax = 12,
+            reverbFactor = 0.2,
+            volume = 0.3,
+        }
+    }
+
+    sound WLL_LockpickSuccess
+    {
+        category = World, loop = false, is3D = true,
+        clip {
+            file = media/sound/WLL_LockpickSuccess.ogg,
+            distanceMin = 1,
+            distanceMax = 12,
+            reverbFactor = 0.2,
+            volume = 0.3,
+        }
+    }
+
+    sound WLL_LockpickFail
+    {
+        category = World, loop = false, is3D = true,
+        clip {
+            file = media/sound/WLL_LockpickFail.ogg,
+            distanceMin = 1,
+            distanceMax = 12,
+            reverbFactor = 0.2,
+            volume = 0.3,
+        }
+    }
+}

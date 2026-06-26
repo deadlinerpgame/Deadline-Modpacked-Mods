@@ -1,0 +1,32 @@
+local function doEnduranceChange(item, endurance)
+    WL_Utils.setItemProperties(item, {
+        EnduranceChange=endurance,
+    })
+end
+
+doEnduranceChange("Base.Mugfull", 5)
+doEnduranceChange("Base.Coffee2", 50)
+doEnduranceChange("Base.Teabag2", 15)
+doEnduranceChange("ChocolateCoveredCoffeeBeans", 5)
+doEnduranceChange("Base.PillsVitamins", 2)
+
+doEnduranceChange("SapphCooking.GrindedCoffee", 10)
+doEnduranceChange("SapphCooking.LowBallGlassCoffeeBrew", 30)
+doEnduranceChange("SapphCooking.MugBrewCoffee", 30)
+doEnduranceChange("SapphCooking.MugBrewCoffee2", 30)
+doEnduranceChange("SapphCooking.MugBrewCoffee3", 30)
+doEnduranceChange("SapphCooking.MugBrewCoffee4", 30)
+doEnduranceChange("SapphCooking.ColaBottlewithProteinShake", 25)
+doEnduranceChange("SapphCooking.ThermosCoffee", 100)
+doEnduranceChange("SapphCooking.ThermosCoffeeEvolved", 100)
+doEnduranceChange("SapphCooking.MugCoffee", 5)
+doEnduranceChange("SapphCooking.MugCoffee2", 5)
+doEnduranceChange("SapphCooking.MugCoffee3", 5)
+doEnduranceChange("SapphCooking.MugCoffee4", 5)
+doEnduranceChange("SapphCooking.BottlewithProteinShake", 25)
+doEnduranceChange("SapphCooking.PopBottlewithProteinShake", 25)
+doEnduranceChange("SapphCooking.BleachBottlewithProteinShake", 40)
+doEnduranceChange("SapphCooking.ProteinBar", 5)
+doEnduranceChange("SapphCooking.CoffeePacket", 15)
+doEnduranceChange("SapphCooking.LowBallGlassCoffee", 5)
+doEnduranceChange("SapphCooking.EnergyDrink", 40)

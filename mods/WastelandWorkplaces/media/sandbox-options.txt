@@ -1,0 +1,11 @@
+VERSION = 1,
+
+option WastelandWorkplaces.TownCitizenActivity
+{
+    type = integer,
+    min = 1,
+    max = 99,
+    default = 14,
+    page = WastelandWorkplaces,
+    translation = WastelandWorkplaces_TownCitizenActivity,
+}

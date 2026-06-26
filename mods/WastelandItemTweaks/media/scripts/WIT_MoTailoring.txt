@@ -1,0 +1,226 @@
+module Base {
+
+    recipe Make Spool of Thread
+   	{
+   		RippedSheets=4,
+   		keep Scissors,
+   		keep Spindle,
+   		Sound:Sawing,
+
+   		Result:Thread,
+   		Time:400.0,
+   		Category:Tailoring,
+        OnGiveXP:Get1TailoringXP,
+   	}
+
+   	recipe Make Ball of Yarn
+   	{
+   	    RippedSheets=4,
+   	    keep Scissors,
+   	    keep Spindle,
+   	    Sound:Sawing,
+
+   	    Result:Yarn=2,
+   	    Time:400.0,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get1TailoringXP,
+   	}
+
+   	recipe Make Ball of Yarn using Wool
+   	{
+   	    Wool=10,
+   	    keep Scissors,
+   	    keep Spindle,
+   	    Sound:Sawing,
+
+   	    Result:Yarn=4,
+   	    Time:400.0,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get2TailoringXP,
+
+   	}
+
+   	recipe Make Roll of Twine
+   	{
+   	    RippedSheets=10,
+   	    keep Scissors,
+   	    keep Spindle,
+   	    Sound:Sawing,
+
+   	    Result:Twine,
+   	    Time:1200.0,
+   	    SkillRequired:Tailoring=2,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get1TailoringXP,
+   	}
+
+   	recipe Make Fishing Line
+   	{
+   	    Thread=2,
+   	    Twine=5,
+   	    keep Scissors,
+   	    keep KitchenKnife/HuntingKnife,
+
+   	    Result:FishingLine=1,
+   	    Time:500.0,
+   	    SkillRequired:Tailoring=7,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get10TailoringXP,
+   	}
+
+    recipe Make Denim Strips from scratch
+    {
+        RippedSheets=12,
+        Thread=4,
+        PaintBlue=1,
+        keep Scissors,
+        keep Needle,
+        keep KitchenKnife/HuntingKnife/ButterKnife,
+
+        Result:DenimStrips=2,
+        Time:2400.0,
+        SkillRequired:Tailoring=1,
+        Category:Tailoring,
+        OnGiveXP:Get2TailoringXP,
+    }
+
+    recipe Create Buttons out of Plastic Bottles
+    {
+        WaterBottleEmpty/PopBottleEmpty,
+        keep Scissors,
+        keep Screwdriver/LetterOpener/HolePuncher,
+
+        Result:Button=5,
+        Time:400.0,
+        Category:Tailoring,
+        OnGiveXP:Get1TailoringXP,
+    }
+
+
+    recipe Make Denim Shirt
+    {
+        RippedSheets=2,
+        Thread=5,
+        DenimStrips=8,
+        Button=5,
+        keep Scissors,
+        keep Needle,
+        keep KitchenKnife/HuntingKnife/ButterKnife,
+
+        Result:Shirt_Denim,
+        Time:1200.0,
+        SkillRequired:Tailoring=3
+        Category:Tailoring,
+        OnGiveXP:Get4TailoringXP,
+    }
+
+   	recipe Make Denim Jeans
+   	{
+   		DenimStrips=12,
+   		RippedSheets=2,
+   		Button,
+   		Thread=4,
+   		keep Scissors,
+   		keep Needle,
+
+   		Result:TrousersMesh_DenimLight,
+   		Time:1200.0,
+   		SkillRequired:Tailoring=3,
+   		Category:Tailoring,
+        OnGiveXP:Get4TailoringXP,
+   	}
+
+   	recipe Make Jeans
+   	{
+   		DenimStrips=12,
+   		RippedSheets=2,
+   		Button,
+   		Thread=4,
+   		keep Scissors,
+   		keep Needle,
+
+   		Result:Trousers_Denim,
+   		Time:1200.0,
+   		SkillRequired:Tailoring=3,
+   		Category:Tailoring,
+   		OnGiveXP:Get4TailoringXP,
+   	}
+
+   	recipe Make Baggy Jeans
+   	{
+   		DenimStrips=14,
+   		Button,
+   		Thread=3,
+   		keep Scissors,
+   		keep Needle,
+
+   		Result:Trousers_JeanBaggy,
+   		Time:1200.0,
+   		SkillRequired:Tailoring=2,
+   		Category:Tailoring,
+   		OnGiveXP:Get4TailoringXP,
+   	}
+
+   	recipe Make Varsity Jacket
+   	{
+   	    LeatherStrips=8,
+   	    RippedSheets=6,
+   	    Button=2,
+   	    Thread=4,
+   	    keep Scissors,
+   	    keep Needle,
+
+   	    Result:Jacket_Varsity,
+   	    Time:1600.0,
+   	    SkillRequired:Tailoring=4,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get7TailoringXP,
+   	}
+
+   	recipe Make Medical Coat
+   	{
+   	    RippedSheets=12,
+   	    Button=6,
+   	    Thread=5,
+   	    keep Scissors,
+   	    keep Needle,
+
+   	    Result:JacketLong_Doctor,
+   	    Time:1400.0,
+   	    SkillRequired:Tailoring=3,
+   	    Category:Tailoring,
+   	    OnGiveX:Get5TailoringXP,
+   	}
+
+   	recipe Make Priest Shirt
+   	{
+   	    RippedSheets=8,
+   	    Button=2,
+   	    Thread=5,
+   	    keep Scissors,
+   	    keep Needle,
+   	    PaintBlack=2,
+
+   	    Result:Shirt_Priest,
+   	    Time:1400.0,
+   	    SkillRequired:Tailoring=3,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get5TailoringXP,
+   	}
+
+   	recipe Make Prisoner Jumpsuit
+   	{
+   	    RippedSheets=18,
+   	    Button=6,
+   	    Thread=5,
+   	    PaintOrange=1,
+   	    keep Scissors,
+   	    keep Needle,
+
+   	    Result:Boilersuit_Prisoner,
+   	    Time:2000.0,
+   	    SkillRequired:Tailoring=5,
+   	    Category:Tailoring,
+   	    OnGiveXP:Get7TailoringXP,
+   	}
+}

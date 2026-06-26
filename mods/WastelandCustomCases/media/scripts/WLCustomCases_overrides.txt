@@ -1,0 +1,55 @@
+module Base {
+
+    item Wallet
+    {
+        DisplayCategory = Cont,
+        Weight	=	0.2,
+        Type	=	Container,
+        DisplayName	=	Wallet,
+        Icon	=	Wallet_01,
+        Capacity	=	10,
+        WeightReduction			= 100,
+        WorldStaticModel = Wallet,
+        AcceptItemFunction  = WLCustomCases.WalletAcceptFunction,
+    }
+
+    item Wallet2
+    {
+        DisplayCategory = Cont,
+        Weight	=	0.2,
+        Type	=	Container,
+        DisplayName	=	Wallet,
+        Icon	=	Wallet_02,
+        Capacity	=	10,
+        WeightReduction			= 100,
+        WorldStaticModel = Wallet2,
+        AcceptItemFunction  = WLCustomCases.WalletAcceptFunction,
+    }
+
+    item Wallet3
+    {
+        DisplayCategory = Cont,
+        Weight	=	0.2,
+        Type	=	Container,
+        DisplayName	=	Wallet,
+        Icon	=	Wallet_03,
+        Capacity	=	10,
+        WeightReduction			= 100,
+        WorldStaticModel = Wallet3,
+        AcceptItemFunction  = WLCustomCases.WalletAcceptFunction,
+    }
+
+    item Wallet4
+    {
+        DisplayCategory = Cont,
+        Weight	=	0.2,
+        Type	=	Container,
+        DisplayName	=	Wallet,
+        Icon	=	Wallet_04,
+        Capacity	=	10,
+        WeightReduction			= 100,
+        WorldStaticModel = Wallet4,
+        AcceptItemFunction  = WLCustomCases.WalletAcceptFunction,
+    }
+
+}

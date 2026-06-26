@@ -1,0 +1,16 @@
+IG_UI_EN = {
+    IGUI_CantEatFoodMasked = "I can't eat food while masked.",
+    IGUI_CantSmokeMasked = "I can't smoke while masked.",
+    IGUI_CantDrinkMasked = "I can't drink while masked.",
+
+    IGUI_MaskRemoved = "Mask Removed",
+    IGUI_MaskEquipped = "Mask Equipped",
+    IGUI_NoMaskFound = "No Mask Found to Equip",
+
+    IGUI_StaffOnly = "Only staff can access this function.",
+
+    IGUI_WITLootCategoryFilterEnabled = "Loot Category Filter Enabled",
+    IGUI_WITLootCategoryFilterDisabled = "Loot Category Filter Disabled",
+
+    IGUI_ItemCat_Blueprints = "Blueprints",
+}

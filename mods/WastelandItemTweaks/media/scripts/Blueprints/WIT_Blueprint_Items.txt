@@ -1,0 +1,220 @@
+module Base
+{
+	item BlueprintPackGeneral
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Normal,
+		DisplayName = Damaged Blueprint Pack (General),
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintGeneral,
+	}
+
+	item BlueprintPackEvent
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Normal,
+		DisplayName = Damaged Blueprint Pack (Event),
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintEvent,
+	}
+
+	item BlueprintPackDungeon
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Normal,
+		DisplayName = Damaged Blueprint Pack (Dungeon),
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintDungeon,
+	}
+
+	item UpgradedBeltBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Upgraded Belt Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintUpgradedBelt,
+	}
+
+	item RattlerSmgBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Rattler SMG Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintRattlerSmg,
+	}
+
+	item ThompsonSmgBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Thompson SMG Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintThompsonSmg,
+	}
+
+	item CamoMedicClothingBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Camo Medic Clothing Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintCamoMedicClothing,
+	}
+
+	item CautionPackBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Caution Pack Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintCautionPack,
+	}
+
+	item SwatClothingBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged SWAT Clothing Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintSwatClothing,
+	}
+
+	item TraumaResponderBlueprintScrap
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.01,
+		Type = Normal,
+		DisplayName = Damaged Trauma Responder Blueprint,
+		Icon = DamagedBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_DamagedBlueprintTraumaResponder,
+	}
+
+	item UpgradedBeltBlueprint_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.2,
+		UseWhileEquipped = FALSE,
+		DisplayName = Upgraded Belt Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintUpgradedBelt,
+	}
+
+	item RattlerSmgBlueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.2,
+		UseWhileEquipped = FALSE,
+		DisplayName = Rattler SMG Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintRattlerSmg,
+	}
+
+	item ThompsonSmgBlueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.2,
+		UseWhileEquipped = FALSE,
+		DisplayName = Thompson SMG Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintThompsonSmg,
+	}
+
+	item Camo_Medic_Clothing_Blueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.1,
+		UseWhileEquipped = FALSE,
+		DisplayName = Camo Medic Clothing Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintCamoMedicClothing,
+	}
+
+	item CautionPack_Blueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.1,
+		UseWhileEquipped = FALSE,
+		DisplayName = Caution Pack Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintCautionPack,
+	}
+
+	item SWAT_Clothing_Blueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.1,
+		UseWhileEquipped = FALSE,
+		DisplayName = SWAT Clothing Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintSwatClothing,
+	}
+
+	item Trauma_Responder_Blueprints_Final
+	{
+		DisplayCategory = Blueprints,
+		Weight = 0.05,
+		Type = Drainable,
+		UseDelta = 0.1,
+		UseWhileEquipped = FALSE,
+		DisplayName = Trauma Responder Blueprint,
+		Icon = WastelandBlueprint,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineWordSearch1_Ground,
+		Tooltip = Tooltip_BlueprintTraumaResponder,
+	}
+}

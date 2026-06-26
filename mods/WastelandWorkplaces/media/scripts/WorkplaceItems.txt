@@ -1,0 +1,76 @@
+module Base {
+
+    item AntiTheftStrip {
+		DisplayCategory = Misc,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	Anti Theft Strip,
+        Icon	=	AntiTheftStrip,
+        Tooltip = Tooltip_AntiTheftStrip,
+        WorldStaticModel = Earring_LoopSmall_Ground,
+    }
+
+    recipe Craft Anti Theft Strips {
+        ScrapMetal,
+        RippedSheets,
+        Result: AntiTheftStrip=10,
+        Category: General
+    }
+
+    item ShippingPallet {
+		Weight	=	3.0,
+		Type	=	Normal,
+		DisplayCategory = Material,
+		DisplayName	= Pallet,
+		Icon	=	ShippingPallet,
+        Tooltip = Tooltip_ShippingPallet,
+		WorldStaticModel = PalletEmpty,
+    }
+
+	item ShippingPalletFarm {
+		Weight	=	30.0,
+		Type = Food,
+		DisplayCategory = Material,
+		DisplayName	= Pallet - Farm Produce,
+		DaysFresh 		= 7,
+		DaysTotallyRotten	= 14,
+		Icon	=	ShippingPalletFarm,
+		Tooltip = Tooltip_ShippingPalletFull,
+		WorldStaticModel = PalletFull,
+	}
+
+	item ShippingPalletLumber {
+		Weight	=	35.0,
+		Type	=	Normal,
+		DisplayCategory = Material,
+		DisplayName	=  Pallet - Lumber,
+		Icon	=	ShippingPalletLumber,
+		Tooltip = Tooltip_ShippingPalletFull,
+		WorldStaticModel = PalletFull,
+	}
+
+	item ShippingPalletScrap {
+		Weight	=	40.0,
+		Type	=	Normal,
+		DisplayCategory = Material,
+		DisplayName	= Pallet - Metal Salvage,
+		Icon	=	ShippingPalletScrap,
+		Tooltip = Tooltip_ShippingPalletFull,
+		WorldStaticModel = PalletFull,
+	}
+
+	model PalletEmpty
+	{
+		mesh = EmptyPalette,
+		texture = Worlditems/Pallet,
+		scale = 1,
+	}
+
+	model PalletFull
+	{
+		mesh = FullPalette,
+		texture = Worlditems/Pallet,
+		scale = 1,
+	}
+}
+

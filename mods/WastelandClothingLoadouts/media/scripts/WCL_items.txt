@@ -1,0 +1,11 @@
+module Base
+{ 
+    recipe Craft Sewing Needle
+	{
+		ScrapMetal=1,
+		
+		Result:Needle=1,
+		Category:Household,
+		Time:10.0,
+	}
+}

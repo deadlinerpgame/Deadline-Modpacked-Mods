@@ -1,0 +1,15 @@
+Sandbox_EN = {
+   Sandbox_WastelandWorldSaver = "Wasteland World Saver",
+
+   Sandbox_WastelandWorldSaver_InitialTokens = "Initial Tokens",
+	Sandbox_WastelandWorldSaver_InitialTokens_tooltip = "The number of tokens the player starts with.",
+
+   Sandbox_WastelandWorldSaver_TokensPerRegen = "Tokens Per Regen Cycle",
+	Sandbox_WastelandWorldSaver_TokensPerRegen_tooltip = "The number of tokens the player receives each regen cycle. (0 = no regen)",
+
+   Sandbox_WastelandWorldSaver_TokenRegenInterval = "Token Regen Interval",
+   Sandbox_WastelandWorldSaver_TokenRegenInterval_tooltip = "The number of real life hours between regen cycles. (0 = no regen)",
+
+   Sandbox_WastelandWorldSaver_OnlyInRooms = "Only In Rooms",
+   Sandbox_WastelandWorldSaver_OnlyInRooms_tooltip = "If true, this will only apply to map defined rooms. If false, tokens will be used everywhere not excluded.",
+}

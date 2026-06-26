@@ -1,0 +1,81 @@
+module Base {
+
+    item NotebookLeather
+    {
+        DisplayCategory = LitW,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Leatherbound Journal,
+        Icon	=	NotebookLeather,
+        CanBeWrite  =   true,
+        PageToWrite =   40,
+    }
+
+    item NotebookGrey
+    {
+        DisplayCategory = LitW,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	= Logbook,
+        Icon	=	NotebookGrey,
+        CanBeWrite  =   true,
+        PageToWrite =   40,
+    }
+
+    item NotebookPink
+    {
+        DisplayCategory = LitW,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Diary,
+        Icon	=	NotebookPink,
+        CanBeWrite  =   true,
+        PageToWrite =   40,
+    }
+
+	recipe Make Leatherbound Journal
+	{
+        LeatherStrips=2,
+		SheetPaper2=40,
+		Glue/Woodglue,
+		Result:NotebookLeather,
+		Time:160.0,
+	}
+
+    recipe Make Logbook
+	{
+		SheetPaper2=40,
+		Glue/Woodglue,
+		Result:NotebookGrey,
+		Time:160.0,
+	}
+
+    recipe Make Cute Diary
+	{
+		SheetPaper2=40,
+		Glue/Woodglue,
+		Result:NotebookPink,
+		Time:160.0,
+	}
+
+    recipe Get Sheets of Paper
+	{
+		NotebookLeather,
+		Result:SheetPaper2=40,
+		Time:60.0,
+	}
+
+    recipe Get Sheets of Paper
+	{
+		NotebookGrey,
+		Result:SheetPaper2=40,
+		Time:60.0,
+	}
+
+    recipe Get Sheets of Paper
+	{
+		NotebookPink,
+		Result:SheetPaper2=40,
+		Time:60.0,
+	}
+}

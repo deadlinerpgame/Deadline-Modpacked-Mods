@@ -1,0 +1,4 @@
+﻿name=Wasteland Spawners Deadline
+id=WastelandSpawners_DL
+description=Allows staff to place zombie spawners with configurable conditions, timers, directions, and flow control
+require=WastelandLib_DL

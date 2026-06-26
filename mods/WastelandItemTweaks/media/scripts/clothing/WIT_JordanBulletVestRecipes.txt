@@ -1,0 +1,13 @@
+module Base
+{
+	recipe Extract Kevlar
+    {
+        keep Scissors,
+        Vest_BulletArmy_Urban/Vest_BulletArmy_Desert/FDRF_BulletproofVest_01/Olive_BulletproofVest/BastionVest/Press_BulletproofVest/Neon_Vandals_Vest,
+        Sound:ClothesRipping,
+        Result:KevlarSheet,
+        OnCreate:Recipe.OnCreate.extractKevlar,
+        Time:250.0,
+        AnimNode:RipSheets,
+    }
+}

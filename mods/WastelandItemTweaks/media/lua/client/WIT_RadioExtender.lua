@@ -1,0 +1,137 @@
+---
+--- WIT_RadioExtender.lua
+--- 11/06/2025
+--- Blacked out for now but not deleting in case I want to revisit it later.
+
+-- require "WL_Utils"
+
+-- local modDataKey = "WIT_RadioExtender"
+
+-- local radios = {
+--     "WalkieTalkie",
+--     "WalkieTalkie2",
+--     "WalkieTalkie3",
+--     "WalkieTalkie4",
+--     "WalkieTalkie5",
+--     "WalkieTalkiePremiumBoosted",
+--     "WalkieTalkieTacticalBoosted",
+--     "WalkieTalkieMakeShift"
+-- }
+
+-- local function extendRadio(playerObj, item, modData)
+--     if modData < 3 then
+--         local range = item:getDeviceData():getTransmitRange()
+--         item:getModData()[modDataKey] = modData + 1
+--         local extendedRange = 1000
+--         item:getDeviceData():setTransmitRange(range + extendedRange)
+--         WL_Utils.attemptTakeItems(playerObj, "Base.WITExtender", 1)
+--         HaloTextHelper.addText(playerObj, "Radio Extender Added.", HaloTextHelper.getColorGreen())
+--         sendClientCommand(playerObj, 'radioFix', 'boostRadio', {
+--             username = playerObj:getUsername(),
+--             itemName = item:getName(),
+--             oldRange = range,
+--             newRange = range + extendedRange
+--         })
+--     end
+-- end
+
+-- local function removeExtend(playerObj, item, modData)
+--     if modData > 1 then
+--         local range = item:getDeviceData():getTransmitRange()
+--         item:getModData()[modDataKey] = modData - 1
+--         local extendedRange = 1000
+--         item:getDeviceData():setTransmitRange(range - extendedRange)
+--         local electricalSkill = playerObj:getPerkLevel(Perks.Electricity)
+--         local chance = 20 - (electricalSkill * 2)
+--         if ZombRand(100) < chance then
+--             HaloTextHelper.addText(playerObj, "Radio Extender Removed and Lost Extender.", HaloTextHelper.getColorRed())
+--         else
+--             playerObj:getInventory():AddItem("Base.WITExtender")
+--             HaloTextHelper.addText(playerObj, "Radio Extender Removed and Recovered Extender.", HaloTextHelper.getColorGreen())
+--         end
+--         sendClientCommand(playerObj, 'radioFix', 'boostRadio', {
+--             username = playerObj:getUsername(),
+--             itemName = item:getName(),
+--             oldRange = range,
+--             newRange = range - extendedRange
+--         })
+--     end
+-- end
+
+-- local function RadioExtenderContextMenu(player, context, items)
+--     local playerObj = getSpecificPlayer(player)
+--     items = ISInventoryPane.getActualItems(items)
+
+--     for _, item in ipairs(items) do
+--         if #items > 1 then return end
+--         if not item then return end
+--         local isRadio = false
+--         for _, v in ipairs(radios) do
+--             if item:getType() == v then
+--                 isRadio = true
+--             end
+--         end
+--         if not isRadio then return end
+--         if not instanceof(item, "Radio") then return end
+--         if playerObj:getPerkLevel(Perks.Electricity) < 8 then
+--             WL_ContextMenuUtils.missingRequirement(context, getText("ContextMenu_ApplyExtender"), "You need Electricity Level 8 to apply an extender to this radio.", item:getTex():getName())
+--             return
+--         end
+--         if not playerObj:getInventory():contains("Base.WITExtender") then
+--             WL_ContextMenuUtils.missingRequirement(context, getText("ContextMenu_ApplyExtender"), "You need a Radio Extender Module in your inventory to apply an extender.", item:getTex():getName())
+--             return
+--         end
+--         if item:getContainer() ~= playerObj:getInventory() then 
+--             WL_ContextMenuUtils.missingRequirement(context, getText("ContextMenu_ApplyExtender"), "You need to have this radio in your inventory to apply an extender.", item:getTex():getName())
+--             return 
+--         end
+--         local modData = item:getModData()[modDataKey]
+--         if not modData then
+--             modData = 1
+--             item:getModData()[modDataKey] = modData
+--         end
+--         local description = "Extends the range of the radio by an additional 1,000m.\nThis radio currently has " .. modData - 1 .. "/2 extenders applied."
+--         if modData >= 3 then 
+--             description = "This radio has reached the maximum number of extenders applied.\nIt cannot be extended further."
+--         end
+--         local option = context:addOption(getText("ContextMenu_ApplyExtender"), playerObj, extendRadio, item, modData)
+--         WL_ContextMenuUtils.addToolTip(option, getText("ContextMenu_ApplyExtender"), description, item:getTex():getName())
+--         if modData >= 3 then
+--             option.notAvailable = true
+--         end
+--     end
+-- end
+
+-- local function RadioExtenderRemoveContextMenu(player, context, items)
+--     local playerObj = getSpecificPlayer(player)
+--     items = ISInventoryPane.getActualItems(items)
+
+--     for _, item in ipairs(items) do
+--         if #items > 1 then return end
+--         if not item then return end
+--         local isRadio = false
+--         for _, v in ipairs(radios) do
+--             if item:getType() == v then
+--                 isRadio = true
+--             end
+--         end
+--         if not isRadio then return end
+--         if not instanceof(item, "Radio") then return end
+--         if item:getContainer() ~= playerObj:getInventory() then 
+--             WL_ContextMenuUtils.missingRequirement(context, "Remove Extender", "You need to have this radio in your inventory to remove an extender.", item:getTex():getName())
+--             return 
+--         end
+--         local modData = item:getModData()[modDataKey]
+--         if not modData then
+--             modData = 1
+--             item:getModData()[modDataKey] = modData
+--         end
+--         if modData > 1 then
+--             local removeOption = context:addOption("Remove Extender", playerObj, removeExtend, item, modData)
+--             WL_ContextMenuUtils.addToolTip(removeOption, "Remove Extender", "Removes an extender from the radio.\nChance to lose the extender based on your Electricity skill.", item:getTex():getName())
+--         end
+--     end
+-- end
+
+-- Events.OnFillInventoryObjectContextMenu.Add(RadioExtenderContextMenu)
+-- Events.OnFillInventoryObjectContextMenu.Add(RadioExtenderRemoveContextMenu)

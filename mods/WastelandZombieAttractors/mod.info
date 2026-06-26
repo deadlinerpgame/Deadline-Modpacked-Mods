@@ -1,0 +1,4 @@
+﻿name=Wasteland Zombie Attractors Deadline
+id=WastelandZombieAttractors_DL
+description=Allows staff to place zombie attractors that emit silent sounds to draw zombies within a specified range
+require=WastelandLib_DL

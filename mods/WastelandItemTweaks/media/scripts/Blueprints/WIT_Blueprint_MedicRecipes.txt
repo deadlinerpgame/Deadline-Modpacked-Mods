@@ -1,0 +1,52 @@
+module Base {
+
+    recipe Craft Medic Patch
+    {
+		Thread = 2,
+        Sheet=1,
+		keep Scissors,
+        keep Needle,
+		Camo_Medic_Clothing_Blueprints_Final,
+        Result: PatchesMedic,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+      	SkillRequired:Tailoring=4,
+	}
+
+	recipe Craft Patriot Camo Vest [Medic]
+	{
+		Thread = 8,
+		LeatherStrips = 2,
+		Sheet=2,
+		KevlarSheet = 35,
+		SmallSheetMetal,
+		Wire = 1,
+		keep Scissors,
+        keep Needle,
+		Camo_Medic_Clothing_Blueprints_Final,
+        Result: Medic_BulletproofVest_Patriot,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+      	SkillRequired:Tailoring=10,
+	}
+
+	recipe Craft Medic Camo Helmet
+	{
+		Thread=2,
+		[Recipe.GetItemTypes.BulletHelmets],
+        PaintRed=1,
+        keep KnittingNeedles,
+		Camo_Medic_Clothing_Blueprints_Final,
+        Result:Medic_Helmet_Patriot,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+      	SkillRequired:Tailoring=10,
+	}
+
+}

@@ -1,0 +1,9 @@
+UI_EN = {
+
+    UI_trait_locksmith = "Locksmith",
+    UI_trait_locksmithdesc = "Whether a hobby or a profession, locks have always fascinated you.<br>Making and picking locks are in your skill set.<br>+1 Metalworking",
+
+    UI_trait_BurglarDesc = "Can hotwire vehicles, less chance of breaking the lock of a window.<br>You are able to pick locks.",
+    UI_profdesc_burglar = "Can hotwire vehicles, less chance of breaking the lock of a window.<br>You are able to pick locks.",
+
+}

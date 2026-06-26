@@ -1,0 +1,10 @@
+Recipe_EN = {
+	Recipe_PackLumberPallet = "Pack Lumber Pallet",
+	Recipe_PackLumberPalletDiscounted = "Pack Lumber Pallet",
+
+	Recipe_PackFarmPallet = "Pack Farm Produce Pallet",
+	Recipe_PackFarmPalletDiscounted = "Pack Farm Produce Pallet",
+
+	Recipe_PackMetalPallet = "Pack Metal Salvage Pallet",
+	Recipe_PackMetalPalletDiscounted = "Pack Metal Salvage Pallet",
+}

@@ -1,0 +1,40 @@
+module Base
+{
+	recipe Craft Pillow
+	{
+		RippedSheets=8,
+		CottonBalls=60,
+		Thread=5,
+        keep [Recipe.GetItemTypes.SewingNeedle],
+
+		Result:Pillow,
+		Time:200.0,
+		Category:Tailoring,
+		SkillRequired:Tailoring=4,
+		OnGiveXP:WIT_recipes.Give5TailoringXP,
+	}
+
+	recipe Craft a Holster
+	{
+		Belt2,
+		Thread=5,
+		LeatherStrips=5,
+		keep [Recipe.GetItemTypes.SewingNeedle],
+		Result:Base.HolsterSimple,
+		Time:200,
+		SkillRequired:Tailoring=2,
+		OnGiveXP:WIT_recipes.Give5TailoringXP,
+	}
+
+	recipe Craft a Double Holster
+	{
+		Belt2,
+		Thread=10,
+		LeatherStrips=10,
+		keep [Recipe.GetItemTypes.SewingNeedle],
+		Result:Base.HolsterDouble,
+		Time:250,
+		SkillRequired:Tailoring=6,
+		OnGiveXP:WIT_recipes.Give5TailoringXP,
+	}
+}

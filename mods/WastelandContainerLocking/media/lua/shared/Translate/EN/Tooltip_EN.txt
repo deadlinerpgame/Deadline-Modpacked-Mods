@@ -1,0 +1,4 @@
+Tooltip_EN = {
+    Tooltip_DoorLock = "A lock that can be install on a door. Only installable by a locksmith.",
+    Tooltip_Slotlock = "A lock with a slot so items can be dropped in, but not taken out.",
+}

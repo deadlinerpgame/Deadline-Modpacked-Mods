@@ -1,0 +1,248 @@
+module Base {
+
+    recipe Craft Caution Visor Helmet
+    {
+        Thread=2,
+        [Recipe.GetItemTypes.BulletHelmets],
+        keep KnittingNeedles,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Helmet_Rook_FaceShield,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Cap
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=2,
+        keep Scissors,
+        keep KnittingNeedles,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Cap,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Balaclava
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=4,
+        keep Scissors,
+        keep KnittingNeedles,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Balaclava,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Jacket
+    {
+        Button=2,
+        Thread=4,
+        Twine=2,
+        LeatherStrips=6,
+        RippedSheets=6,
+        keep Scissors,
+        keep KnittingNeedles/Needle,
+        CautionPack_Blueprints_Final,
+        Result:Caution_LightJacket,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Light Vest
+    {
+        Thread=8,
+        LeatherStrips=2,
+        Sheet=2,
+        KevlarSheet=35,
+        SmallSheetMetal,
+        Wire=1,
+        keep Scissors,
+        keep Needle,
+        CautionPack_Blueprints_Final,
+        Result:Caution_BulletproofVest,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Gloves
+    {
+        Thread=1,
+        LeatherStrips=6,
+        Gloves_LeatherGloves/Gloves_LeatherGlovesBlack/Gloves_LeatherGlovesBlackFull/Gloves_LeatherWalker/OCP_Camo_Gloves,
+        keep Needle,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Gloves,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Pants
+    {
+        Button=1,
+        Thread=2,
+        Twine=2,
+        LeatherStrips=2,
+        Sheet=2,
+        keep Scissors,
+        keep KnittingNeedles/Needle,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Pants,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Boots
+    {
+        Thread=2,
+        LeatherStrips=4,
+        RippedSheets=2,
+        Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Tintable_Boots_01/Tintable_Boots_LowTop/OCP_Camo_TacBoots/OCP_Camo_Boots/Flecktarn_Camo_TacBoots/Fat03_Boots/Shoes_BlackBoots/Shoes_ArmyBootsOrange,
+        keep Scissors,
+        keep KnittingNeedles,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Boots,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Backpack
+    {
+        Thread=4,
+        LeatherStrips=2,
+        Sheet=1,
+        keep Scissors,
+        keep Needle,
+        Bag_SurvivorBag/Bag_ALICEpack/Bag_ALICEpack_Army/Bag_ALICEpack_UrbanCamo/Bag_Schoolbag/Bag_Schoolbag_Spiffo02/Tintable_Backpack_Strategist,
+        CautionPack_Blueprints_Final,
+        Result:Caution_Backpack_Radio,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution Gasmask
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        Thread=2,
+        LeatherStrips=4,
+        keep Needle,
+        CautionPack_Blueprints_Final,
+        Result:Caution_GasMask,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Container [Large]
+    {
+        Thread=6,
+        LeatherStrips=4,
+        keep Scissors,
+        keep Needle,
+        CBX_Sumk_1M_L/CBX_Sumk_1M_R/BagBack_StormPack_Large-Tint/BagBack_StormPack_Large-Medic/BagBack_StormPack_Large-Tint,
+        CautionPack_Blueprints_Final,
+        Result:Caution_DarkZoneBag,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Container [Medium]
+    {
+        Thread=4,
+        LeatherStrips=2,
+        keep Scissors,
+        keep Needle,
+        Bag_L4DeadMedkit/BagBack_StormPack_Medium-Tint/SWATPouch/BagBack_StormPack_Medium-Tint,
+        CautionPack_Blueprints_Final,
+        Result:Caution_DarkZonePack,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Container [Small]
+    {
+        Thread=8,
+        LeatherStrips=2,
+        keep Scissors,
+        keep Needle,
+        Pouch_Leg_Tint_Left/Pouch_Leg_Tint_Right/Pouch_Leg_Tint_ArmorLeft/Pouch_Leg_Tint_ArmorRight/SWATPouch/CBX_Sumk_7_L/CBX_Sumk_7_R,
+        CautionPack_Blueprints_Final,
+        Result:Caution_DarkZoneCanister_BeltLeft,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Caution Hazmat Suit
+    {
+        Thread=1,
+        LeatherStrips=8,
+        Button=2,
+        keep Scissors,
+        keep KnittingNeedles,
+        CautionPack_Blueprints_Final,
+        Result:Slim_Hazmat_HoodDown,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Caution GasTank Backpack
+    {
+        Thread=1,
+        LeatherStrips=2,
+        SmallSheetMetal=4,
+        keep Scissors,
+        keep Needle,
+        CautionPack_Blueprints_Final,
+        Result:Slim_Hazmat_GasTank,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10;MetalWelding=2,
+    }
+
+}

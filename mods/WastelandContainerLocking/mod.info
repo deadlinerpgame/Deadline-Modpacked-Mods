@@ -1,0 +1,4 @@
+﻿name=Wasteland Container Locks Deadline
+id=WastelandContainerLocks_DL
+description=Lock containers!
+require=WastelandLib_DL

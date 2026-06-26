@@ -1,0 +1,953 @@
+module Base
+{
+    import
+    {
+        Sprout,
+        Mani,
+        SapphCooking,
+        MoreSmokes,
+    }
+
+/*** Sacks ***/
+item SackProduce_Avocado
+	{
+		DisplayName = Sack of Avocados,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 14,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Banana
+	{
+		DisplayName = Sack of Bananas,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 7,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_CoffeeBeans
+	{
+		DisplayName = Sack of Coffee Beans,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 28,
+		DaysTotallyRotten = 30,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Daikon
+	{
+		DisplayName = Sack of Daikon Radishes,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_GingerRoot
+	{
+		DisplayName = Sack of Ginger Roots,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+        DaysFresh = 28,
+		DaysTotallyRotten = 42,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Ginseng
+	{
+		DisplayName = Sack of Ginseng Roots,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Grapefruit
+	{
+		DisplayName = Sack of Grapefruits,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_PepperHabanero
+	{
+		DisplayName = Sack of Habanero Peppers,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Hops
+	{
+		DisplayName = Sack of Hops,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_PepperJalapeno
+	{
+		DisplayName = Sack of Jalapeno Peppers,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Lemon
+	{
+		DisplayName = Sack of Lemons,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 7,
+		DaysTotallyRotten = 9,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Lemongrass
+	{
+		DisplayName = Sack of Lemongrass,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Lime
+	{
+		DisplayName = Sack of Limes,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 7,
+		DaysTotallyRotten = 9,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Mango
+	{
+		DisplayName = Sack of Mangoes,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 14,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Olive
+	{
+		DisplayName = Sack of Olives,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 14,
+		DaysTotallyRotten = 28,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Orange
+	{
+		DisplayName = Sack of Oranges,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 9,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Pineapple
+	{
+		DisplayName = Sack of Pineapples,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 14,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Pumpkin
+	{
+		DisplayName = Sack of Pumpkins,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_SoyBean
+	{
+		DisplayName = Sack of Soybeans,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 14,
+		DaysTotallyRotten = 16,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Squash
+	{
+		DisplayName = Sack of Squash,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 5,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_SugarCane
+	{
+		DisplayName = Sack of Sugarcanes,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 28,
+		DaysTotallyRotten = 30,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_TeaLeaf
+	{
+		DisplayName = Sack of Tea Leaves,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 28,
+		DaysTotallyRotten = 30,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_TobaccoLoose
+	{
+		DisplayName = Sack of Loose Tobacco,
+		DisplayCategory = FoodN,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Truffle
+	{
+		DisplayName = Sack of Truffles,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 20,
+		DaysTotallyRotten = 60,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Watermelon
+	{
+		DisplayName = Sack of Watermelons,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 8,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 8,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Wheat
+	{
+		DisplayName = Sack of Wheat,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 28,
+		DaysTotallyRotten = 30,
+		WorldStaticModel = SandBag,
+	}
+
+item SackProduce_Zucchini
+	{
+		DisplayName = Sack of Zucchinis,
+		DisplayCategory = FoodP,
+		Type = Food,
+		Weight = 2,
+		Icon = Sandbag,
+		CantEat = TRUE,
+		DaysFresh = 6,
+		DaysTotallyRotten = 14,
+		WorldStaticModel = SandBag,
+	}
+
+/*** Packing Sacks ***/
+recipe Put Avocados in Sack
+    {
+        Avocado=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Avocado,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Avocados
+    {
+        SackProduce_Avocado,
+
+        Result: Avocado=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Bananas in Sack
+    {
+        Banana=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Banana,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Bananas
+    {
+        SackProduce_Banana,
+
+        Result: Banana=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Coffee Beans in Sack
+    {
+        SapphCooking.CoffeeBeans=20,
+        EmptySandbag,
+        
+        Result: SackProduce_CoffeeBeans,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Coffee Beans
+    {
+        SackProduce_CoffeeBeans,
+
+        Result: SapphCooking.CoffeeBeans=20,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Daikon Radishes in Sack
+    {
+        Daikon=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Daikon,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Daikon Radishes
+    {
+        SackProduce_Daikon,
+
+        Result: Daikon=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Grapefruit in Sack
+    {
+        Grapefruit=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Grapefruit,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Grapefruit
+    {
+        SackProduce_Grapefruit,
+
+        Result: Grapefruit=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Ginger Roots in Sack
+    {
+        GingerRoot=15,
+        EmptySandbag,
+        
+        Result: SackProduce_GingerRoot,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Ginger Roots
+    {
+        SackProduce_GingerRoot,
+
+        Result: GingerRoot=15,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Ginseng Roots in Sack
+    {
+        Ginseng=15,
+        EmptySandbag,
+        
+        Result: SackProduce_Ginseng,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Ginseng Roots
+    {
+        SackProduce_Ginseng,
+
+        Result: Ginseng=15,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+
+recipe Put Habanero Peppers in Sack
+    {
+        PepperHabanero=12,
+        EmptySandbag,
+        
+        Result: SackProduce_PepperHabanero,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Habanero Peppers
+    {
+        SackProduce_PepperHabanero,
+
+        Result: PepperHabanero=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Hops in Sack
+    {
+        Hops=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Hops,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Hops
+    {
+        SackProduce_Hops,
+
+        Result: Hops=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+
+recipe Put Jalapeno Peppers in Sack
+    {
+        PepperJalapeno=12,
+        EmptySandbag,
+        
+        Result: SackProduce_PepperJalapeno,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Jalapeno Peppers
+    {
+        SackProduce_PepperJalapeno,
+
+        Result: PepperJalapeno=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Lemons in Sack
+    {
+        Lemon=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Lemon,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Lemons
+    {
+        SackProduce_Lemon,
+
+        Result: Lemon=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Lemongrass in Sack
+    {
+        LemonGrass=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Lemongrass,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Lemongrass
+    {
+        SackProduce_Lemongrass,
+
+        Result: LemonGrass=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Limes in Sack
+    {
+        Lime=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Lime,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Limes
+    {
+        SackProduce_Lime,
+
+        Result: Lime=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Mangoes in Sack
+    {
+        Mango=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Mango,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Mangoes
+    {
+        SackProduce_Mango,
+
+        Result: Mango=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Olives in Sack
+    {
+        Olive=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Olive,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Olives
+    {
+        SackProduce_Olive,
+
+        Result: Olive=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Oranges in Sack
+    {
+        Orange=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Orange,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Oranges
+    {
+        SackProduce_Orange,
+
+        Result: Orange=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Pineapples in Sack
+    {
+        Pineapple=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Pineapple,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Pineapples
+    {
+        SackProduce_Pineapple,
+
+        Result: Pineapple=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Pumpkins in Sack
+    {
+        Pumpkin=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Pumpkin,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Pumpkins
+    {
+        SackProduce_Pumpkin,
+
+        Result: Pumpkin=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Soybeans in Sack
+    {
+        SoyBean=12,
+        EmptySandbag,
+        
+        Result: SackProduce_SoyBean,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Soybeans
+    {
+        SackProduce_SoyBean,
+
+        Result: SoyBean=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Squash in Sack
+    {
+        Squash=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Squash,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Squash
+    {
+        SackProduce_Squash,
+
+        Result: Squash=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Sugarcanes in Sack
+    {
+        SugarCane=12,
+        EmptySandbag,
+        
+        Result: SackProduce_SugarCane,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Sugarcanes
+    {
+        SackProduce_SugarCane,
+
+        Result: SugarCane=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Tea Leaves in Sack
+    {
+        TeaLeaf=12,
+        EmptySandbag,
+        
+        Result: SackProduce_TeaLeaf,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Tea Leaves
+    {
+        SackProduce_TeaLeaf,
+
+        Result: TeaLeaf=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Loose Tobacco in Sack
+    {
+        TobaccoLoose=12,
+        EmptySandbag,
+        
+        Result: SackProduce_TobaccoLoose,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Loose Tobacco
+    {
+        SackProduce_TobaccoLoose,
+
+        Result: TobaccoLoose=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Truffles in Sack
+    {
+        Truffle=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Truffle,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Truffles
+    {
+        SackProduce_Truffle,
+
+        Result: Truffle=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Watermelons in Sack
+    {
+        Watermelon=6,
+        EmptySandbag,
+        
+        Result: SackProduce_Watermelon,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Watermelons
+    {
+        SackProduce_Watermelon,
+
+        Result: Watermelon=6,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Wheat in Sack
+    {
+        Wheat=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Wheat,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Wheat
+    {
+        SackProduce_Wheat,
+
+        Result: Wheat=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Put Zucchinis in Sack
+    {
+        Zucchini=12,
+        EmptySandbag,
+        
+        Result: SackProduce_Zucchini,
+        Time: 20.0,
+        Category: Farming,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+recipe Open Sack of Zucchinis
+    {
+        SackProduce_Zucchini,
+
+        Result: Zucchini=12,
+        Time: 20.0,
+        Category: Farming,
+        OnCreate: Recipe.OnCreate.OpenSackProduce,
+        OnGiveXP: Recipe.OnGiveXP.None,
+    }
+
+
+}

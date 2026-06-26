@@ -1,0 +1,4 @@
+﻿name=Wasteland Clothing Loadouts Deadline
+id=WastelandClothingLoadouts_DL
+description=Saves clothing loadouts, and quickly change between them
+require=WastelandLib_DL

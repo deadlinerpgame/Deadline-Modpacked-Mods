@@ -1,0 +1,8 @@
+﻿name=WL Build Helpers Deadline
+id=wlbuildhelper_DL
+description= build helpers for... builders and stuff
+poster=pensive.png
+pack=wl_build_helpers
+pack=wl_build_helpers.floor
+tiledef=wl_build_helpers 420
+require=TMC_TrueActions

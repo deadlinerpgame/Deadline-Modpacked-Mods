@@ -1,0 +1,16 @@
+version = 0
+settings
+{
+    packFileName = ../wl_build_helpers.pack
+    outputImageSize = 1024,1024
+    scale50 = false
+    inputImageDirectory
+    {
+        path = resources
+        imagesAreTilesheets = true
+    }
+    tileDef
+    {
+        path = wl_build_helpers.tiles
+    }
+}

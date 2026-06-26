@@ -1,0 +1,73 @@
+VERSION = 1,
+
+option WastelandSafezone.CanPlayersClaim
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.CanPlayersClaim,
+}
+
+option WastelandSafezone.CanCustomClaim
+{
+  type = boolean,
+  default = false,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.CanCustomClaim,
+}
+
+option WastelandSafezone.ClaimExpirationHours
+{
+  type = integer,
+  default = 336, min = 0, max = 87600,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.ClaimExpirationHours,
+}
+
+option WastelandSafezone.MaxClaimSizeXY
+{
+  type = integer,
+  default = 25, min = 1, max = 100,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.MaxClaimSizeXY,
+}
+
+option WastelandSafezone.MaxClaimSizeZ
+{
+  type = integer,
+  default = 3, min = 1, max = 7,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.MaxClaimSizeZ,
+}
+
+option WastelandSafezone.CanClaimCommercial
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.CanClaimCommercial,
+}
+
+option WastelandSafezone.MaxPlayerSafezones
+{
+  type = integer,
+  default = 1, min = 1, max = 50,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.MaxPlayerSafezones,
+}
+
+option WastelandSafezone.OverrideSafehouseClaim
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandSafezone,
+  translation = WastelandSafezone.OverrideSafehouseClaim,
+}

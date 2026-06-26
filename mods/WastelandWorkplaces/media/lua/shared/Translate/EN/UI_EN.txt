@@ -1,0 +1,8 @@
+UI_EN = {
+
+    UI_trait_lazy = "Lazy",
+    UI_trait_lazydesc = "You prefer to take a back seat and avoid unnecessary effort.<br>-10 maximum Work Points<br>-10% speed of Work Point recovery",
+
+    UI_trait_Industrious = "Industrious",
+    UI_trait_Industriousdesc = "Your strong work ethic and drive ensure that you consistently put in maximum effort.<br>+10 maximum Work Points<br>+10% speed of Work Point recovery",
+}

@@ -1,0 +1,32 @@
+module Base
+{
+	item KevlarSheet
+	{
+		DisplayCategory = CraftTailor,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Kevlar Sheet,
+        Icon	=	KevlarSheet,
+        Tooltip = Tooltip_KevlarSheet,
+        WorldStaticModel = Tarp,
+	}
+
+    item Vest_BulletLight
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        FabricType = Kevlar,
+        DisplayName = Light Bulletproof Vest,
+        Tooltip = Tooltip_LightBulletproofVest,
+        ClothingItem = Vest_BulletCivilian,
+        BodyLocation = TorsoExtraVestUnderJS,
+        Icon = BulletVestWhite,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.6,
+        WindResistance = 0.25,
+        BiteDefense = 20,
+        ScratchDefense = 30,
+        BulletDefense = 40,
+        WorldStaticModel = BulletVest_Ground,
+    }
+}

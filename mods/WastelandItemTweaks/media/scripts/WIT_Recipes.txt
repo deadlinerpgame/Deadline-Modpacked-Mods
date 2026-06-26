@@ -1,0 +1,1449 @@
+module Base {
+
+	recipe Pull Apart Nest
+	{
+		BirdNest,
+		Result:Twigs,
+		Time: 15,
+		Category: Survivalist,
+        OnCreate:Recipe.OnCreate.PullApartNest,
+        Sound: NestSnap,
+	}
+
+	recipe Make Broken Glass
+	{
+		SmashedBottle=2,
+		keep [Recipe.GetItemTypes.Hammer],
+		Result:Moveables.brokenglass_1_0,
+		Sound:BreakGlassItem,
+		Time: 100,
+		Category: Survivalist,
+	}
+
+	recipe Rip Feathers Out
+	{
+		FeatherPillow,
+		Result:WLFeather=40,
+		Time: 100,
+		Category: General,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+	}
+
+    recipe Convert Metal to Scrap Metal
+    {
+        UnusableMetal=1,
+        Result:ScrapMetal=2,
+        Category:Metalworking,
+        Time:10.0,
+    }
+
+    recipe Convert Chain
+    {
+        TW.Chain,
+        Result:ATAProtectionWheelsChain,
+        Time:1,
+        Category:Metalworking,
+    }
+    recipe Convert Chain
+    {
+        ATAProtectionWheelsChain,
+        Result:TW.Chain,
+        Time:1,
+        Category:Metalworking,
+    }
+    recipe Craft Empty Propane Tank
+    {
+        SheetMetal=2,
+        SmallSheetMetal=2,
+        ScrapMetal=10,
+        BlowTorch=10,
+    keep [Recipe.GetItemTypes.WeldingMask],
+        Result:PropaneTank,
+        Time:500,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=7,
+        OnCreate:WIT_recipes.OnMakePropaneTank,
+    }
+    recipe Weld Chain
+    {
+        MetalBar=10,
+        ScrapMetal=10,
+        BlowTorch=30,
+    keep [Recipe.GetItemTypes.Hammer],
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:TW.Chain,
+        Time:500,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=5,
+    }
+    recipe Craft Chain
+    {
+        IronIngot=40,
+        ScrapMetal=20,
+        BlowTorch=15,
+    keep [Recipe.GetItemTypes.Hammer],
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:TW.Chain,
+        Time:1000,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=7,
+    }
+
+    recipe Craft Empty Bucket
+    {
+        SheetMetal=2,
+        SmallSheetMetal=1,
+        ScrapMetal=5,
+        MetalBar=1,
+        BlowTorch=10,
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:BucketEmpty,
+        Time:400,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=4,
+    }
+    recipe Craft Empty Paint Bucket
+    {
+        SheetMetal=2,
+        SmallSheetMetal=1,
+        ScrapMetal=5,
+        MetalBar=1,
+        BlowTorch=8,
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:PaintbucketEmpty,
+        Time:300,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=3,
+    }
+    recipe Craft Lug Wrench
+    {
+        MetalBar=2,
+        WeldingRods=2,
+        BlowTorch=5,
+        IronIngot=2,
+        Charcoal=1,
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:LugWrench,
+        Time:100,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=3,
+    }
+    recipe Craft Pipe Wrench
+    {
+        MetalBar=1,
+        BlowTorch=5,
+        IronIngot=3,
+        Charcoal=1,
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:PipeWrench,
+        Time:200,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=4,
+    }
+    recipe Craft Wrench
+    {
+        MetalBar=1,
+        BlowTorch=2,
+        IronIngot=2,
+        Charcoal=1,
+	keep [Recipe.GetItemTypes.WeldingMask],
+        Result:Wrench,
+        Time:300,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=4,
+    }
+    recipe Make Taco Shell
+    {
+        keep KitchenTongs/Fork/Chopsticks,
+        Tortilla,
+        SaucepanwithOil/FryingPanwithOil,
+        CanBeDoneFromFloor: true,
+        Result: TacoShell,
+        Time: 100,
+        Heat: -0.22,
+        Category: Cooking,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Sound: FryingSounds,
+        AnimNode: Disassemble,
+        Prop1: Source=1,
+        Prop2: Cooking_SaucepanOil,
+    }
+    recipe Make Ice Cream
+    {
+        keep Spoon/Fork/MetalWhisk/WoodenSpoon,
+        Milk=4,
+        Sugar=2,
+        Salt=2,
+        Chocolate/Strewberrie=5,
+        CanBeDoneFromFloor: true,
+        Result: Icecream,
+        Time: 300,
+        Category: Cooking,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        AnimNode: Disassemble,
+    }
+    recipe Deconstruct Metal Items
+    {
+        MetalBar/MetalPipe/LeadPipe,
+        keep [Recipe.GetItemTypes.Saw],
+        keep MetalWorkbench,
+
+        NoBrokenItems: false,
+        AllowDestroyedItem: true,
+        Result: MetalParts=6,
+        Time: 150.0,
+        Sound: ScrapStuff,
+        Category: Scrapping,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Source=1,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn: false,
+    }
+    recipe Disassemble Tent Peg
+    {
+        TentPeg=1,
+        keep Pliers,
+        keep MetalWorkbench,
+        CanBeDoneFromFloor: true,
+        Result: MetalParts,
+        Sound: ScrapStuff,
+        Time: 300.0,
+        OnGiveXP: Recipe.OnGiveXP.MetalWorking10,
+        Category:Scrapping,
+    }
+    recipe Disassemble More Knives
+    {
+        ChefKnife1/ChefKnife2/ChefKnife3/PrepperKnifeKnock/PrepperKnifeSwing/PrepperKnifeStab/StalkerKnife/ButterKnife,
+        keep MetalWorkbench,
+        CanBeDoneFromFloor: true,
+        Result: SmallBlade,
+        Sound: BreakingWeapon,
+        Time:150.0,
+        OnGiveXP: Recipe.OnGiveXP.Metalworking2,
+        Category:Scrapping,
+    }
+    recipe Form Eraser
+    {
+        CuredRubber=10,
+        BowlwithBeatenEggs,
+        AvocadoOil/CanolaOil/PeanutOil/OilOlive/OilVegetable/CoconutOil,
+        keep: MortarPestle,
+        Result: Eraser,
+        Time:250.0,
+        Category:Survivalist,
+        }
+    recipe Make Paper
+    {
+        Log,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        Result: SheetPaper2=10,
+        CanBeDoneFromFloor: true,
+        AnimNode: SawLog,
+        Prop1: HuntingKnife,
+        Prop2: Log,
+        Sound: SawLog,
+        Time:400.0,
+        Category:Survivalist,
+        }
+    recipe Make Ice Cream Cone
+    {
+        keep Bowl,
+        keep Fork/Spoon/MetalWhisk,
+        PancakeMix=1,
+        Water=2,
+        Result: Cone,
+        Time: 100,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: Cooking,
+    }
+    recipe Pack Cascade Hops
+    {
+        Hops=2,
+        Result:HopsCascade,
+        Time: 100,
+        SkillRequired:Farming=1,
+        Category: Farming,
+    }
+    recipe Pack Golding Hops
+    {
+        Hops=5,
+        Result:HopsGolding,
+        Time: 100,
+        SkillRequired:Farming=1,
+        Category: Farming,
+    }
+    recipe Pack Nugget Hops
+    {
+        Hops=8,
+        Result:HopsNugget,
+        Time: 100,
+        SkillRequired:Farming=1,
+        Category: Farming,
+    }
+    recipe Pack Saaz Hops
+    {
+        Hops=1,
+        Result:HopsSaaz,
+        Time: 100,
+        SkillRequired:Farming=1,
+        Category: Farming,
+    }
+    recipe Pack Hallertau Hops
+    {
+        Hops=12,
+        Result:HopsHallertau,
+        Time: 100,
+        SkillRequired:Farming=5,
+        Category: Farming,
+    }
+    recipe Pack Centennial Hops
+    {
+        Hops=11,
+        Result:HopsCentennial,
+        Time: 100,
+        SkillRequired:Farming=6,
+        Category: Farming,
+    }
+    recipe Pack Simcoe Hops
+    {
+        Hops=13,
+        Result:HopsSimcoe,
+        Time: 100,
+        SkillRequired:Farming=7,
+        Category: Farming,
+    }
+    recipe Pack Mosaic Hops
+    {
+        Hops=10,
+        Result:HopsMosaic,
+        Time: 100,
+        SkillRequired:Farming=4,
+        Category: Farming,
+    }
+    recipe Mix Pancake Mix
+    {
+        keep Bowl,
+        keep Fork/Spoon/MetalWhisk,
+        Flour,
+        Sugar,
+        Salt=3,
+        CanBeDoneFromFloor: true,
+        Result: PancakeMix,
+        Time: 100,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: Cooking,
+    }
+    recipe Extract Light Malt
+    {
+        keep Water=20,
+        Wheat,
+        Sugar,
+        CanBeDoneFromFloor: true,
+        Result:MaltExtractLight,
+        Heat: -0.22,
+        Time: 300,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: MoreBrews,
+    }
+    recipe Extract Dark Malt
+    {
+        keep PortaSmoker,
+        MaltExtractLight,
+        Charcoal,
+        Result:MaltExtractDark,
+        Time: 300,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: MoreBrews,
+    }
+    recipe Break Chocolate Bars
+    {
+        Chocolate,
+        Result:ChocolateChips=3,
+        Time: 50,
+        Category: Cooking,
+    }
+    recipe Make Parmesan Cheese
+    {
+        Cheese,
+        Salt,
+        SkillRequired:Cooking=8,
+        Result:ParmesanCheese,
+        Time: 500,
+        OnGiveXP: Recipe.OnGiveXP.Cooking15,
+        Category: Cooking,
+    }
+    recipe Make Hot Sauce
+    {
+        keep MortarPestle,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        BellPepper/PepperPlant=4,
+        Vinegar=2,
+        Water,
+        AlcoholRippedSheets,
+        SkillRequired:Cooking=4,
+        Result:Hotsauce,
+        Time: 100,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: Cooking,
+    }
+
+    recipe Stack in Fives
+    {
+        GoldCurrency=5,
+        Result:GoldCurrencyFive,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack in Tens
+    {
+		GoldCurrency=10,
+		Result:GoldCurrencyTen,
+		Time: 8,
+		Sound: CoinClink,
+    }
+
+    recipe Stack in Tens
+    {
+        GoldCurrencyFive=2,
+        Result:GoldCurrencyTen,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack in Fifties
+    {
+		GoldCurrency=50,
+		Result:GoldCurrencyFifty,
+		Time: 8,
+		Sound: CoinClink,
+    }
+
+    recipe Stack in Fifties
+    {
+        GoldCurrencyFive=10,
+        Result:GoldCurrencyFifty,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Fifties
+    {
+		GoldCurrencyTen=5,
+        Result:GoldCurrencyFifty,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Hundreds
+    {
+        GoldCurrency=100,
+        Result:GoldCurrencyHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Hundreds
+    {
+        GoldCurrencyFive=20,
+        Result:GoldCurrencyHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Hundreds
+    {
+        GoldCurrencyTen=10,
+        Result:GoldCurrencyHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Hundreds
+    {
+        GoldCurrencyFifty=2,
+        Result:GoldCurrencyHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Five Hundreds
+    {
+        GoldCurrency=500,
+        Result:GoldCurrencyFiveHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Five Hundreds
+    {
+        GoldCurrencyFive=100,
+        Result:GoldCurrencyFiveHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Five Hundreds
+    {
+        GoldCurrencyTen=50,
+        Result:GoldCurrencyFiveHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Five Hundreds
+    {
+        GoldCurrencyFifty=10,
+        Result:GoldCurrencyFiveHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Five Hundreds
+    {
+        GoldCurrencyHundred=5,
+        Result:GoldCurrencyFiveHundred,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrency=1000,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrencyFive=200,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrencyTen=100,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrencyFifty=20,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrencyHundred=10,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Stack into Thousands
+    {
+        GoldCurrencyFiveHundred=2,
+        Result:GoldCurrencyThousand,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Separate Stacks
+    {
+		GoldCurrencyFive/GoldCurrencyTen/GoldCurrencyFifty/GoldCurrencyHundred/GoldCurrencyFiveHundred/GoldCurrencyThousand,
+        Result:GoldCurrency,
+        OnCreate:Recipe.OnCreate.unstackCoins,
+        Time: 8,
+        Sound: CoinClink,
+    }
+
+    recipe Cook Tomato Paste
+    {
+        Water=5,
+        Tomato=25,
+        CanBeDoneFromFloor: true,
+        Result:TomatoPaste,
+        Heat: -0.22,
+        Time: 300,
+        SkillRequired:Cooking=3,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: Cooking,
+    }
+    recipe Seal Can of Popcorn Kernels
+    {
+        TinCanEmpty,
+        keep CanSealer,
+        Sprout.CornSeed=20,
+        Result:CanofKernelCorn,
+        Time: 200,
+        Category: Cooking,
+    }
+    recipe Weave Lei
+    {
+        MagentaPenta/PinkCarnation = 20,
+        Twine/FishingLine = 1,
+        Result: AuthenticZClothing.HawaiianLei,
+        Time: 300,
+        Category: General,
+    }
+    recipe Make Cheese with Rehydrated Milk
+	{
+        Vinegar=1,
+        WaterPopBottle/WaterBottleFull/ColaBottlewithMilk=2,
+        Yeast,
+        Water=10,
+        Salt=3,
+        keep ButterKnife/KitchenKnife,
+        keep RippedSheets,
+        keep Bowl,
+        Result:Cheese,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+	}
+    recipe Fold Paper Bag
+    {
+        SheetPaper2=4,
+        Glue,
+        Result: PaperBag,
+        Time: 100,
+        Category: General,
+    }
+    recipe Draw a Bird on Bag
+    {
+        PaperBag,
+        keep Crayons,
+        Result: Paperbag_Jays,
+        Time: 50,
+        Category: General,
+    }
+    recipe Draw Spiffo on Bag
+    {
+        PaperBag,
+        keep Crayons,
+        Result: Paperbag_Spiffos,
+        Time: 50,
+        Category: General,
+    }
+    recipe Make Rock Candy
+    {
+        WaterPot;5,
+        WoodenSkewers=5,
+        Sugar,
+        Heat: -0.22,
+        Result: RockCandy=5,
+        CanBeDoneFromFloor: true,
+        Time: 1200,
+        Category: Cooking,
+    }
+    recipe Extract Sugar from Honey
+    {
+        Honey=4,
+        WaterPot;2,
+        SheetPaper2=12,
+        Result:Sugar,
+        CanBeDoneFromFloor: true,
+        Heat: -0.22,
+        Time: 1200,
+        SkillRequired:Cooking=2,
+        OnGiveXP: Recipe.OnGiveXP.Cooking10,
+        Category: Cooking,
+    }
+    recipe Churn Butter
+    {
+        keep ButterChurn,
+        [Recipe.GetItemTypes.SapphCookingMilk];10,
+        [Recipe.GetItemTypes.SapphCookingSalt];2,
+        Result: Butter,
+        Time: 1400,
+        OnGiveXP: Recipe.OnGiveXP.Cooking3,
+        SkillRequired:Cooking=3,
+        AnimNode:Sapph_ButterChurn,
+        StopOnWalk: TRUE,
+        Prop1:Cooking_ButterChurnBot,
+        Prop2:Cooking_ButterChurnTop,
+        Category: Cooking,
+    }
+    recipe Convert Bottles
+    {
+        RumEmpty/VodkaEmpty/TequilaEmpty/SakeEmpty/LiqueurEmpty/ColaBottleEmpty/GinEmpty/CachacaEmpty,
+        Result: BeerEmpty,
+        Time: 10,
+        Category: General,
+    }
+    recipe Sew Bandages
+    {
+        keep Needle,
+        Thread=2,
+        AlcoholRippedSheets=10,
+        Result: Bandage,
+        SkillRequired:Tailoring=5,
+        Time: 600,
+        Category: Health,
+    }
+    recipe Make Mop
+    {
+        WoodenStick,
+        ScrapMetal,
+        RippedSheets=10,
+        Result: Mop,
+        Category: General,
+    }
+    recipe Dehydrate Milk
+    {
+        WaterPot;10,
+        Heat:-0.22,
+        Milk=10,
+        CanBeDoneFromFloor:true,
+        Time: 1300,
+        Result: CannedMilk,
+        Category: Cooking,
+    }
+    recipe Bag Up Coffee Beans
+    {
+        Sprout.CoffeeBeans=10,
+        Plasticbag,
+		Glue/Woodglue,
+        Result: SapphCooking.CoffeeBeansBag,
+        Time: 100,
+        Category: Cooking,
+    }
+    recipe Make Plastic Bag
+    {
+        Garbagebag,
+        keep Scissors/[Recipe.GetItemTypes.SharpKnife],
+        Time: 100,
+        Result: Plasticbag,
+        Category: General,
+    }
+
+    recipe Craft Pressure Vessel
+    {
+        SheetMetal=40,
+        SmallSheetMetal=8,
+        ScrapMetal=20,
+        MetalPipe=5,
+        BlowTorch=40,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result: PressureVessel,
+        Time: 1000,
+        Category: Metalworking,
+        SkillRequired: MetalWelding=10,
+        CanBeDoneFromFloor:true,
+    }
+
+    recipe Craft Electrical Generator Mechanism
+    {
+        ElectricWire=10,
+        ElectronicsScrap=200,
+        DuctTape=10,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result: ElectricalGeneratorMechanism,
+        Time: 1000,
+        Category: Electrical,
+        SkillRequired: Electricity=10,
+        CanBeDoneFromFloor:true,
+    }
+
+    recipe Craft Steam Generator
+    {
+        PressureVessel,
+        ElectricalGeneratorMechanism,
+        BlowTorch=100,
+        SheetMetal=10,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:SteamGenerator.Generator,
+        Time: 1000,
+        Category: Electrical,
+	    OnCreate:Recipe.OnCreate.SteamGenerator,
+        SkillRequired: MetalWelding=6;Electricity=6,
+        CanBeDoneFromFloor:false,
+    }
+    recipe Convert to Carboy
+    {
+        WaterJugEmpty,
+        Result: EmptyCarboy,
+        Time: 100,
+        Category: General,
+    }
+    recipe Boost Walkie Talkie - Premium
+    {
+        WalkieTalkie3,
+        ScannerModule=1,
+        ElectricWire=10,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:WalkieTalkiePremiumBoosted=1,
+        NeedToBeLearn:true,
+        SkillRequired:Electricity=5,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Category:Electrical,
+        Time:500
+    }
+    recipe Boost Walkie Talkie - Tactical
+    {
+        WalkieTalkie4,
+        ScannerModule=3,
+        ElectricWire=20,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:WalkieTalkieTacticalBoosted=1,
+        NeedToBeLearn:true,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Category:Electrical,
+        SkillRequired:Electricity=7,
+        Time:500
+    }
+    recipe Craft Electric Wire
+    {
+        ElectronicsScrap=5,
+        Wire=1,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ElectricWire=1,
+        Category:Electrical,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        SkillRequired:Electricity=4,
+        Time:100
+    }
+    recipe Craft Aluminum
+    {
+        SmallSheetMetal=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:Aluminum=4,
+        Category:Electrical,
+        SkillRequired:Electricity=3,
+        Time:200
+    }
+    recipe Craft Scanner Module
+    {
+        ElectronicsScrap=50,
+        Aluminum=10,
+        ElectricWire=5,
+        RadioReceiver=1,
+        RadioTransmitter=1,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ScannerModule=1,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Category:Electrical,
+        SkillRequired:Electricity=5,
+        Time:750
+    }
+    recipe Craft Battery Charger
+    {
+        LeadPipe=1,
+        SheetMetal=2,
+        ElectricWire=20,
+        ElectronicsScrap=50,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep BallPeenHammer,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        SkillRequired:Electricity=8,
+        Result:CarBatteryCharger,
+        Category:Scrapping,
+        Time:1000,
+    }
+    recipe Break Down Tire
+    {
+        OldTire1/OldTire2/OldTire3/NormalTire1/NormalTire2/NormalTire3/ModernTire1/ModernTire2/ModernTire3/ClassicTire1/ClassicTire2/ClassicTire3,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        Sound:ClothesRipping,
+        SkillRequired:Mechanics=5,
+        Result:DestroyedCarTire,
+        Category:Scrapping,
+        Time:1000,
+    }
+    recipe Make Rubber Band
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        SolidRubber=1,
+        Sound:ClothesRipping,
+        Result:RubberBand=5,
+        Category:Survivalist,
+        Time:300,
+    }
+    recipe Dismantle Car Battery
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        destroy CarBattery1/CarBattery2/CarBattery3,
+        Sound:ScrapStuff,
+        SkillRequired:Electricity=7,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Result:ElectronicsScrap=5,
+        Category:Scrapping,
+        Time:1000,
+    }
+    recipe Dismantle Amplifier
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Amplifier=1,
+        Sound:ScrapStuff,
+        SkillRequired:Electricity=3,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Result:ElectronicsScrap=1,
+        Category:Electrical,
+        Time:250,
+    }
+    recipe Dismantle Radio Receiver
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        RadioReceiver=1,
+        Sound:ScrapStuff,
+        SkillRequired:Electricity=3,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Result:ElectronicsScrap=1,
+        Category:Electrical,
+        Time:250,
+    }
+    recipe Dismantle Radio Transmitter
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        RadioTransmitter=1,
+        Sound:ScrapStuff,
+        SkillRequired:Electricity=3,
+        OnGiveXP:Recipe.OnGiveXP.Electricity10,
+        Result:ElectronicsScrap=1,
+        Category:Electrical,
+        Time:250,
+    }
+    recipe Box Up Charcoal Pills
+    {
+        WITCharcoalTablet=20,
+        Sound:PutItemInBag,
+        Result:WITCharcoalBox=1,
+        Category:Survivalist,
+        Time:100,
+    }
+    recipe Unbox Charcoal Pills
+    {
+        WITCharcoalBox=1,
+        Sound:ClothesRipping,
+        Result:WITCharcoalTablet=20,
+        Category:Survivalist,
+        Time:100,
+    }
+    recipe Make Charcoal Pills
+    {
+        Charcoal=4,
+        Water=5,
+        keep MortarPestle,
+        Result:WITCharcoalTablet=5,
+        Category:Survivalist,
+        Time:100,
+    }
+    recipe Convert Propane Tank
+    {
+        PropaneTankEmpty,
+        Result:PropaneTank,
+        Time: 10,
+        Category: Metalworking,
+        OnCreate: WIT_recipes.OnMakePropaneTank,
+    }
+
+    recipe Make Chainsaw Chain
+    {
+        ScrapMetal=20,
+        SmallSheetMetal=4,
+        BlowTorch=10,
+        Screws=30,
+        keep TW.MetalCutter,
+        keep TW.File,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:ChainsawChain,
+        Category:Metalworking,
+        Time:2000,
+    }
+    recipe Replace Chainsaw Chain
+    {
+        ChainsawChain,
+        AuthenticZClothing.ChainsawOff,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:AuthenticZClothing.ChainsawOff,
+        Category:Metalworking,
+        OnText:WIT_OnTest_RechainChainsaw,
+        OnCreate:WIT_OnCreate_RechainChainsaw,
+        Time:200,
+    }
+
+    recipe Make Jerrycan
+    {
+        SheetMetal=4,
+        SmallSheetMetal=2,
+        WeldingRods=2,
+        BlowTorch=5,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:EmptyJerryCan,
+        Time:500,
+        Category:Metalworking,
+        SkillRequired:MetalWelding=5;Mechanics=2,
+    }
+
+    recipe Weld Cooking Pot
+    {
+        SheetMetal=2,
+        SmallSheetMetal=1,
+        BlowTorch=3,
+	    keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:Pot,
+        SkillRequired:MetalWelding=2,
+        AnimNode:BlowTorchMid,
+        Prop1:BlowTorch,
+        Time:400,
+        Category:General,
+    }
+    recipe Convert to Wearable
+    {
+        MSCigarette,
+        Result:Cigarette,
+        Category:General,
+        Time:50,
+    }
+
+        recipe Rip Fabric
+    {
+        FabricRoll/FabricRollBlue/FabricRollRed/FabricRollBrown/FabricRollGreen/FabricRollGrey,
+        keep [Recipe.GetItemTypes.SharpKnife]/Scissors,
+        Result:RippedSheets=10,
+        Time:250,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+    }
+
+    recipe Make a Keyring
+    {
+        Wire;1,
+        keep TW.Pliers,
+        Result:KeyRing,
+        Category:General,
+        Sound:Lightswitch,
+        Time:50,
+    }
+
+    recipe Make Baking Tray
+    {
+        SheetMetal=1,
+        BlowTorch;2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:BakingTray,
+        Category:Metalworking,
+        Sound:ScrapStuff,
+        AnimNode:BlowTorchMid,
+        Prop1:BlowTorch,
+        Time:300,
+    }
+
+    recipe Make Baking Pan
+    {
+        SheetMetal,
+        BlowTorch;2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:BakingPan,
+        Category:Metalworking,
+        Sound:ScrapStuff,
+        AnimNode:BlowTorchMid,
+        Prop1:BlowTorch,
+        Time:300,
+    }
+
+    recipe Make Fountain Cup
+    {
+        PlasticCup/FunctionalAppliances.FAPlasticCup,
+        Straw,
+        Result:FunctionalAppliances.FAFountainCup,
+        Category:Cooking,
+        Sound:Lightswitch,
+        Time:30,
+    }
+
+    recipe Make Plastic Cup
+    {
+        PopBottleEmpty/RemouladeEmpty/MayonnaiseEmpty/WaterBottleEmpty,
+        keep Scissors,
+        Result:FunctionalAppliances.FAPlasticCup,
+        Category:Cooking,
+        Sound:Scissors,
+        Time:50,
+    }
+
+    recipe Turn Gym Bottle into Plastic Cup
+    {
+        AuthenticZClothing.AuthenticGymBottle_Pink/AuthenticZClothing.AuthenticGymBottle_Blue/AuthenticZClothing.AuthenticGymBottle_Transparent/AuthenticZClothing.AuthenticGymBottle_US/AuthenticZClothing.AuthenticGymBottle_Green/AuthenticZClothing.AuthenticGymBottle_Camo/AuthenticZClothing.AuthenticGymBottle_Cyan/AuthenticZClothing.AuthenticGymBottle_Yellow/AuthenticZClothing.AuthenticGymBottle_Purple/AuthenticZClothing.AuthenticGymBottle_CamoUrban/AuthenticZClothing.AuthenticGymBottle_Red/AuthenticZClothing.AuthenticGymBottle_Gradient1,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        Result:FunctionalAppliances.FAPlasticCup,
+        Category:Cooking,
+        Time:350,
+        AnimNode:RipSheets,
+        Sound:scrapingWood,
+        SkillRequired:Strength=3,
+    }
+
+    recipe Make Rope
+    {
+        Cotton=10,
+        SheetRope=3,
+        keep Sprout.Spindle,
+        Result:Rope=4,
+        Time:300,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+    }
+
+    recipe Make Empty Box of Soda Syrup
+    {
+        Garbagebag=2,
+        DuctTape=1,
+        Plasticbag/GroceryBag2/GroceryBag3/GroceryBag4/GroceryBag5,
+        Result:FunctionalAppliances.FAEmptySodaSyrupBox,
+        Category:Cooking,
+        Time:600,
+    }
+
+    recipe Disassemble Analog Watch
+    {
+        WristWatch_Right_ClassicBlack/WristWatch_Right_ClassicBrown/WristWatch_Right_ClassicMilitary/WristWatch_Right_ClassicDress/WristWatch_Right_ClassicField/WristWatch_Right_ClassicAviator/WristWatch_Left_ClassicBlack/WristWatch_Left_ClassicBrown/WristWatch_Left_ClassicMilitary/WristWatch_Left_ClassicDress/WristWatch_Left_ClassicField/WristWatch_Left_ClassicAviator,
+        keep Scissors,
+        Result:LeatherStrips,
+        Category:Tailoring,
+        Time:100,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        OnGiveXP:Get1TailoringXP,
+    }
+
+    recipe Disassemble Metal Analog Watch
+    {
+        WristWatch_Right_ClassicGold/WristWatch_Right_ClassicDiving/WristWatch_Right_ClassicSilverDive/WristWatch_Right_ClassicSilver/WristWatch_Left_ClassicGold/WristWatch_Left_ClassicDiving/WristWatch_Left_ClassicSilverDive/WristWatch_Left_ClassicSilver,
+        keep TW.MetalCutter,
+        Result:ScrapMetal,
+        Category:Scrapping,
+        Time:100,
+        Sound:ScrapStuff,
+    }
+
+    recipe Rip Picnic Blanket
+    {
+        PicnicBlanketBlue/PicnicBlanketGreen/PicnicBlanketGrey/PicnicBlanketOrange/PicnicBlanketPink/PicnicBlanketPurple/PicnicBlanketTeal/PicnicBlanketYellow,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        Result:RippedSheets=4,
+        Time:200,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+    }
+
+    recipe Convert to Water Jug
+    {
+        MoreBrews.EmptyCarboy,
+        Result:WaterDispenser.WaterJugEmpty,
+        Category:General,
+        Time:100,
+    }
+    recipe Craft Patch Kit
+    {
+        keep Sprout.Spindle,
+        RippedSheets=10,
+        DenimStrips=10,
+        LeatherStrips=10,
+        Thread;4,
+        keep Needle,
+        FabricGlue,
+        Result:PatchKit,
+        Time:300,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        SkillRequired:Tailoring=10,
+    }
+    recipe Craft Kevlar Kit
+    {
+        keep Sprout.Spindle,
+        KevlarSheet=20,
+        Thread;4,
+        keep Needle,
+        FabricGlue,
+        Result:KevlarKit,
+        Time:300,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        SkillRequired:Tailoring=10,
+    }
+    recipe Craft Wooden Cutting Board
+    {
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
+        Result:CuttingBoardWooden=2,
+        Time:200,
+        Category:Carpentry,
+        Sound:Saw,
+        SkillRequired:Woodwork=3,
+    }
+    recipe Craft Clipboard
+    {
+        CuttingBoardWooden,
+        Stapler,
+        Paperclip = 3,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:ClipboardEmpty,
+        Time:200,
+        Sound:ScrapStuff,
+        Category:General,
+    }
+    recipe Refill Blue Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeBlue;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Blue,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Red Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeRed;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Red,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Green Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeGreen;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Green,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Orange Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeOrange;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Orange,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Purple Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyePurple;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Purple,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Pink Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyePink;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Pink,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill Yellow Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeYellow;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_Yellow,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Refill White Glowstick
+    {
+        AuthenticZClothing.AuthenticGlowstick_Blank,
+        Disinfectant;1,
+        Vinegar;1,
+        HairDyeWhite;1,
+        Result:AuthenticZClothing.AuthenticGlowstick_White,
+        Time:50,
+        Sound:MakePlaster,
+        Category:General,
+    }
+    recipe Craft Pager
+    {
+        ElectronicsScrap = 6,
+        RadioReceiver,
+        ElectricWire,
+        Screws = 4,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:WITPager,
+        Time:200,
+        Sound:ScrapStuff,
+        Category:Electrical,
+        SkillRequired:Electricity=6,
+    }
+    recipe Craft Gas Mask Filter
+    {
+        WaterBottleEmpty,
+        WITCharcoalTablet = 30,
+        AlcoholRippedSheets,
+        Glue,
+        SkillRequired:Doctor=7,
+        Result:GasMaskFilter,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Craft Empty Gas Mask Filter
+    {
+        WaterBottleEmpty,
+        WITCharcoalTablet = 15,
+        Glue,
+        SkillRequired:Doctor=7,
+        Result:GasMaskFilter_Empty,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Craft Homemade Gas Mask Filter
+    {
+        WaterBottleEmpty,
+        WITCharcoalTablet = 30,
+        AlcoholRippedSheets,
+        Glue,
+        SkillRequired:Doctor=3,
+        Result:GasMaskFilterHomemade,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Craft Empty Homemade Gas Mask Filter
+    {
+        WaterBottleEmpty,
+        WITCharcoalTablet = 15,
+        Glue,
+        SkillRequired:Doctor=3,
+        Result:GasMaskFilterHomemade_Empty,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Refill Homemade Gas Mask Filter
+    {
+        GasMaskFilterHomemade_Empty,
+        WITCharcoalTablet = 15,
+        AlcoholRippedSheets,
+        Glue,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:GasMaskFilterHomemade,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Refill Gas Mask Filter
+    {
+        GasMaskFilter_Empty,
+        WITCharcoalTablet = 15,
+        AlcoholRippedSheets,
+        Glue,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:GasMaskFilter,
+        Time:500,
+        Sound:ScrapStuff,
+        Category:Survivalist,
+    }
+    recipe Catalyze Ethanol into Fuel
+    {
+        SpoonEthanol=4,
+        EmptyPetrolCan,
+        ZeoliteCatalyst,
+        Result:PetrolCan,
+        Time: 1000,
+        Category:Survivalist,
+    }
+    recipe Remove Backpack Attachable Item
+    {
+        AuthenticZClothing.WaterBottleEmpty/AuthenticZClothing.PopBottleEmpty,
+        Result:Base.WaterBottleEmpty,
+        Time: 100,
+        Category: General,
+    }
+    recipe Craft Box of Paperclips
+    {
+        Wire;15,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:PaperclipBox,
+        Time:1000,
+        Category:General,
+    }
+    recipe Remove Backpack Attachable Item
+    {
+        AuthenticZClothing.Hat_GasMask,
+        Result:Hat_GasMask,
+        OnTest:WM_BlockGasMask,
+        Time:30,
+        Category:General,
+    }
+    recipe Wind Cassette
+    {
+        UnwoundCassette,
+        keep [Recipe.GetItemTypes.Write],
+        Result: UnwoundCassette,
+        RemoveResultItem:true,
+        Time: 200,
+        Sound: ScrapStuff,
+        Category: General,
+        OnCreate:Recipe.OnCreate.WindCassette,
+    }
+    recipe Get Garlic Seeds
+    {
+        WildGarlic2,
+
+        Result:Sprout.GarlicSeeds=1,
+        Time:20.0,
+        Category:Farming,
+    }
+    recipe Convert Tobacco Seeds
+    {
+        Sprout.TobaccoSeeds,
+        Result: MoreSmokes.SeedTobacco,
+        Time:20.0,
+        Category:Farming,
+    }
+}
+
+module TW {
+    recipe Combine MetalParts
+    {
+    	MetalParts=3,
+		keep MetalWorkbench,
+
+        Override                : TRUE,
+        Result           		: ScrapMetal,
+        Time             		: 10.0,
+	    Sound 					: ScrapStuff,
+		Category 		        : Scrapping,
+		CanBeDoneFromFloor      : TRUE,
+    }
+}

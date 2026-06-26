@@ -1,0 +1,242 @@
+module Base {
+
+    sound CoinsClinkHeavy
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/CoinsClinkHeavy.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.5,
+        }
+    }
+
+    sound PaperMoney
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/PaperMoney.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.8,
+        }
+    }
+
+	sound BoxSound
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/BoxSound.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.1,
+        }
+    }
+
+    sound GuitarSound
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/GuitarSound.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.2,
+        }
+    }
+
+    sound ShopDoorBell
+    {
+		category = World, loop = false, is3D = true,
+		clip {
+			file = media/sound/ShopDoorBell.ogg,
+			distanceMin = 2,
+			distanceMax = 15,
+			reverbFactor = 0.1,
+			volume = 0.2,
+		}
+	}
+
+	sound ShopDoorBell2
+	{
+		category = World, loop = false, is3D = true,
+		clip {
+		    file = media/sound/ShopDoorBell2.ogg,
+		    distanceMin = 2,
+		    distanceMax = 15,
+		    reverbFactor = 0.1,
+		    volume = 0.3,
+		}
+	}
+
+	sound TownMotorworks
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_motorworks.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.9,
+        }
+    }
+
+	sound TownDrifers
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_drugden.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.6,
+        }
+    }
+
+    sound TownFactory
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_factory.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.7,
+        }
+    }
+
+	sound TownFarm
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_farm.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.8,
+        }
+    }
+
+    sound TownFishing
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_fishing.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.8,
+        }
+    }
+
+	sound TownMining
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_mining.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 1.0,
+        }
+    }
+
+    sound TownTradeHub
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_trade.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.4,
+        }
+    }
+
+    sound TownWoodland
+    {
+        category = World, loop = false, is3D = false,
+        clip {
+            file = media/sound/town_woodland.ogg,
+            distanceMin = 1,
+            distanceMax = 1,
+            reverbFactor = 1.0,
+            volume = 0.8,
+        }
+    }
+
+	sound ExiledFromTown
+	{
+		category = World, loop = false, is3D = false,
+		clip {
+			file = media/sound/exiled.ogg,
+			distanceMin = 1,
+			distanceMax = 1,
+			reverbFactor = 1.0,
+			volume = 0.4,
+		}
+	}
+
+	sound CitizenshipFree
+	{
+		category = World, loop = false, is3D = false,
+		clip {
+			file = media/sound/citizenship_free.ogg,
+			distanceMin = 1,
+			distanceMax = 1,
+			reverbFactor = 1.0,
+			volume = 0.8,
+		}
+	}
+
+	sound CitizenshipPaid
+	{
+		category = Item, loop = false, is3D = false,
+		clip {
+			file = media/sound/citizenship_paid.ogg,
+			distanceMin = 1,
+			distanceMax = 1,
+			reverbFactor = 1.0,
+			volume = 0.8,
+		}
+	}
+
+	sound DigThroughTrash
+    {
+        category = Item, loop = false, is3D = true,
+        clip {
+            file = media/sound/DigThroughTrash.ogg,
+            distanceMin = 1,
+            distanceMax = 15,
+            reverbFactor = 0.5,
+            volume = 0.7,
+        }
+    }
+
+    sound TownBuy
+    {
+        category = Item, loop = false, is3D = false,
+		clip {
+			file = media/sound/TownBuy.ogg,
+			distanceMin = 1,
+			distanceMax = 1,
+			reverbFactor = 1.0,
+			volume = 0.1,
+		}
+    }
+
+    sound TownSell
+    {
+        category = Item, loop = false, is3D = false,
+		clip {
+			file = media/sound/TownSell.ogg,
+			distanceMin = 1,
+			distanceMax = 1,
+			reverbFactor = 1.0,
+			volume = 0.3,
+		}
+    }
+}

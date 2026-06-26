@@ -1,0 +1,11 @@
+ContextMenu_EN = {
+    ContextMenu_Tie1Ear = "Tie on 1 Ear",
+    ContextMenu_Tie5Ears = "Tie on 5 Ears",
+    ContextMenu_TieAllEars = "Tie on All Ears",
+    ContextMenu_Untie1Ear = "Untie 1 Ear",
+    ContextMenu_Untie5Ears = "Untie 5 Ears",
+    ContextMenu_UntieAllEars = "Untie All Ears",
+
+    ContextMenu_CombineGold = "Combine Money Here",
+    ContextMenu_ApplyExtender = "Apply Extender",
+}

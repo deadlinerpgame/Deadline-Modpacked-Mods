@@ -1,0 +1,219 @@
+module WLCustomCases
+{
+  imports
+  {
+      Base
+  }
+
+  item Manilla_Folder
+  {
+    DisplayCategory = LitW,
+    WeightReduction			= 100,
+    Weight	=	0.1,
+    Type	=	Container,
+    DisplayName	=	Manilla Folder,
+    Icon	=	manillafolder,
+    Capacity	=	10,
+    AcceptItemFunction  = WLCustomCases.FolderAcceptFunction,
+    WorldStaticModel = Manilla_Folder,
+  }
+
+  item Empty_Book
+  {
+    DisplayCategory = LitW,
+    WeightReduction			= 100,
+    Weight	=	0,
+    Type	=	Container,
+    DisplayName	=	Empty Book,
+    Icon	=	Book,
+    Capacity	=	10,
+    AcceptItemFunction  = WLCustomCases.FolderAcceptFunction,
+    WorldStaticModel = BookClosedGround,
+  }
+
+  item Hallow_Book
+  {
+    DisplayCategory = LitW,
+    WeightReduction		= 0,
+    Weight	=	0.5,
+    Type	=	Container,
+    DisplayName	=	Hollowed Out Book,
+    Icon	=	Book,
+    Capacity	=	5,
+    WorldStaticModel = BookClosedGround,
+  }
+
+  item Log_Pile
+  {
+    DisplayCategory = CraftCarp,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Log Pile,
+    Icon	=	LogPile,
+    Capacity	=	450,
+    AcceptItemFunction  = WLCustomCases.LogPileAcceptFunction,
+  }
+
+  item Stone_Pile
+  {
+    DisplayCategory = CraftMas,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Stone Pile,
+    Icon	=	StonePile,
+    Capacity	=	300,
+    AcceptItemFunction  = WLCustomCases.StonePileAcceptFunction,
+  }
+
+  item Plank_Pile
+  {
+    DisplayCategory = CraftCarp,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Plank Pile,
+    Icon	=	PlankPile,
+    Capacity	=	450,
+    AcceptItemFunction  = WLCustomCases.PlankPileAcceptFunction,
+  }
+
+  item Brick_Pile
+  {
+    DisplayCategory = CraftMas,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Brick Pile,
+    Icon	=	BrickPile,
+    Capacity	=	250,
+    AcceptItemFunction  = WLCustomCases.BrickPileAcceptFunction,
+  }
+
+  item Metal_Pile
+  {
+    DisplayCategory = CraftMetal,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Metal Pile,
+    Icon	=	MetalPile,
+    Capacity	=	400,
+    AcceptItemFunction  = WLCustomCases.MetalPileAcceptFunction,
+  }
+
+  item BaggedItems_Pile
+  {
+    DisplayCategory = CraftTailor,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Bagged Items Pile,
+    Icon	=	BaggedItemsPile,
+    Capacity	=	300,
+    AcceptItemFunction  = WLCustomCases.BaggedItemsPileAcceptFunction,
+  }
+
+  item CarParts_Pile
+  {
+    DisplayCategory = Mech,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Car Parts Pile,
+    Icon	=	CarPartsPile,
+    Capacity	=	400,
+    AcceptItemFunction  = WLCustomCases.CarPartsPileAcceptFunction,
+  }
+
+  item PropaneTank_Pile
+  {
+    DisplayCategory = CraftMetal,
+    WeightReduction		= 0,
+    Weight	=	50,
+    Type	=	Container,
+    DisplayName	=	Propane Tank Pile,
+    Icon	=	PropaneTankPile,
+    Capacity	=	300,
+    AcceptItemFunction  = WLCustomCases.PropaneTankPileAcceptFunction,
+  }
+
+  item FloppyDisk_Binder
+  {
+    DisplayCategory = Cont,
+    WeightReduction			= 100,
+    Weight	=	0.1,
+    Type	=	Container,
+    DisplayName	=	Floppy Disk Box,
+    Icon	=	FloppyCase,
+    Capacity	=	10,
+    AcceptItemFunction  = WLCustomCases.FloppyDiskBinderAcceptFunction,
+    WorldStaticModel = FloppyDisk_Binder,
+  }
+
+  item Cassette_Case
+  {
+    DisplayCategory = MediaA,
+    WeightReduction			= 100,
+    Weight	=	0.1,
+    Type	=	Container,
+    DisplayName	=	Cassette Case,
+    Icon	=	CassetteCase,
+    Capacity	=	10,
+    AcceptItemFunction  = WLCustomCases.CassetteCaseAcceptFunction,
+    WorldStaticModel = BowlingBallBag_Ground,
+  }
+
+  item StorageOrganizer_Black
+  {
+    DisplayCategory = Organizer,
+    Weight = 0.01,
+    Type = Normal,
+    DisplayName = Storage Organizer (Black),
+    Icon = StorageOrganizer_Black,
+    WorldStaticModel = PlasticBag,
+  }
+
+  item StorageOrganizer_Blue
+  {
+    DisplayCategory = Organizer,
+    Weight = 0.01,
+    Type = Normal,
+    DisplayName = Storage Organizer (Blue),
+    Icon = StorageOrganizer_Blue,
+    WorldStaticModel = PlasticBag,
+  }
+
+  item StorageOrganizer_Green
+  {
+    DisplayCategory = Organizer,
+    Weight = 0.01,
+    Type = Normal,
+    DisplayName = Storage Organizer (Green),
+    Icon = StorageOrganizer_Green,
+    WorldStaticModel = PlasticBag,
+  }
+
+  item StorageOrganizer_Red
+  {
+    DisplayCategory = Organizer,
+    Weight = 0.01,
+    Type = Normal,
+    DisplayName = Storage Organizer (Red),
+    Icon = StorageOrganizer_Red,
+    WorldStaticModel = PlasticBag,
+  }
+
+  model Manilla_Folder
+  {
+    mesh = manillafolder,
+    texture = manillafolder,
+  }
+
+  model FloppyDisk_Binder
+  {
+    mesh = FloppyCase,
+    texture = FloppyCase,
+  }
+}

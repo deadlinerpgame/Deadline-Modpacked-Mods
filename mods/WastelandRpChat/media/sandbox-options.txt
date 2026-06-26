@@ -1,0 +1,172 @@
+VERSION = 1,
+
+option WastelandRpChat.EnablePM
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnablePM,
+}
+
+option WastelandRpChat.EnableOOC
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableOOC,
+}
+
+option WastelandRpChat.EnableAll
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableAll,
+}
+
+option WastelandRpChat.EnableBuffs
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableBuffs,
+}
+
+option WastelandRpChat.RangeXYWhisper
+{
+  type = integer, min = 0, max = 100,
+  default = 1,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeXYWhisper,
+}
+
+option WastelandRpChat.RangeZWhisper
+{
+  type = integer, min = 0, max = 7,
+  default = 0,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeZWhisper,
+}
+
+option WastelandRpChat.RangeXYLow
+{
+  type = integer, min = 0, max = 100,
+  default = 5,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeXYLow,
+}
+
+option WastelandRpChat.RangeZLow
+{
+  type = integer, min = 0, max = 7,
+  default = 0,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeZLow,
+}
+
+option WastelandRpChat.RangeXYSay
+{
+  type = integer, min = 0, max = 100,
+  default = 10,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeXYSay,
+}
+
+option WastelandRpChat.RangeZSay
+{
+  type = integer, min = 0, max = 7,
+  default = 1,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeZSay,
+}
+
+option WastelandRpChat.RangeXYLoud
+{
+  type = integer, min = 0, max = 100,
+  default = 30,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeXYLoud,
+}
+
+option WastelandRpChat.RangeZLoud
+{
+  type = integer, min = 0, max = 7,
+  default = 4,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeZLoud,
+}
+
+option WastelandRpChat.RangeXYShout
+{
+  type = integer, min = 0, max = 100,
+  default = 50,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeXYShout,
+}
+
+option WastelandRpChat.RangeZShout
+{
+  type = integer, min = 0, max = 7,
+  default = 7,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.RangeZShout,
+}
+
+option WastelandRpChat.EnableHardOfHearing
+{
+  type = boolean,
+  default = false,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableHardOfHearing,
+}
+
+option WastelandRpChat.EnableDeaf
+{
+  type = boolean,
+  default = false,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableDeaf,
+}
+
+option WastelandRpChat.AllowPlayerCoords
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.AllowPlayerCoords,
+}
+
+option WastelandRpChat.EnableDrunkSlurredSpeech
+{
+  type = boolean,
+  default = false,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnableDrunkSlurredSpeech,
+}
+
+option WastelandRpChat.EnablePlayerLanguageFileProcessing
+{
+  type = boolean,
+  default = true,
+
+  page = WastelandRpChat,
+  translation = WastelandRpChat.EnablePlayerLanguageFileProcessing,
+}

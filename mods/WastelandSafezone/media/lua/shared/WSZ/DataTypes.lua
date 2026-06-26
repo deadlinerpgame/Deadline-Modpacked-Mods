@@ -1,0 +1,23 @@
+--- @class WSZ_Zone : WSZ_Area
+--- @field id string
+--- @field name string
+--- @field members table<string, WSZ_Member>
+--- @field createdBy string
+--- @field createdAt number
+--- @field lastVisitedAt number
+
+--- @class WSZ_Area
+--- @field x1 number
+--- @field y1 number
+--- @field z1 number
+--- @field x2 number
+--- @field y2 number
+--- @field z2 number
+
+--- @class WSZ_Member
+--- @field username string
+--- @field type "owner" | "officer" | "member" | "guest"
+--- @field addedBy string
+--- @field addedAt number
+--- @field lastVisitedAt number
+--- @field expiration number

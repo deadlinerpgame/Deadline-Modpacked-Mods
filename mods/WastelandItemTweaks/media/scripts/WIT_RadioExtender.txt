@@ -1,0 +1,12 @@
+module Base
+{
+    item WITExtender
+    {
+        DisplayCategory = Communications,
+        Type = Normal,
+        Weight = 0.5,
+        DisplayName = Radio Extender Module,
+        Tooltip = An module that allows a qualified electrician to extend the range of a Walkie Talkie up to a maximum of 2km.,
+        Icon = ScannerChip,
+    }
+}

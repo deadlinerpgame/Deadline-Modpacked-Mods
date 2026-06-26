@@ -1,0 +1,5 @@
+Tooltip_EN = {
+	Tooltip_AntiTheftStrip = "A small magnetic strip which can be placed on<br>an item to prevent theft from a workplace.<br><br>Strips can only be added or removed by<br>employees inside a workplace.",
+	Tooltip_ShippingPallet = "A wooden pallet used for moving bulk goods.<br>Town trade official will only accept goods when<br>they are packed onto a pallet such as this.",
+	Tooltip_ShippingPalletFull = "A wooden pallet full of commodities for trading, stamped with a unique marker showing the origin.<br>Town trade official will only accept goods when they are packed onto a pallet such as this.",
+}

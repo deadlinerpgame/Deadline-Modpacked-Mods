@@ -1,0 +1,13 @@
+module Base
+{
+	recipe Extract Kevlar
+    {
+        keep Scissors,
+        Vest_BulletHounds/Vest_BulletExodus,
+        Sound:ClothesRipping,
+        Result:KevlarSheet,
+        OnCreate:Recipe.OnCreate.extractKevlar,
+        Time:250.0,
+        AnimNode:RipSheets,
+    }
+}

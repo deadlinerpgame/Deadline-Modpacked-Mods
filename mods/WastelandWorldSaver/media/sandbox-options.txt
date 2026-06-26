@@ -1,0 +1,29 @@
+VERSION = 1,
+
+option WastelandWorldSaver.InitialTokens
+{
+	type = integer, min = 0, max = 999999, default = 20,
+  page = WastelandWorldSaver,
+  translation = WastelandWorldSaver_InitialTokens,
+}
+
+option WastelandWorldSaver.TokensPerRegen
+{
+  type = integer, min = 0, max = 999999, default = 0,
+  page = WastelandWorldSaver,
+  translation = WastelandWorldSaver_TokensPerRegen,
+}
+
+option WastelandWorldSaver.TokenRegenInterval
+{
+  type = integer, min = 0, max = 999999, default = 0,
+  page = WastelandWorldSaver,
+  translation = WastelandWorldSaver_TokenRegenInterval,
+}
+
+option WastelandWorldSaver.OnlyInRooms
+{
+  type = boolean, default = false,
+  page = WastelandWorldSaver,
+  translation = WastelandWorldSaver_OnlyInRooms,
+}

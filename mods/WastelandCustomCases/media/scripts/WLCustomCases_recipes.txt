@@ -1,0 +1,256 @@
+module WLCustomCases
+{
+  imports
+  {
+    Base
+  }
+  recipe Fold Folder
+  {
+    SheetPaper2=4,
+    Result: Manilla_Folder,
+    Time: 100,
+    Category: General,
+  }
+  recipe Sew Floppy Disk Binder
+  {
+    RippedSheets=4,
+    Thread=2,
+    keep Needle,
+    Result: FloppyDisk_Binder,
+    Time: 300,
+    Category: General,
+  }
+  recipe Sew Cassette Case
+  {
+    RippedSheets=4,
+    Thread=2,
+    keep Needle,
+    Result: Cassette_Case,
+    Time: 300,
+    Category: General,
+  }
+  recipe Empty Book
+  {
+    Book,
+    Result: Empty_Book,
+    Time: 100,
+    Category: General,
+  }
+  recipe Hollow out Book
+  {
+    Book,
+    keep Scissors,
+    Result: Hallow_Book,
+    Time: 100,
+    Category: General,
+  }
+  recipe Make Log Pile
+  {
+    Log=12,
+    Result: Log_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Log Pile
+  {
+    Log_Pile,
+    Result: Log=12,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Stone Pile
+  {
+    Stone=20,
+    Result: Stone_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Stone Pile
+  {
+    Stone_Pile,
+    Result: Stone=20,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Plank Pile
+  {
+    Plank=20,
+    Result: Plank_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Plank Pile
+  {
+    Plank_Pile,
+    Result: Plank=20,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Brick Pile
+  {
+    WastelandBuildsBrick=20,
+    Result: Brick_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Brick Pile
+  {
+    Brick_Pile,
+    Result: WastelandBuildsBrick=20,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Metal Pile
+  {
+    ScrapMetal=40,
+    Result: Metal_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Metal Pile
+  {
+    Metal_Pile,
+    Result: ScrapMetal=40,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Bagged Items Pile
+  {
+    EmptySandbag=10,
+    Result: BaggedItems_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Bagged Items Pile
+  {
+    BaggedItems_Pile,
+    Result: EmptySandbag=10,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Car Parts Pile
+  {
+    EngineParts=10,
+    Result: CarParts_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Car Parts Pile
+  {
+    CarParts_Pile,
+    Result: EngineParts=10,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Make Propane Tank Pile
+  {
+    PropaneTankEmpty=1,
+    Result: PropaneTank_Pile,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanBuildPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  recipe Destroy Propane Tank Pile
+  {
+    PropaneTank_Pile,
+    Result: PropaneTankEmpty=1,
+    Time: 100,
+    Category: General,
+    CanBeDoneFromFloor:true,
+    OnTest: WLCustomCases.CanDestroyPile,
+    OnGiveXP: Recipe.OnGiveXP.None,
+  }
+  
+  recipe Sew Storage Organizer
+  {
+    RippedSheets=8,
+    Thread=4,
+    SmallSheetMetal=2,
+    SheetPaper2=8,
+    keep Needle,
+    Result: StorageOrganizer_Black,
+    SkillRequired: Tailoring=2,
+    Time: 300,
+    Category: General,
+  }
+
+  recipe Dye Storage Organizer Blue
+  {
+    StorageOrganizer_Black/StorageOrganizer_Green/StorageOrganizer_Red,
+    HairDyeBlue;1,
+    Result: StorageOrganizer_Blue,
+    Time: 100,
+    Category: General,
+  }
+
+  recipe Dye Storage Organizer Green
+  {
+    StorageOrganizer_Black/StorageOrganizer_Blue/StorageOrganizer_Red,
+    HairDyeGreen;1,
+    Result: StorageOrganizer_Green,
+    Time: 100,
+    Category: General,
+  }
+
+  recipe Dye Storage Organizer Red
+  {
+    StorageOrganizer_Black/StorageOrganizer_Blue/StorageOrganizer_Green,
+    HairDyeRed;1,
+    Result: StorageOrganizer_Red,
+    Time: 100,
+    Category: General,
+  }
+
+  recipe Dye Storage Organizer Black
+  {
+    StorageOrganizer_Blue/StorageOrganizer_Green/StorageOrganizer_Red,
+    HairDyeBlack;1,
+    Result: StorageOrganizer_Black,
+    Time: 100,
+    Category: General,
+  }
+}

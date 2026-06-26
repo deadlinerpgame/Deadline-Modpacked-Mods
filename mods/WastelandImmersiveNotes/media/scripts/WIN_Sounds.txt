@@ -1,0 +1,39 @@
+module Base {
+
+	sound NotebookOpening
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/NotebookOpening.ogg,
+            distanceMin = 3,
+            distanceMax = 7,
+            reverbFactor = 0.1,
+            volume = 0.5,
+        }
+    }
+
+    sound NotebookTurnPage1
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/NotebookTurnPage1.ogg,
+            distanceMin = 3,
+            distanceMax = 7,
+            reverbFactor = 0.1,
+            volume = 0.5,
+        }
+    }
+
+    sound NotebookTurnPage2
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/NotebookTurnPage2.ogg,
+            distanceMin = 3,
+            distanceMax = 7,
+            reverbFactor = 0.1,
+            volume = 0.5,
+        }
+    }
+
+}

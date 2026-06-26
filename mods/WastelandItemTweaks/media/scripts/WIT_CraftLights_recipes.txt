@@ -1,0 +1,195 @@
+module Base {
+    recipe Make Striped Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp1,
+        SkillRequired:Electricity=2,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Black Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp2,
+        SkillRequired:Electricity=2,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Red Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp3,
+        SkillRequired:Electricity=2,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Gray Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp4,
+        SkillRequired:Electricity=2,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Blue Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp5,
+        SkillRequired:Electricity=2,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make White Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Result:Mov_Lamp6,
+        SkillRequired:Electricity=2,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Pink Wall Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_indoor_01_16,
+        SkillRequired:Electricity=3,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Dark Wall Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_indoor_01_20,
+        SkillRequired:Electricity=3,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Antique Outdoor Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_outdoor_01_30,
+        SkillRequired:Electricity=4,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Round Outdoor Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_outdoor_01_28,
+        SkillRequired:Electricity=4,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Modern Outdoor Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        ElectronicsScrap,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_outdoor_01_32,
+        SkillRequired:Electricity=4,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+    recipe Make Oval Outdoor Lamp {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        ScrapMetal,
+        LightBulb,
+        RippedSheets,
+        Radio.ElectricWire,
+        DuctTape=1,
+        Screws=2,
+        Result:Moveables.lighting_outdoor_01_40,
+        SkillRequired:Electricity=4,
+        OnGiveXP:WIT_recipes.OnGiveXP_CraftLamp,
+        Sound:Hammering,
+        Time:500,
+        Category:Household
+    }
+}

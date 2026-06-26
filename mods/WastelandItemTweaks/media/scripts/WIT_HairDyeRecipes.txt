@@ -1,0 +1,109 @@
+module Base {
+
+    recipe Convert to Green Hair Dye
+    {
+        filcher.HairDyeAvocado/filcher.HairDyeDarkGreen/filcher.HairDyeLime/filcher.HairDyeOlive,
+        filcher.HairDyeAvocado/filcher.HairDyeDarkGreen/filcher.HairDyeLime/filcher.HairDyeOlive,
+        Result: HairDyeGreen,
+        Time: 200,
+        Sound: BottleShake,
+        Category: Misc,
+    }
+    recipe Convert to Yellow Hair Dye
+    {
+        filcher.HairDyeLightBlonde/filcher.HairDyeOrange,
+        filcher.HairDyeLightBlonde/filcher.HairDyeOrange,
+        Result: HairDyeYellow,
+        Time: 200,
+        Sound: BottleShake,
+        Category: Misc,
+    }
+    recipe Convert to Red Hair Dye
+    {
+        filcher.HairDyeAuburn/filcher.HairDyeCherry/filcher.HairDyeDarkBrown/filcher.HairDyeDarkRed/filcher.HairDyeMagenta,
+        filcher.HairDyeAuburn/filcher.HairDyeCherry/filcher.HairDyeDarkBrown/filcher.HairDyeDarkRed/filcher.HairDyeMagenta,
+        Result: HairDyeRed,
+        Time: 200,
+        Sound: BottleShake,
+        Category: Misc,
+    }
+    recipe Convert to Blue Hair Dye
+    {
+        filcher.HairDyeCaribbeanBlue/filcher.HairDyeCyan/filcher.HairDyeDarkBlue/filcher.HairDyeDarkTurquoise/filcher.HairDyeTurquoise,
+        filcher.HairDyeCaribbeanBlue/filcher.HairDyeCyan/filcher.HairDyeDarkBlue/filcher.HairDyeDarkTurquoise/filcher.HairDyeTurquoise,
+        Result: HairDyeBlue,
+        Time: 200,
+        Sound: BottleShake,
+        Category: Misc,
+    }
+    recipe Convert to White Hair Dye
+    {
+        filcher.HairDyeSnowWhite,
+        filcher.HairDyeSnowWhite,
+        Result: HairDyeWhite,
+        Time: 200,
+        Sound: BottleShake,
+        Category: Misc,
+    }
+
+    recipe Mix Yellow Dye
+    {
+        PaintYellow;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.YellowDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+    recipe Mix Green Dye
+    {
+        PaintGreen/PaintTurquoise;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.GreenDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+    recipe Mix Red Dye
+    {
+        PaintRed;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.RedDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+    recipe Mix Blue Dye
+    {
+        PaintBlue/PaintLightBlue;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.BlueDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+    recipe Mix White Dye
+    {
+        PaintWhite;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.WhiteDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+    recipe Mix Black Dye
+    {
+        PaintBlack;3,
+        keep Sprout.DryingRack,
+        Water;5,
+        Result:Sprout.BlackDye,
+        Time:200.0,
+        Sound: BottleShake,
+        Category:Cooking,
+    }
+}

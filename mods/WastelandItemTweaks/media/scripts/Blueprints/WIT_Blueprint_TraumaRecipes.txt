@@ -1,0 +1,325 @@
+module Base {
+
+    recipe Craft Trauma Responder Helmet [Visor]
+    {
+        Thread=2,
+        [Recipe.GetItemTypes.BulletHelmets],,
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Helmet_Rook_FaceShield,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Trauma Responder Helmet [Defender]
+    {
+        Thread=2,
+        [Recipe.GetItemTypes.BulletHelmets],
+         keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Helmet,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Trauma Responder Helmet [Patriot]
+    {
+        Thread=2,
+        [Recipe.GetItemTypes.BulletHelmets],
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Helmet_Patriot,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Trauma Responder Cap
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=2,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Hat,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Balaclava [1 Hole]
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=4,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Balaclava_1Hole,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Balaclava [2 Hole]
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=4,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Balaclava_2Hole,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Balaclava [3 Hole]
+    {
+        Thread=2,
+        LeatherStrips=2,
+        RippedSheets=4,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Balaclava_3Hole,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Jacket
+    {
+        Button=2,
+        Thread=4,
+        Twine=2,
+        LeatherStrips=6,
+        RippedSheets=6,
+        keep Scissors,
+        keep KnittingNeedles/Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Jacket,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Vest
+    {
+        Thread=8,
+        LeatherStrips=2,
+        Sheet=2,
+        KevlarSheet=35,
+        SmallSheetMetal,
+        Wire=1,
+        keep Scissors,
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_BulletproofVest_Patriot,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Trauma Responder Gloves
+    {
+        Thread=1,
+        LeatherStrips=6,
+        Gloves_LeatherGloves/Gloves_LeatherGlovesSWAT/Gloves_LeatherGlovesSWATFull/Gloves_LeatherWalker/OCP_Camo_Gloves,
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Gloves,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Pants
+    {
+        Button=1,
+        Thread=2,
+        Twine=2,
+        LeatherStrips=2,
+        Sheet=2,
+        keep Scissors,
+        keep KnittingNeedles/Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Pants,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Boots
+    {
+        Thread=2,
+        LeatherStrips=4,
+        RippedSheets=2,
+        Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Tintable_Boots_01/Tintable_Boots_LowTop/OCP_Camo_TacBoots/OCP_Camo_Boots/Flecktarn_Camo_TacBoots/Fat03_Boots/Shoes_BlackBoots/Shoes_ArmyBootsOrange,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Boots,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder TacBoots
+    {
+        Thread=2,
+        LeatherStrips=4,
+        RippedSheets=2,
+        Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Tintable_Boots_01/Tintable_Boots_LowTop/OCP_Camo_Boots/OCP_Camo_TacBoots/Flecktarn_Camo_Boots/Fat03_Boots/Shoes_BlackBoots/Shoes_ArmyBootsOrange,
+        keep Scissors,
+        keep KnittingNeedles,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_TacBoots,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Backpack [Radio]
+    {
+        Thread=4,
+        LeatherStrips=2,
+        Sheet=1,
+        keep Scissors,
+        keep Needle,
+        Bag_SurvivorBag/Bag_ALICEpack/Bag_ALICEpack_Army/Bag_ALICEpack_UrbanCamo/Bag_Schoolbag/Bag_Schoolbag_Spiffo02/Tintable_Backpack_Strategist,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_Backpack,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=8,
+    }
+
+    recipe Craft Trauma Responder Gasmask
+    {
+        [Recipe.GetItemTypes.GasMasks],
+        Thread=2,
+        LeatherStrips=4,
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_GasMask,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Trauma Responder Container [Medium]
+    {
+        Thread=4,
+        LeatherStrips=4,
+        Sheet=2,
+        keep Scissors,
+        keep Needle,
+        Trauma_Responder_Blueprints_Final,
+        Result:Medical_Red_DarkZonePack,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Utility Leg Pouch [Medic]
+    {
+        Thread=4,
+        LeatherStrips=2,
+        keep Scissors,
+        keep Needle,
+        SWATPouch/CBX_Sumk_7_L/CBX_Sumk_7_R/Pouch_Leg_Tint_Left/Pouch_Leg_Tint_Right/Pouch_Leg_Tint_ArmorLeft/Pouch_Leg_Tint_ArmorRight/Pouch_Utility_Medium-Tint_Left/Pouch_Utility_Medium-Tint_Right/Pouch_Utility_Medium-Tint_ArmorLeft/Pouch_Utility_Medium-Tint_ArmorRight,
+        Trauma_Responder_Blueprints_Final,
+        Result:Pouch_Utility_Medium-Medic_Left,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Small Storm Pouch [Medic]
+    {
+        Thread=4,
+        LeatherStrips=2,
+        keep Scissors,
+        keep Needle,
+        FirstAidKit/CBX_Sumk_2_R/CBX_Sumk_2_L,
+        Trauma_Responder_Blueprints_Final,
+        Result:BagBack_StormPack_Small-Medic,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Medium Storm Pouch [Medic]
+    {
+        Thread=4,
+        LeatherStrips=2,
+        keep Scissors,
+        keep Needle,
+        Bag_L4DeadMedkit/BagBack_StormPack_Medium-Tint/CBX_Sumk_2_R/CBX_Sumk_2_L,
+        Trauma_Responder_Blueprints_Final,
+        Result:BagBack_StormPack_Medium-Medic,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Large Storm Pouch [Medic]
+    {
+        Thread=6,
+        LeatherStrips=4,
+        keep Scissors,
+        keep Needle,
+        CBX_Sumk_1M_L/CBX_Sumk_1M_R/BagBack_StormPack_Large-Tint,
+        Trauma_Responder_Blueprints_Final,
+        Result:BagBack_StormPack_Large-Medic,
+        Sound:ClothesRipping,
+        Time:300.0,
+        AnimNode:RipSheets,
+        Category:Tailoring,
+        SkillRequired:Tailoring=10,
+    }
+
+}

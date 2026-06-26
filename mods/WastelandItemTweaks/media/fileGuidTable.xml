@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+
+	<files>
+		<path>media/clothing/clothingItems/Bag_Jerrycan_LHand.xml</path>
+		<guid>ade5eb0c-5e60-4466-842e-1179aec5e6c2</guid>
+	</files>
+    <files>
+		<path>media/clothing/clothingItems/Bag_Jerrycan_RHand.xml</path>
+		<guid>fbe70839-b76a-48b4-9d31-db249e61a623</guid>
+	</files>
+
+</fileGuidTable>

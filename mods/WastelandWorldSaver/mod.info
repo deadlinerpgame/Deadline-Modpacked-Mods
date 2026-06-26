@@ -1,0 +1,4 @@
+﻿name=Wasteland World Saver Deadline
+id=WastelandWorldSaver_DL
+description=Stop the world from being picked clean.
+require=WastelandLib_DL

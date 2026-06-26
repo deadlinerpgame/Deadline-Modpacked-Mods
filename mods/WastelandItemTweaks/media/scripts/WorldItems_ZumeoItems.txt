@@ -1,0 +1,11 @@
+module Base
+{
+
+    model SpectrumBar_Ground
+    {
+        mesh = WorldItems/Snackcake_HiHis,
+		texture = WorldItems/SpectrumBar,
+        scale = 0.4,
+    }
+
+}

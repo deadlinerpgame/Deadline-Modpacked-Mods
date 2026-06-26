@@ -1,0 +1,15 @@
+ItemName_EN = {
+    ItemName_Base.Chocolate = "Zumeo Chocolate Bar",
+    ItemName_Base.Crisps = "Zumeo Chips",
+    ItemName_Base.Crisps2 = "Zumeo Chips",
+    ItemName_Base.Crisps3 = "Zumeo Chips",
+    ItemName_Base.Crisps4 = "Zumeo Chips",
+    ItemName_Base.GranolaBar = "Zumeo Breakfast Bar",
+	ItemName_Base.Cereal = "Zumeos Cereal",
+	ItemName_Base.CerealBowl = "Bowl of Zumeos Cereal",
+	ItemName_Base.TortillaChips = "Zumeo Crunchies",
+	ItemName_Base.HiHis = "Zumeo Crunch Logs",
+	ItemName_Base.Pop = "Zumeo Energy Drink",
+	ItemName_Base.JuiceBox = "Zumeo Juice Box",
+	ItemName_Base.SnoGlobes = "Zumeo Spectrum Bar",
+}

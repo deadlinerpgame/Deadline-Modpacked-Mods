@@ -1,0 +1,6 @@
+﻿name=Wasteland Safezone Deadline
+id=WastelandSafezone_DL
+poster=
+description=Custom safezones integrating with Wasteland mods. Requires Wasteland Lib.
+require=WastelandLib_DL
+version=0.0.1

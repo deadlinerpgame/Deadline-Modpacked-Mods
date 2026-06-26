@@ -1,0 +1,93 @@
+module Base {
+
+	/************************* BLUEPRINT PARTS **************************/
+
+	recipe Open Blueprint Pack (General)
+	{
+		BlueprintPackGeneral,
+		Result: BlueprintPackGeneral,
+		RemoveResultItem:true,
+		Time: 200,
+		Sound: ScrapStuff,
+		Category: Misc,
+		OnCreate:Recipe.OnCreate.OpenBlueprintPackGeneral,
+	}
+
+	recipe Open Blueprint Pack (Event)
+	{
+		BlueprintPackEvent,
+		Result: BlueprintPackEvent,
+		RemoveResultItem:true,
+		Time: 200,
+		Sound: ScrapStuff,
+		Category: Misc,
+		OnCreate:Recipe.OnCreate.OpenBlueprintPackEvent,
+	}
+
+	recipe Open Blueprint Pack (Dungeon)
+	{
+		BlueprintPackDungeon,
+		Result: BlueprintPackDungeon,
+		RemoveResultItem:true,
+		Time: 200,
+		Sound: ScrapStuff,
+		Category: Misc,
+		OnCreate:Recipe.OnCreate.OpenBlueprintPackDungeon,
+	}
+
+	recipe Assemble Upgraded Belt Blueprint
+	{
+		UpgradedBeltBlueprintScrap=3,
+		Result:Base.UpgradedBeltBlueprint_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble Rattler SMG Blueprint
+	{
+		RattlerSmgBlueprintScrap=5,
+		Result:Base.RattlerSmgBlueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble Thompson SMG Blueprint
+	{
+		ThompsonSmgBlueprintScrap=5,
+		Result:Base.ThompsonSmgBlueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble Camo Medic Clothing Blueprint
+	{
+		CamoMedicClothingBlueprintScrap=5,
+		Result:Base.Camo_Medic_Clothing_Blueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble Caution Pack Blueprint
+	{
+		CautionPackBlueprintScrap=5,
+		Result:Base.CautionPack_Blueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble SWAT Clothing Blueprint
+	{
+		SwatClothingBlueprintScrap=7,
+		Result:Base.SWAT_Clothing_Blueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+
+	recipe Assemble Trauma Responder Blueprint
+	{
+		TraumaResponderBlueprintScrap=7,
+		Result:Base.Trauma_Responder_Blueprints_Final,
+		Time: 200,
+		Category: Misc,
+	}
+}

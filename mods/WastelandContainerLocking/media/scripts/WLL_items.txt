@@ -1,0 +1,50 @@
+module Base {
+
+    item WLLCombinationPadlock
+    {
+        DisplayCategory = Security,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Combination Padlock,
+        Icon = PadlockDigital,
+        MetalValue = 15,
+        Tooltip = Tooltip_Padlock,
+        WorldStaticModel = CombinationPadlock,
+    }
+
+    item WLLPadlock
+    {
+        DisplayCategory = Security,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Padlock,
+        Icon = Padlock,
+        MetalValue = 15,
+        Tooltip = Tooltip_Padlock,
+        WorldStaticModel = Padlock,
+    }
+
+    item WLLSlotlock
+    {
+        DisplayCategory = Security,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Slotlock,
+        Icon = Padlock,
+        MetalValue = 15,
+        Tooltip = Tooltip_Slotlock,
+        WorldStaticModel = Padlock,
+    }
+
+    item WLLDoorLock
+    {
+        DisplayCategory = Security,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Door Lock,
+        Icon = DoorKnob,
+        MetalValue = 15,
+        Tooltip = Tooltip_DoorLock,
+        WorldStaticModel = DoorKnob,
+    }
+}

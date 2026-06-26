@@ -1,0 +1,65 @@
+module Base
+{
+    item GasMaskFilter
+    {
+        DisplayCategory = Misc,
+        Weight = 0.5,
+        Type = Drainable,
+        UseDelta = 0.02,
+        UseWhileEquipped = FALSE,
+        cantBeConsolided = TRUE,
+        DisplayName = Gas Mask Filter,
+        Icon = GasmaskFilter,
+        Tooltip = Tooltip_GasmaskFilter,
+        StaticModel = GasmaskFilter,
+        WorldStaticModel = GasmaskFilter,
+    }
+    item GasMaskFilter_Empty
+    {
+        DisplayCategory = Misc,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Gas Mask Filter (Empty),
+        Icon = GasmaskFilter,
+        Tooltip = Tooltip_GasmaskFilter_Empty,
+        StaticModel = GasmaskFilter,
+        WorldStaticModel = GasmaskFilter,
+    }
+    item GasMaskFilterHomemade
+    {
+        DisplayCategory = Misc,
+        Weight = 0.5,
+        Type = Drainable,
+        UseDelta = 0.04,
+        UseWhileEquipped = FALSE,
+        cantBeConsolided = TRUE,
+        DisplayName = Homemade Gas Mask Filter,
+        Icon = GasmaskFilterHomemade,
+        Tooltip = Tooltip_GasmaskFilterHomemade,
+        StaticModel = GasmaskFilterHomemade,
+        WorldStaticModel = GasmaskFilter_Homemade,
+    }
+    item GasMaskFilterHomemade_Empty
+    {
+        DisplayCategory = Misc,
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName = Homemade Gas Mask Filter (Empty),
+        Icon = GasmaskFilterHomemade,
+        Tooltip = Tooltip_GasmaskFilter_Empty,
+        StaticModel = GasmaskFilterHomemade,
+        WorldStaticModel = GasmaskFilter_Homemade,
+    }
+    model GasmaskFilter
+    {
+        mesh = GasmaskFilter,
+        texture = GasmaskFilter,
+        scale = 0.2,
+    }
+    model GasmaskFilter_Homemade
+    {
+        mesh = GasmaskFilter_Homemade,
+        texture = GasmaskFilterHomemade,
+        scale = 0.2,
+    }
+}

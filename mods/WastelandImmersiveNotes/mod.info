@@ -1,0 +1,4 @@
+﻿name=Wasteland Immersive Notes Deadline
+id=WastelandImmersiveNotes_DL
+description=Changes note items so they have a new UI
+require=WastelandLib_DL

@@ -1,0 +1,74 @@
+module Base {
+
+    sound CoinClink
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/CoinClink.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.08,
+        }
+    }
+
+    sound Scissors
+    {
+        category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/Scissors.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.3,
+        }
+    }
+
+	sound ClipLoad
+	{
+		category = Item, loop = false, is3D = false,
+        clip {
+            file = media/sound/stormy9mmClipLoad.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 1.0,
+        }
+	}
+
+	sound NestSnap
+    {
+        category = Item, loop = false, is3D = true,
+        clip {
+            file = media/sound/NestSnap.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.15,
+        }
+    }
+
+    sound ExhaleMaskOff
+    {
+        category = Item, loop = false, is3D = true,
+        clip {
+            file = media/sound/ExhaleMaskOff.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.3,
+        }
+    }
+
+    sound GasMaskBreathing
+    {
+        category = Item, loop = false, is3D = true,
+        clip {
+            file = media/sound/GasMaskBreathing1.ogg,
+            distanceMin = 10,
+            distanceMax = 10,
+            reverbFactor = 0.1,
+            volume = 0.5,
+        }
+    }
+}

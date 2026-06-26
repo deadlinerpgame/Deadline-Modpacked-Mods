@@ -1,0 +1,4 @@
+IGUI_EN = {
+	IGUI_WFHasSprinkler = "Has sprinkler attached.",
+	IGUI_WFTokens_TooManyPlots = "You have too many plots!",
+}
