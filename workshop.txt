@@ -1,0 +1,8 @@
+version=1
+id=3752308001
+title=Deadline Modpacked Mods
+description=Contains mods that have been modpacked for use on DeadlineRP. All mods have been modpacked with permission, ff you are a mod author and your work has been included without your permission, please contact a DeadlineRP manager through the Discord server.
+description=Join us at discord.gg/deadline-rp
+description=Unless otherwise noted, all copyrights and ownership of the original mods remain with their respective authors. This repository contains the original works, along with modifications and integrations created for use on DeadlineRP. No ownership of the original content is claimed by DeadlineRP.
+tags=Build 41
+visibility=unlisted
