@@ -23,7 +23,7 @@ end
 
 local FONT = UIFont.Small
 local MODULE_INVISIBLE = "Invisible"
-local MODULE_DISGUISED = "Disguised"
+--local MODULE_DISGUISED = "Disguised"
 local MODULE_OPEN = "Open"
 local MODULE_DND = "DND"
 local LINE_HEIGHT = getTextManager():MeasureStringY(FONT, "[Invisible]")
@@ -32,17 +32,18 @@ local PRIMARY_COLOR = { r = 0.6, g = 0.6, b = 0.6, a = 1.0 }
 local OPEN_COLOR = { r = 0.2, g = 0.9, b = 0.2, a = 1.0 }
 local DND_COLOR = { r = 0.9, g = 0.2, b = 0.2, a = 1.0 }
 
-local function buildIndicatorText(username, isGhost, isDisguised)
+local function buildIndicatorText(username, isGhost) -- removed , isDisguised
     local modules = {}
     local textColor = PRIMARY_COLOR
 
     if isGhost then
         modules[#modules + 1] = MODULE_INVISIBLE
     end
-    if isDisguised then
+--[[
+        if isDisguised then
         modules[#modules + 1] = MODULE_DISGUISED
     end
-
+    ]]
     if WAT.InvisibleIndicator.ShowEventPreference then
         local playerStatus = WPC_System:getStatus(username)
         if playerStatus then
@@ -85,7 +86,7 @@ function WAT.InvisibleIndicator.ShowInvisibleIndicators()
         local player = allPlayers:get(i)
         local username = player:getUsername()
 
-        local indicatorText, indicatorColor = buildIndicatorText(username, player:isGhostMode(), WLDi_System:isDisguised(username))
+        local indicatorText, indicatorColor = buildIndicatorText(username, player:isGhostMode()) -- removed , WLDi_System:isDisguised(username))
         if indicatorText then
             local x = isoToScreenX(0, player:getX(), player:getY(), player:getZ())
             local y = isoToScreenY(0, player:getX(), player:getY(), player:getZ())
