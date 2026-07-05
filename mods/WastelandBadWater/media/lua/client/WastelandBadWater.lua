@@ -9,7 +9,6 @@ end
 local original_ISWorldObjectContextMenu_doFillWaterMenu = ISWorldObjectContextMenu.doFillWaterMenu
 
 ISWorldObjectContextMenu.doFillWaterMenu = function(sink, playerNum, context)
-    if SandboxVars.WastelandItemTweaks.BadWater then
         if isWorldSink(sink) and not sink:isTaintedWater() then
             sink:setTaintedWater(true)
             sink:transmitCompleteItemToServer()
