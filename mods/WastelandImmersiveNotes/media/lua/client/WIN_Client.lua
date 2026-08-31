@@ -5,6 +5,9 @@
 
 if not isClient() then return end
 
+require "UI/WIN_NewspaperWindow"
+require "WIN_NewspaperData"
+
 WIN_Client = {}
 
 --- Sends a message to other players to show them an ID card window.
@@ -26,6 +29,19 @@ function WIN_Client.showPageToPlayers(playerUsernames, pageContent, fontKey, ski
         languageKey = languageKey
     }
 	sendClientCommand(getPlayer(), "WastelandImmersiveNotes", "showPageToPlayers", cardData)
+end
+
+--- Sends a newspaper payload to other players for read-only display.
+--- @param playerUsernames table list of all usernames to send the newspaper to
+--- @param newspaperData table structured newspaper content from WIN_NewspaperData
+function WIN_Client.showNewspaperToPlayers(playerUsernames, newspaperData)
+	if not playerUsernames then error("playerUsernames is missing") end
+	if not newspaperData then error("newspaperData is missing") end
+    local cardData = {
+        usernames = playerUsernames,
+        newspaperData = WIN_NewspaperData.normalize(newspaperData),
+    }
+	sendClientCommand(getPlayer(), "WastelandImmersiveNotes", "showNewspaperToPlayers", cardData)
 end
 
 local serverCommands = {}
@@ -51,6 +67,17 @@ function serverCommands.showPage(pageData)
     end
 
     WIN_NotePaperWindow.displayFromServerMessage(pageContent, pageData.fontKey, pageData.skinKey)
+end
+
+function serverCommands.showNewspaper(pageData)
+	if not pageData then
+        error("pageData is missing from showNewspaper")
+    end
+    if not pageData.newspaperData then
+        error("newspaperData is missing from pageData")
+    end
+
+    WIN_NewspaperWindow.displayFromServerMessage(pageData.newspaperData)
 end
 
 local function processServerCommand(module, command, args)

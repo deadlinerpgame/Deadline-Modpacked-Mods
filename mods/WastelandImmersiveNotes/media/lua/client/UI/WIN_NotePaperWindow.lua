@@ -196,6 +196,19 @@ function WIN_NotePaperWindow:onSave()
         WIN_Utils.setLanguageKey(self.notebook, WIN_Utils.getDefaultNoteLanguageKey())
     end
     self.pageContents[self.currentPage] = self.textBox:getText()
+    if WIN_Utils.hasPageContentChanges(self.originalPageContents, self.pageContents) then
+        WIN_Utils.clearHandwritingDisguise(self.notebook)
+        if WIN_Utils.hasWrittenContent(self.pageContents) then
+            local authorIdentity = WIN_Utils.getAuthorIdentity(getPlayer())
+            if authorIdentity then
+                WIN_Utils.setLastAuthorUsername(self.notebook, authorIdentity)
+            else
+                WIN_Utils.clearLastAuthorUsername(self.notebook)
+            end
+        else
+            WIN_Utils.clearLastAuthorUsername(self.notebook)
+        end
+    end
     WIN_Utils.writeContentChangeLog(getPlayer(), self.notebook, self.originalPageContents, self.pageContents)
     for i,v in ipairs(self.pageContents) do
         self.notebook:addPage(i,v)
@@ -261,7 +274,16 @@ end
 
 function WIN_NotePaperWindow:getLightLevelToDraw()
     local player = getPlayer()
-    local lightLevel = player:getSquare():getLightLevel(player:getPlayerNum())
+    if not player then
+        return 1
+    end
+
+    local square = player:getSquare()
+    if not square then
+        return 1
+    end
+
+    local lightLevel = square:getLightLevel(player:getPlayerNum())
     if lightLevel < 0.75 then lightLevel = lightLevel - 0.27 end
     if lightLevel < 0.05 then lightLevel = 0.05 end
 
@@ -275,8 +297,28 @@ function WIN_NotePaperWindow:getLightLevelToDraw()
     return self.currLightLevel
 end
 
+function WIN_NotePaperWindow:updateIconButtonLightLevel(lightLevel)
+    if self.saveButton then
+        self.saveButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    end
+    self.cancelButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    if self.clearButton then
+        self.clearButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    end
+    if self.lockButton then
+        self.lockButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    end
+    if self.prevPageButton then
+        self.prevPageButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    end
+    if self.nextPageButton then
+        self.nextPageButton:setTextureRGBA(lightLevel, lightLevel, lightLevel, 1)
+    end
+end
+
 function WIN_NotePaperWindow:prerender()
     local lightLevel = self:getLightLevelToDraw()
+    self:updateIconButtonLightLevel(lightLevel)
     self.pinButton:setVisible(false)
     self.collapseButton:setVisible(false)
     self.closeButton:setVisible(false)

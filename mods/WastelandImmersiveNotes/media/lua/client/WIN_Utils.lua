@@ -6,6 +6,9 @@
 WIN_Utils = {}
 WIN_Utils.DEFAULT_LANGUAGE_KEY = "en"
 WIN_Utils.NOTE_UID_KEY = "WIN_UID"
+WIN_Utils.LAST_AUTHOR_USERNAME_KEY = "WIN_LastAuthorUsername"
+WIN_Utils.DISGUISED_HANDWRITING_KEY = "WIN_IsHandwritingDisguised"
+WIN_Utils.DEBUG_HANDWRITING_COMPARISONS = false
 WIN_Utils.ASL_LANGUAGE_KEY = "asl"
 WIN_Utils.BROKEN_ENGLISH_LANGUAGE_KEY = "pen"
 
@@ -29,7 +32,10 @@ end
 
 function WIN_Utils.isPaperSheet(fullType)
     if fullType == "Base.Newspaper"
+        or fullType == "Base.WIN_PlayerNewspaper"
+        or fullType == "Base.WIN_NewspaperDraft"
         or fullType == "Base.SheetPaper2"
+        or fullType == "Base.Parchment"
         or string.sub(fullType, 1, 20) == "RPDescriptors.Pinned" then
         return true
     end
@@ -54,7 +60,9 @@ function WIN_Utils.getFontKey(writeableItem)
 end
 
 function WIN_Utils.getSkinKey(writeableItem)
-    if WIN_Utils.isPaperSheet(writeableItem:getFullType()) then
+    if writeableItem:getFullType() == "Base.Parchment" then
+        return "Base.Parchment"
+    elseif WIN_Utils.isPaperSheet(writeableItem:getFullType()) then
         return writeableItem:getModData()["WIN_Skin"] or WIN_LiteratureSkin.DEFAULT_SHEET_PAPER_TYPE
     elseif WIN_Utils.isBook(writeableItem:getFullType()) then
         if WIN_LiteratureSkin.findFromKey(writeableItem:getFullType()) then
@@ -105,6 +113,113 @@ function WIN_Utils.clearLanguageKey(writeableItem)
     writeableItem:getModData()["WIN_Language"] = nil
 end
 
+function WIN_Utils.getLastAuthorUsername(writeableItem)
+    local username = writeableItem:getModData()[WIN_Utils.LAST_AUTHOR_USERNAME_KEY]
+    if username ~= nil and username ~= "" then
+        return username
+    end
+    return nil
+end
+
+function WIN_Utils.setLastAuthorUsername(writeableItem, username)
+    writeableItem:getModData()[WIN_Utils.LAST_AUTHOR_USERNAME_KEY] = username
+end
+
+function WIN_Utils.clearLastAuthorUsername(writeableItem)
+    writeableItem:getModData()[WIN_Utils.LAST_AUTHOR_USERNAME_KEY] = nil
+end
+
+function WIN_Utils.isHandwritingDisguised(writeableItem)
+    return writeableItem:getModData()[WIN_Utils.DISGUISED_HANDWRITING_KEY] == true
+end
+
+function WIN_Utils.disguiseHandwriting(writeableItem)
+    writeableItem:getModData()[WIN_Utils.DISGUISED_HANDWRITING_KEY] = true
+end
+
+function WIN_Utils.clearHandwritingDisguise(writeableItem)
+    writeableItem:getModData()[WIN_Utils.DISGUISED_HANDWRITING_KEY] = nil
+end
+
+function WIN_Utils.writeHandwritingComparisonDebug(sourceItem, candidateItem, result)
+    if not WIN_Utils.DEBUG_HANDWRITING_COMPARISONS then
+        return
+    end
+
+    local sourceAuthor = WIN_Utils.getLastAuthorUsername(sourceItem) or "none"
+    local candidateAuthor = WIN_Utils.getLastAuthorUsername(candidateItem) or "none"
+    local sourceDisguised = tostring(WIN_Utils.isHandwritingDisguised(sourceItem))
+    local candidateDisguised = tostring(WIN_Utils.isHandwritingDisguised(candidateItem))
+    print(string.format(
+        "[WastelandImmersiveNotes] Handwriting comparison: %s | source=%s | candidate=%s | sourceAuthor=%s | candidateAuthor=%s | sourceDisguised=%s | candidateDisguised=%s",
+        result,
+        WIN_Utils.getLogIdentity(sourceItem),
+        WIN_Utils.getLogIdentity(candidateItem),
+        sourceAuthor,
+        candidateAuthor,
+        sourceDisguised,
+        candidateDisguised))
+end
+
+function WIN_Utils.canIdentifyHandwriting(player)
+    if WL_Utils.isStaff(player) or not WIN_WDCIntegration.isActive() then
+        return true
+    end
+    return WIN_WDCIntegration.hasSufficientInvestigation(player)
+end
+
+function WIN_Utils.canDisguiseHandwriting(player, authorUsername)
+    if WL_Utils.isStaff(player) then
+        return true
+    end
+    if not authorUsername or WIN_Utils.getAuthorIdentity(player) ~= authorUsername then
+        return false
+    end
+    return WIN_WDCIntegration.isActive()
+        and WIN_WDCIntegration.hasSufficientDeception(player)
+end
+
+function WIN_Utils.getAuthorIdentity(player)
+    if not player then
+        return nil
+    end
+
+    local username = player:getUsername()
+    if not WL_Utils.isStaff(player) then
+        return username
+    end
+
+    local roleplayName = WL_Utils.getRolePlayChatName(username)
+    if not roleplayName or roleplayName == username then
+        return nil
+    end
+    return roleplayName
+end
+
+function WIN_Utils.hasWrittenContent(pageContents)
+    for _, pageContent in pairs(pageContents or {}) do
+        if string.find(tostring(pageContent or ""), "%S") then
+            return true
+        end
+    end
+    return false
+end
+
+function WIN_Utils.hasPageContentChanges(oldPages, newPages)
+    local oldPageCount = oldPages and #oldPages or 0
+    local newPageCount = newPages and #newPages or 0
+    local maxPageCount = math.max(oldPageCount, newPageCount)
+
+    for i = 1, maxPageCount do
+        local oldText = (oldPages and oldPages[i]) or ""
+        local newText = (newPages and newPages[i]) or ""
+        if oldText ~= newText then
+            return true
+        end
+    end
+    return false
+end
+
 function WIN_Utils.getNoteUID(writeableItem)
     local uid = writeableItem:getModData()[WIN_Utils.NOTE_UID_KEY]
     if uid ~= nil and uid ~= "" then
@@ -147,6 +262,48 @@ local function sanitizeForLog(text)
     return value
 end
 
+local function addChangedValue(changedValues, label, oldValue, newValue)
+    local oldText = tostring(oldValue or "")
+    local newText = tostring(newValue or "")
+    if oldText ~= newText then
+        table.insert(changedValues, string.format("%s: \"%s\" -> \"%s\"",
+            label, sanitizeForLog(oldText), sanitizeForLog(newText)))
+    end
+end
+
+local function getLogLocation(player)
+    local x = 0
+    local y = 0
+    local z = 0
+    if player then
+        x = math.floor(player:getX())
+        y = math.floor(player:getY())
+        z = math.floor(player:getZ())
+    end
+    return x, y, z
+end
+
+local function writeChangedValuesLog(player, writeableItem, changedValues)
+    if #changedValues == 0 then
+        return false
+    end
+
+    WIN_Utils.ensureNoteUID(writeableItem)
+
+    local username = player and player:getUsername() or "unknown"
+    local x, y, z = getLogLocation(player)
+    WL_Utils.writeLog("WrittenNotes", string.format(
+        "%s modified %s | %s at %d,%d,%d",
+        username,
+        WIN_Utils.getLogIdentity(writeableItem),
+        table.concat(changedValues, " | "),
+        x,
+        y,
+        z
+    ))
+    return true
+end
+
 function WIN_Utils.getLogIdentity(writeableItem)
     local languageKey = WIN_Utils.getStoredLanguageKey(writeableItem) or "none"
     local uid = WIN_Utils.getNoteUID(writeableItem) or "none"
@@ -163,6 +320,18 @@ function WIN_Utils.writeRenameLog(player, writeableItem, oldName, newName)
         username, WIN_Utils.getLogIdentity(writeableItem), oldName, newName))
 end
 
+function WIN_Utils.writeHandwritingDisguiseLog(player, writeableItem)
+    local username = player and player:getUsername() or "unknown"
+    local x, y, z = getLogLocation(player)
+    WL_Utils.writeLog("WrittenNotes", string.format(
+        "%s disguised the handwriting on %s at %d,%d,%d",
+        username,
+        WIN_Utils.getLogIdentity(writeableItem),
+        x,
+        y,
+        z))
+end
+
 function WIN_Utils.writeContentChangeLog(player, writeableItem, oldPages, newPages)
     local changedPageContents = {}
     local oldPageCount = oldPages and #oldPages or 0
@@ -177,31 +346,85 @@ function WIN_Utils.writeContentChangeLog(player, writeableItem, oldPages, newPag
         end
     end
 
-    if #changedPageContents == 0 then
-        return false
+    return writeChangedValuesLog(player, writeableItem, changedPageContents)
+end
+
+local function getNewspaperPageConfigName(pageData)
+    return WIN_NewspaperData.getPageConfigName(pageData.pageConfigKey)
+end
+
+local function getNewspaperImageName(pageData)
+    local imageKey = pageData.imageKey or ""
+    if imageKey == "" then
+        return "none"
     end
 
-    WIN_Utils.ensureNoteUID(writeableItem)
+    local imageOption = WIN_NewspaperData.getImageOption(imageKey)
+    if imageOption and imageOption.name then
+        return imageOption.name .. " (" .. imageKey .. ")"
+    end
+    return imageKey
+end
 
+local function addNewspaperColumnChanges(changedValues, pageIndex, columnIndex, oldColumn, newColumn)
+    local labelPrefix = string.format("Page %d Column %d ", pageIndex, columnIndex)
+    addChangedValue(changedValues, labelPrefix .. "Headline", oldColumn.title, newColumn.title)
+    addChangedValue(changedValues, labelPrefix .. "Author", oldColumn.author, newColumn.author)
+    addChangedValue(changedValues, labelPrefix .. "Body", oldColumn.body, newColumn.body)
+end
+
+function WIN_Utils.writeNewspaperChangeLog(player, newspaperItem, oldNewspaperData, newNewspaperData)
+    local oldData = WIN_NewspaperData.normalize(oldNewspaperData)
+    local newData = WIN_NewspaperData.normalize(newNewspaperData)
+    local changedValues = {}
+
+    addChangedValue(changedValues, "Paper Name", oldData.paperName, newData.paperName)
+    addChangedValue(changedValues, "Issue Number", oldData.issueNumber, newData.issueNumber)
+    addChangedValue(changedValues, "Issue Date", oldData.issueDate, newData.issueDate)
+    if oldData.pageCount ~= newData.pageCount then
+        table.insert(changedValues, string.format("Page Count: %d -> %d", oldData.pageCount, newData.pageCount))
+    end
+
+    local maxPageCount = math.max(oldData.pageCount, newData.pageCount)
+    for pageIndex = 1, maxPageCount do
+        local oldPageData = oldData.pages[pageIndex]
+        local newPageData = newData.pages[pageIndex]
+        if oldPageData and newPageData and pageIndex <= oldData.pageCount and pageIndex <= newData.pageCount then
+            addChangedValue(changedValues, string.format("Page %d Layout", pageIndex),
+                getNewspaperPageConfigName(oldPageData), getNewspaperPageConfigName(newPageData))
+            addChangedValue(changedValues, string.format("Page %d Image", pageIndex),
+                getNewspaperImageName(oldPageData), getNewspaperImageName(newPageData))
+
+            for columnIndex = 1, WIN_NewspaperData.COLUMN_COUNT do
+                addNewspaperColumnChanges(
+                    changedValues,
+                    pageIndex,
+                    columnIndex,
+                    oldPageData.columns[columnIndex],
+                    newPageData.columns[columnIndex]
+                )
+            end
+        end
+    end
+
+    return writeChangedValuesLog(player, newspaperItem, changedValues)
+end
+
+function WIN_Utils.writeNewspaperPrintLog(player, draftItem, copyCount, newspaperData)
+    local issueData = WIN_NewspaperData.normalize(newspaperData)
     local username = player and player:getUsername() or "unknown"
-    local x = 0
-    local y = 0
-    local z = 0
-    if player then
-        x = math.floor(player:getX())
-        y = math.floor(player:getY())
-        z = math.floor(player:getZ())
-    end
+    local x, y, z = getLogLocation(player)
     WL_Utils.writeLog("WrittenNotes", string.format(
-        "%s modified %s | %s at %d,%d,%d",
+        "%s printed %d copies of %s %s from %s at %d,%d,%d",
         username,
-        WIN_Utils.getLogIdentity(writeableItem),
-        table.concat(changedPageContents, " | "),
+        copyCount,
+        issueData.paperName,
+        WIN_NewspaperData.getIssueLabel(issueData),
+        WIN_Utils.getLogIdentity(draftItem),
         x,
         y,
         z
     ))
-    return true
 end
 
 function WIN_Utils.getLanguageDisplayName(languageKey)
@@ -332,4 +555,11 @@ function WIN_Utils.isSpecialItem(writeableItem)
     end
 
     return false
+end
+
+function WIN_Utils.isComparableNote(writeableItem)
+    return writeableItem:getCategory() == "Literature"
+        and writeableItem:canBeWrite()
+        and not WIN_NewspaperData.isNewspaperItem(writeableItem)
+        and not WIN_Utils.isSpecialItem(writeableItem)
 end
