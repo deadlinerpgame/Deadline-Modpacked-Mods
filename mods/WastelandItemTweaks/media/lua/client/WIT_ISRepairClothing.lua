@@ -26,7 +26,7 @@ function ISRepairClothing:perform()
         self.character:resetModel();
         patchKit:Use()
         self.thread:Use()
-        
+
         triggerEvent("OnClothingUpdated", self.character)
 
         ISBaseTimedAction.perform(self);

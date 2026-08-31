@@ -739,6 +739,7 @@ module Base {
         Category: Metalworking,
         SkillRequired: MetalWelding=10,
         CanBeDoneFromFloor:true,
+        OnTest:WIT_RecipeTests.BlowTorchInPlayerInventory,
     }
 
     recipe Craft Electrical Generator Mechanism
@@ -1212,6 +1213,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Red Glowstick
     {
@@ -1223,6 +1225,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Green Glowstick
     {
@@ -1234,6 +1237,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Orange Glowstick
     {
@@ -1245,6 +1249,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Purple Glowstick
     {
@@ -1256,6 +1261,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Pink Glowstick
     {
@@ -1267,6 +1273,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill Yellow Glowstick
     {
@@ -1278,6 +1285,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Refill White Glowstick
     {
@@ -1289,6 +1297,7 @@ module Base {
         Time:50,
         Sound:MakePlaster,
         Category:General,
+        OnTest:WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Craft Pager
     {

@@ -149,6 +149,7 @@ function WIT_Pager_UI:onSend()
     end
     
     sendClientCommand(self.character, "WIT_Pager", "sendMessage", {recipients = selectedPlayers, message = tostring(message)})
+    WRC.SendLocalEmote("sent a pager alert")
     self:close()
 end
 
