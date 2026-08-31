@@ -339,6 +339,7 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
     local myPlayer = getPlayer()
     local isMe = myPlayer:getUsername() == parsedMessage.playerUsername
     local canUnderstandLanguage = WRC.Meta.CanUnderstand(parsedMessage.language)
+    local canUnderstandOwnSpeech = isMe and WRC.Meta.CanSpeak(parsedMessage.language)
     -- check if radio message
     if chatMessage:getRadioChannel() > 0 then
         parsedMessage.radioFrequency = chatMessage:getRadioChannel()
@@ -469,8 +470,23 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
 
     if myPlayer:HasTrait("Deaf") and SandboxVars.WastelandRpChat.EnableDeaf and (not isMe or parsedMessage.fromRecorder) then
         WRC.Parsing.AdjustForDeaf(parsedMessage)
-    elseif not canUnderstandLanguage then
+    elseif not canUnderstandLanguage and not canUnderstandOwnSpeech then
         WRC.Parsing.AdjustForUnknownLanguage(parsedMessage)
+    end
+
+    if parsedMessage.radioFrequency and not isMe then
+        local sourcePos = parsedMessage.pos
+        if chattingPlayer then
+            sourcePos = { x = chattingPlayer:getX(), y = chattingPlayer:getY() }
+        end
+        if sourcePos then
+            local xDist = myPlayer:getX() - sourcePos.x
+            local yDist = myPlayer:getY() - sourcePos.y
+            local distanceSq = xDist * xDist + yDist * yDist
+            if distanceSq > 500 * 500 then
+                WRC.Parsing.AdjustForRadioStatic(parsedMessage, 10)
+            end
+        end
     end
 
     local formattedMessage = WRC.Parsing.FormatMessage(parsedMessage)
