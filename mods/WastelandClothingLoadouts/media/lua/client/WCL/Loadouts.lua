@@ -18,6 +18,7 @@ WCL_Loadouts.DEFAULT_RESTORE_OPTIONS = {
     restoreItems = true,     -- Restore inventory items
     restoreIdentity = true,  -- Restore WRC identity data
     restoreHair = true,      -- Restore hair and beard style/color
+    restoreGender = true,    -- Restore character gender
     restoreCharacteristics = true  -- Restore WastelandDisguises characteristics
 }
 
@@ -704,7 +705,8 @@ function WCL_Loadouts.captureCurrent(player)
         items = serializedItems,
         metadata = {
             captureDate = os.time(),
-            playerName = player:getUsername()
+            playerName = player:getUsername(),
+            gender = player:isFemale()
         }
     }
     
@@ -1158,6 +1160,18 @@ function WCL_Loadouts.applyInventory(player, loadout, options)
     end
     
     local inventory = player:getInventory()
+
+    -- Apply gender before restoring clothing and hair so gender-specific visuals use the correct model.
+    if options.restoreGender and loadout.metadata and type(loadout.metadata.gender) == "boolean" then
+        player:setFemale(loadout.metadata.gender)
+        player:getDescriptor():setFemale(loadout.metadata.gender)
+        player:resetModel()
+        if isClient() then
+            sendClientCommand(player, "WastelandClothingLoadouts", "ChangeGender", {
+                isFemale = loadout.metadata.gender
+            })
+        end
+    end
     
     -- Phase 1: Reset player
     WCL_Loadouts.resetPlayer(player, false, options)

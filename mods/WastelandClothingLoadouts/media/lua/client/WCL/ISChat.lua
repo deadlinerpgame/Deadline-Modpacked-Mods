@@ -221,7 +221,7 @@ function ISChat:onLoadoutButtonClick()
     -- Change Gender option
     local genderSubmenu = context:getNew(context)
     context:addSubMenu(context:addOption("Change Gender"), genderSubmenu)
-    local info = genderSubmenu:addOption("!!! ONLY LOCAL - NOT SYNCED !!!")
+    local info = genderSubmenu:addOption("!!! SERVER SYNCED !!!")
     info.notAvailable = true
     genderSubmenu:addOption("Male", self, ISChat.onChangeGender, false)
     genderSubmenu:addOption("Female", self, ISChat.onChangeGender, true)
@@ -418,7 +418,9 @@ end
 function ISChat:onChangeGender(isFemale)
     local player = getPlayer()
     player:setFemale(isFemale)
+    player:getDescriptor():setFemale(isFemale)
     player:resetModel()
+    sendClientCommand(player, "WastelandClothingLoadouts", "ChangeGender", {isFemale = isFemale})
     if isFemale then
         infoLine("Changed gender to Female")
     else

@@ -8,6 +8,22 @@ WCL_Loadouts.Loadouts = WCL_Loadouts.Loadouts or {}
 local Commands = {}
 local lastTry = 0
 local didGetInitialLoadouts = false
+local gendersByUsername = {}
+
+local function applyGender(player, isFemale)
+    if not player or player:isFemale() == isFemale then return end
+    player:setFemale(isFemale)
+    player:getDescriptor():setFemale(isFemale)
+    player:resetModelNextFrame()
+end
+
+local function applyKnownGender(player)
+    if player == getPlayer() then return end
+    local isFemale = gendersByUsername[player:getUsername()]
+    if type(isFemale) == "boolean" then
+        applyGender(player, isFemale)
+    end
+end
 
 local function checkForInitialLoadout()
     if didGetInitialLoadouts then
@@ -47,7 +63,34 @@ function Commands.SyncPlayerLoadouts(args)
     WCL_Loadouts.PlayerLoadouts = args
 end
 
+function Commands.SyncGender(args)
+    if not args or type(args.username) ~= "string" or type(args.isFemale) ~= "boolean" then
+        return
+    end
+
+    gendersByUsername[args.username] = args.isFemale
+    if type(args.onlineID) == "number" then
+        applyGender(getPlayerByOnlineID(args.onlineID), args.isFemale)
+    end
+end
+
+function Commands.SyncGenders(args)
+    gendersByUsername = {}
+    if not args then return end
+
+    for username, genderData in pairs(args) do
+        if type(username) == "string" and type(genderData) == "table"
+            and type(genderData.isFemale) == "boolean" then
+            gendersByUsername[username] = genderData.isFemale
+            if type(genderData.onlineID) == "number" then
+                applyGender(getPlayerByOnlineID(genderData.onlineID), genderData.isFemale)
+            end
+        end
+    end
+end
+
 Events.OnServerCommand.Add(processServerCommand)
+Events.OnPlayerUpdate.Add(applyKnownGender)
 Events.OnInitWorld.Add(function()
     Events.OnTick.Add(checkForInitialLoadout)
 end)
