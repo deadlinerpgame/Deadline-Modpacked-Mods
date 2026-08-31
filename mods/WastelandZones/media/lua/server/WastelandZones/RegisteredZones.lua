@@ -160,11 +160,12 @@ function RegisteredZones:flushSave()
         return
     end
 
-    self.saveDirty = false
-    self.saveTicksRemaining = -1
-
     local data = self:getAllSerialized()
     WastelandZones.Storage:save(data)
+
+    -- Only clear the pending save after storage completed successfully.
+    self.saveDirty = false
+    self.saveTicksRemaining = -1
 end
 
 ---@param value number
