@@ -31,6 +31,10 @@ function WLSP_SpawnerListWindow:show()
     ui:initialise()
     ui:addToUIManager()
     WLSP_SpawnerListWindow.instance = ui
+
+    -- Pull a fresh list from the server; Commands.FullSync repopulates when it lands.
+    WLSP_Client:requestFullSync()
+
     return ui
 end
 
@@ -41,6 +45,7 @@ function WLSP_SpawnerListWindow:new(x, y, width, height)
     
     o.player = getPlayer()
     o.nearbyRadius = 200  -- Show spawners within 200 units
+    o.showAll = false  -- When true, ignore nearbyRadius and list every spawner
     o.lastPlayerX = nil  -- Track player position for movement detection
     o.lastPlayerY = nil
     o.highlighters = {}  -- Track all highlighter instances for cleanup
@@ -72,10 +77,18 @@ function WLSP_SpawnerListWindow:initialise()
     -- Add button
     local btnSize = FONT_HGT_SMALL + scale(4)
     local addBtnWidth = scale(40)
-    self.addButton = ISButton:new(self.width - btnSize - addBtnWidth - scale(10), scale(3), addBtnWidth, btnSize, "Add", self, self.onAddSpawner)
+    local addBtnX = self.width - btnSize - addBtnWidth - scale(10)
+    self.addButton = ISButton:new(addBtnX, scale(3), addBtnWidth, btnSize, "Add", self, self.onAddSpawner)
     self.addButton:initialise()
     self.addButton.borderColor = { r = 0.3, g = 1, b = 0.3, a = 0.8 }
     self:addChild(self.addButton)
+
+    -- Show-all toggle
+    local allBtnWidth = scale(60)
+    self.showAllButton = ISButton:new(addBtnX - allBtnWidth - scale(5), scale(3), allBtnWidth, btnSize, "", self, self.onToggleShowAll)
+    self.showAllButton:initialise()
+    self:addChild(self.showAllButton)
+    self:refreshShowAllButton()
     
     -- Close button
     self.closeButton = ISButton:new(self.width - btnSize - scale(5), scale(3), btnSize, btnSize, "X", self, self.onClose)
@@ -149,19 +162,23 @@ function WLSP_SpawnerListWindow:populateList()
     self.lastPlayerX = playerX
     self.lastPlayerY = playerY
     
-    -- Filter by distance
+    -- Filter by distance. A spawner counts as near if EITHER its spawn point or its
+    -- target is near -- measuring only the target hides the spawner from the place
+    -- the zombies actually come out of.
+    local function distanceTo(point)
+        local dx = point.x - playerX
+        local dy = point.y - playerY
+        return math.sqrt(dx * dx + dy * dy)
+    end
+
     local nearbySpawners = {}
     for _, spawner in ipairs(spawners) do
-        local dx = spawner.position.x - playerX
-        local dy = spawner.position.y - playerY
+        local distance = distanceTo(spawner.position)
         if spawner.targetLocation then
-            dx = spawner.targetLocation.x - playerX
-            dy = spawner.targetLocation.y - playerY
+            distance = math.min(distance, distanceTo(spawner.targetLocation))
         end
-        
-        local distance = math.sqrt(dx * dx + dy * dy)
-        
-        if distance <= self.nearbyRadius then
+
+        if self.showAll or distance <= self.nearbyRadius then
             table.insert(nearbySpawners, {
                 spawner = spawner,
                 distance = distance
@@ -220,8 +237,21 @@ function WLSP_SpawnerListWindow:populateList()
     end
     
     if #nearbySpawners == 0 then
-        self.scrollPanel:addItem("No nearby spawners", nil)
+        self.scrollPanel:addItem(self.showAll and "No spawners" or "No nearby spawners", nil)
     end
+end
+
+function WLSP_SpawnerListWindow:refreshShowAllButton()
+    self.showAllButton:setTitle(self.showAll and "All" or "Near")
+    local color = self.showAll and { r = 1, g = 0.8, b = 0.3 } or { r = 0.6, g = 0.6, b = 0.6 }
+    self.showAllButton.borderColor = { r = color.r, g = color.g, b = color.b, a = 0.8 }
+    self.titleLabel:setName(self.showAll and "All Spawners" or "Nearby Spawners")
+end
+
+function WLSP_SpawnerListWindow:onToggleShowAll()
+    self.showAll = not self.showAll
+    self:refreshShowAllButton()
+    self:populateList()
 end
 
 function WLSP_SpawnerListWindow:drawSpawnerRow(y, item, alt)

@@ -460,7 +460,7 @@ function WLSP_TriggersPanel:showAreaTriggerDialog(editIdx)
     local buttonRow = vstack:makeNode(WLSP_UI_Constants.FONT_HGT_MEDIUM + WLSP_UI_Constants.scale(8))
     local okBtn, cancelBtn = buttonRow:cols({ 0.5, 0.5 }, WLSP_UI_Constants.scale(5))
     okBtn:makeButton("OK", dialog, function()
-        local pos = self.positionPicker:getValue()
+        local pos = positionPicker:getValue()
         local radius = tonumber(radiusInput:getText()) or 10
         local minPlayers = tonumber(minPlayersInput:getText()) or 1
         local cooldown = (tonumber(cooldownInput:getText()) or 30) * 60 -- Convert to seconds
