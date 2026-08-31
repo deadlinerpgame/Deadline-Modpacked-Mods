@@ -10,6 +10,19 @@ local textures = {
 
 WRU_RadioIndicator = ISPanel:derive("WRU_RadioIndicator")
 WRU_RadioIndicator.instances = {}
+WRU_RadioIndicator.isSuppressed = false
+WRU_RadioIndicator.isWorldMapVisible = false
+WRU_RadioIndicator.suppressedVisibility = {}
+
+local tickDelay = 0
+
+local function canShowIndicators()
+    local isGlobalUIVisible = not ISUIHandler or ISUIHandler.allUIVisible ~= false
+    return WRU_Options.show_broadcast_indicator
+        and not WRU_RadioIndicator.isSuppressed
+        and not WRU_RadioIndicator.isWorldMapVisible
+        and isGlobalUIVisible
+end
 
 function WRU_RadioIndicator:new(radio)
     local o = ISPanel:new(0, 0, 25, 25)
@@ -65,6 +78,7 @@ function WRU_RadioIndicator:initialise()
     self:addToUIManager()
     self:setInitialPosition()
     self:setAlwaysOnTop(true)
+    self:setVisible(canShowIndicators())
     WRU_RadioIndicator.instances[self.radio] = self
 end
 
@@ -121,10 +135,38 @@ function WRU_RadioIndicator:destroy()
     WRU_RadioIndicator.instances[self.radio] = nil
 end
 
+function WRU_RadioIndicator.setSuppressed(suppressed)
+    suppressed = suppressed == true
+    if WRU_RadioIndicator.isSuppressed == suppressed then
+        return
+    end
+
+    WRU_RadioIndicator.isSuppressed = suppressed
+    if suppressed then
+        WRU_RadioIndicator.suppressedVisibility = {}
+        for _, indicator in pairs(WRU_RadioIndicator.instances) do
+            WRU_RadioIndicator.suppressedVisibility[indicator] = indicator:isVisible()
+            indicator:setVisible(false)
+        end
+        return
+    end
+
+    for _, indicator in pairs(WRU_RadioIndicator.instances) do
+        local wasVisible = WRU_RadioIndicator.suppressedVisibility[indicator]
+        if wasVisible == nil then
+            wasVisible = true
+        end
+        indicator:setVisible(canShowIndicators() and wasVisible)
+    end
+    WRU_RadioIndicator.suppressedVisibility = {}
+    tickDelay = 0
+end
+
 -- hide the indicators if the world map is open
 local ISWorldMap_initialiseOrig = ISWorldMap.initialise
 function ISWorldMap:initialise()
     ISWorldMap_initialiseOrig(self)
+    WRU_RadioIndicator.isWorldMapVisible = true
     for _, indicator in pairs(WRU_RadioIndicator.instances) do
         indicator:setVisible(false)
     end
@@ -135,15 +177,19 @@ local ISWorldMap_setVisibleOrig = ISWorldMap.setVisible
 function ISWorldMap:setVisible(visible)
     print("ISWorldMap:setVisible " .. tostring(visible))
     ISWorldMap_setVisibleOrig(self, visible)
+    WRU_RadioIndicator.isWorldMapVisible = visible
     for _, indicator in pairs(WRU_RadioIndicator.instances) do
-        indicator:setVisible(not visible)
+        indicator:setVisible(canShowIndicators())
     end
 end
 
-local tickDelay = 0
 local function onTick()
     if not WRU_Options.show_broadcast_indicator then
         Events.OnTick.Remove(onTick)
+        return
+    end
+
+    if WRU_RadioIndicator.isSuppressed then
         return
     end
 
@@ -180,6 +226,9 @@ local function onTick()
 
     -- update the status of all indicators
     for _, indicator in pairs(WRU_RadioIndicator.instances) do
+        if indicator:isVisible() ~= canShowIndicators() then
+            indicator:setVisible(canShowIndicators())
+        end
         indicator:updateStatus()
     end
 end
