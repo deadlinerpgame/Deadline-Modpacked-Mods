@@ -15,7 +15,7 @@ local function loadFromDisk()
     lastWrite = getTimestamp()
     wereZonesLoaded = true
 
-    local fileReaderObj = getFileReader("WastelandEventZones.json", true)
+    local fileReaderObj = getFileReader("WastelandEventZones.txt", true)
     local json = ""
     local line = fileReaderObj:readLine()
     while line ~= nil do
@@ -35,7 +35,7 @@ local function loadFromDisk()
 end
 
 local function writeToDisk()
-    local fileWriterObj = getFileWriter("WastelandEventZones.json", true, false)
+    local fileWriterObj = getFileWriter("WastelandEventZones.txt", true, false)
     local json = Json.Encode(WEZ_EventZones)
     fileWriterObj:write(json)
     fileWriterObj:close()
