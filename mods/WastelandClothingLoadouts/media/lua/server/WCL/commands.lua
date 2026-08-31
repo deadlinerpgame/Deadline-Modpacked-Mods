@@ -4,8 +4,14 @@ local Json = require "wcl_json"
 
 -- Constants
 local DIR = "WCL_loadouts"
-local PUBLIC_FILE = DIR .. "/_public.json"
-local OLD_FILE = "WCL_loadouts.json"
+-- Build 42.20 restricts getFileReader/getFileWriter to ini/cfg/txt/log.
+-- The files still contain JSON; only their extension has changed.
+local PUBLIC_FILE = DIR .. "/_public.txt"
+local OLD_FILE = "WCL_loadouts.txt"
+
+local function getUserFile(username)
+    return DIR .. "/" .. tostring(username) .. ".txt"
+end
 
 -- State
 local loadouts = nil
@@ -64,7 +70,7 @@ local function migrateOldFileIfPresent()
     
     writeJsonFile(PUBLIC_FILE, globalTbl)
     for username, userTbl in pairs(playersTbl) do
-        writeJsonFile(DIR .. "/" .. tostring(username) .. ".json", userTbl or {})
+        writeJsonFile(getUserFile(username), userTbl or {})
     end
     
     loadouts = globalTbl
@@ -86,7 +92,7 @@ local function loadUserFromDisk(username)
     if loadoutsByPlayer[username] then
         return
     end
-    loadoutsByPlayer[username] = readJsonFile(DIR .. "/" .. tostring(username) .. ".json") or {}
+    loadoutsByPlayer[username] = readJsonFile(getUserFile(username)) or {}
 end
 
 -- Writing
@@ -95,7 +101,7 @@ local function writePublicToDisk()
 end
 
 local function writeUserToDisk(username)
-    writeJsonFile(DIR .. "/" .. tostring(username) .. ".json", loadoutsByPlayer[username] or {})
+    writeJsonFile(getUserFile(username), loadoutsByPlayer[username] or {})
 end
 
 -- Sending
@@ -117,6 +123,19 @@ end
 
 local function sendLoadoutsToAll()
     sendServerCommand("WastelandClothingLoadouts", "SyncLoadouts", loadouts)
+end
+
+local function sendGendersToAll()
+    local genders = {}
+    local onlinePlayers = getOnlinePlayers()
+    for i = 0, onlinePlayers:size() - 1 do
+        local onlinePlayer = onlinePlayers:get(i)
+        genders[onlinePlayer:getUsername()] = {
+            onlineID = onlinePlayer:getOnlineID(),
+            isFemale = onlinePlayer:isFemale()
+        }
+    end
+    sendServerCommand("WastelandClothingLoadouts", "SyncGenders", genders)
 end
 
 -- Command Handlers
@@ -169,6 +188,24 @@ end
 function Commands.GetLoadouts(player, args)
     sendLoadoutsToClient(player)
     sendPlayerLoadoutsToClient(player)
+    sendGendersToAll()
+end
+
+function Commands.ChangeGender(player, args)
+    if not args or type(args.isFemale) ~= "boolean" then
+        return
+    end
+
+    player:setFemale(args.isFemale)
+    player:getDescriptor():setFemale(args.isFemale)
+    player:resetModel()
+    syncVisuals(player)
+    sendServerCommand("WastelandClothingLoadouts", "SyncGender", {
+        onlineID = player:getOnlineID(),
+        username = player:getUsername(),
+        isFemale = args.isFemale
+    })
+    print("[WCL] " .. player:getUsername() .. " changed gender to " .. (args.isFemale and "Female" or "Male"))
 end
 
 local function processClientCommand(module, command, player, args)

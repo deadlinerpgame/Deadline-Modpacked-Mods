@@ -143,6 +143,38 @@ WLCustomCases = {
     ["WepAmmoMag"] = true,
   },
 
+  ToolboxItems = {
+    "Base.Toolbox",
+    "Base.Bag_JanitorToolbox",
+    "AuthenticZClothing.Toolbox_Secondary",
+  },
+
+  ToolboxAllowedCategory = {
+    ["Tool"] = true,
+    ["ToolWeapon"] = true,
+  },
+
+  FirstAidContainerItems = {
+    "Base.FirstAidKit",
+    "AuthenticZClothing.FirstAidKit_Secondary",
+    "AuthenticZClothing.Bag_L4DeadMedkit",
+  },
+
+  FirstAidContainerAllowedCategory = {
+    ["FirstAid"] = true,
+    ["Med"] = true,
+    ["Medical"] = true,
+  },
+
+  FirstAidContainerAllowedTypes = {
+    ["Base.Elderberry"] = true,
+    ["Base.MagicMushroom"] = true,
+  },
+
+  FirstAidContainerAllowedModIDs = {
+    ["WastelandMedical"] = true,
+  },
+
   SecondaryStorageItems = {
     "Base.Bag_FannyPackFront",
     "Base.Bag_FannyPackBack",
@@ -332,6 +364,62 @@ function WLCustomCases.MagPouchAcceptFunction(_, item)
     return false
   end
   return WLCustomCases.MagPouchAllowedCategory[category]
+end
+
+for _, itemName in ipairs(WLCustomCases.ToolboxItems) do
+  local item = getScriptManager():getItem(itemName)
+  if item then
+    WL_Utils.setItemProperties(itemName, {
+      ["AcceptItemFunction"] = "WLCustomCases.ToolboxAcceptFunction",
+      ["WeightReduction"] = 90,
+      ["Capacity"] = 12,
+    })
+  end
+end
+
+local function GetEffectiveItem(item)
+  if item:getFullType() == "Base.WPI_Package" then
+    local packageData = item:getModData()['WPIPackages']
+    local contents = packageData and packageData.contents
+    local itemName = contents and contents.itemName
+    return itemName and InventoryItemFactory.CreateItem(itemName)
+  end
+  return item
+end
+
+function WLCustomCases.ToolboxAcceptFunction(_, item)
+  local effectiveItem = GetEffectiveItem(item)
+  if not effectiveItem then
+    return false
+  end
+  if effectiveItem:IsInventoryContainer() then
+    return false
+  end
+  return WLCustomCases.ToolboxAllowedCategory[effectiveItem:getDisplayCategory()]
+end
+
+for _, itemName in ipairs(WLCustomCases.FirstAidContainerItems) do
+  local item = getScriptManager():getItem(itemName)
+  if item then
+    WL_Utils.setItemProperties(itemName, {
+      ["AcceptItemFunction"] = "WLCustomCases.FirstAidContainerAcceptFunction",
+      ["WeightReduction"] = 90,
+    })
+  end
+end
+
+function WLCustomCases.FirstAidContainerAcceptFunction(_, item)
+  local effectiveItem = GetEffectiveItem(item)
+  if not effectiveItem then
+    return false
+  end
+  if effectiveItem:IsInventoryContainer() then
+    return false
+  end
+  return effectiveItem:getStringItemType() == "Medical"
+      or WLCustomCases.FirstAidContainerAllowedCategory[effectiveItem:getDisplayCategory()]
+      or WLCustomCases.FirstAidContainerAllowedTypes[effectiveItem:getFullType()]
+      or WLCustomCases.FirstAidContainerAllowedModIDs[effectiveItem:getModID()]
 end
 
 for _, itemName in ipairs(WLCustomCases.SecondaryStorageItems) do

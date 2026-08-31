@@ -28,7 +28,8 @@ local backpacks = {
     "Base.Woodland_Camo_Backpack_Radio",
     "Base.Tactical_Radio_Backpack",
     "Base.Tactical_Radio_Backpack",
-    "Base.Caution_Backpack_Radio"
+    "Base.Caution_Backpack_Radio",
+    "Base.Medical_Red_Backpack"
 }
 
 for _, backpack in ipairs(backpacks) do

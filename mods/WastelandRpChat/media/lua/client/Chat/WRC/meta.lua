@@ -30,6 +30,8 @@ WRC.Meta.ChatPreferences["OverheadTypingIndicator"] = WRC.Meta.ChatPreferences["
 WRC.Meta.ChatPreferences["InvertStatus"] = WRC.Meta.ChatPreferences["InvertStatus"] or false
 WRC.Meta.ChatPreferences["SaveLastChat"] = WRC.Meta.ChatPreferences["SaveLastChat"] or false
 WRC.Meta.ChatPreferences["KeepSafe"] = WRC.Meta.ChatPreferences["KeepSafe"] or true
+WRC.Meta.ChatPreferences["SoundboardSoundsEnabled"] = WRC.Meta.ChatPreferences["SoundboardSoundsEnabled"] ~= false
+WRC.Meta.ChatPreferences["SoundboardMusicEnabled"] = WRC.Meta.ChatPreferences["SoundboardMusicEnabled"] ~= false
 
 
 local function changeModifer(modifer, enable)
@@ -403,6 +405,35 @@ function WRC.Meta.GetName(username)
 	return name
 end
 
+--- Returns the stored pre-disguise WRC name for an actively disguised player.
+--- @param username string|nil
+--- @return string|nil
+local function getStoredDisguiseRealName(username)
+    if not username or not WLDi_System then return nil end
+    local isDisguised = WLDi_System:isDisguised(username)
+    if not isDisguised then return nil end
+    if not WLDi_System.publicData or not WLDi_System.publicData.nameStorage then return nil end
+
+    local nameStorage = WLDi_System.publicData.nameStorage[username]
+    if not nameStorage then return nil end
+
+    local realName = nameStorage.currentName
+    if not realName or realName == "" or realName == "Unknown" then return nil end
+    return realName
+end
+
+--- Returns the display name for a parsed message, revealing real names only for radio copies.
+--- @param parsedMessage table|nil
+--- @return string|nil
+function WRC.Meta.getMessageName(parsedMessage)
+    local username = parsedMessage and parsedMessage.playerUsername
+    if parsedMessage and parsedMessage.radioFrequency and parsedMessage.radioFrequency > 0 then
+        local realName = getStoredDisguiseRealName(username)
+        if realName then return realName end
+    end
+    return WRC.Meta.GetName(username)
+end
+
 function WRC.Meta.SetName(newName)
     local player = getPlayer()
     player:getDescriptor():setForename(newName)
@@ -527,6 +558,48 @@ end
 
 function WRC.Meta.SetKeepSafeEnabled(enabled)
     writeChatPref("KeepSafe", enabled)
+end
+
+function WRC.Meta.IsSoundboardSoundsEnabled()
+    return getChatPref("SoundboardSoundsEnabled")
+end
+
+function WRC.Meta.SetSoundboardSoundsEnabled(enabled)
+    writeChatPref("SoundboardSoundsEnabled", enabled)
+end
+
+function WRC.Meta.IsSoundboardMusicEnabled()
+    return getChatPref("SoundboardMusicEnabled")
+end
+
+function WRC.Meta.SetSoundboardMusicEnabled(enabled)
+    writeChatPref("SoundboardMusicEnabled", enabled)
+end
+
+function WRC.Meta.GetDrunkSpeechOverrideStrength()
+    local player = getPlayer()
+    if not player then return nil end
+
+    local strength = tonumber(player:getModData()["WRC_DrunkSpeechOverrideStrength"])
+    if strength and strength >= 1 and strength <= 4 then
+        return strength
+    end
+    return nil
+end
+
+function WRC.Meta.SetDrunkSpeechOverrideStrength(strength)
+    local player = getPlayer()
+    if not player then return end
+
+    strength = tonumber(strength) or 0
+    local md = player:getModData()
+    if strength >= 1 and strength <= 4 then
+        md["WRC_DrunkSpeechOverrideStrength"] = math.floor(strength)
+        WL_Utils.addInfoToChat("Drunk speech effect set to level " .. math.floor(strength) .. ".")
+    else
+        md["WRC_DrunkSpeechOverrideStrength"] = nil
+        WL_Utils.addInfoToChat("Drunk speech effect disabled.")
+    end
 end
 
 WRC.Meta.FocusedPersons = WRC.Meta.FocusedPersons or {}
@@ -775,6 +848,16 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
     local keepSafeEnabled = WRC.Meta.IsKeepSafeEnabled()
     actionsContext:addOption((keepSafeEnabled and "Disable" or "Enable") .. " Keep Safe", keepSafeEnabled and "off" or "on", WRC.Commands.KeepSafe)
 
+    local soundboardOption = actionsContext:addOption("Soundboard", nil, nil)
+    local soundboardContext = actionsContext:getNew(actionsContext)
+    actionsContext:addSubMenu(soundboardOption, soundboardContext)
+
+    local soundboardSoundsEnabled = WRC.Meta.IsSoundboardSoundsEnabled()
+    soundboardContext:addOption((soundboardSoundsEnabled and "Disable" or "Enable") .. " Sounds", not soundboardSoundsEnabled, WRC.Meta.SetSoundboardSoundsEnabled)
+
+    local soundboardMusicEnabled = WRC.Meta.IsSoundboardMusicEnabled()
+    soundboardContext:addOption((soundboardMusicEnabled and "Disable" or "Enable") .. " Music", not soundboardMusicEnabled, WRC.Meta.SetSoundboardMusicEnabled)
+
     local languageOption = actionsContext:addOption("Choose Language", nil, nil)
     local languageContext = actionsContext:getNew(actionsContext)
     actionsContext:addSubMenu(languageOption, languageContext)
@@ -860,12 +943,15 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
     local focusablePlayers = {}
     local unfocusablePlayers = {}
     local tradablePlayers = {}
+    if WRC.Meta.FocusedPersons then
+        for i=1, #WRC.Meta.FocusedPersons do
+            table.insert(unfocusablePlayers, WRC.Meta.FocusedPersons[i])
+        end
+    end
     for i=0,players:size()-1 do
         local player = players:get(i)
         local username = player:getUsername()
-        if WRC.Meta.IsFocusedOn(username) then
-            table.insert(unfocusablePlayers, username)
-        else
+        if not WRC.Meta.IsFocusedOn(username) then
             if not player:isGhostMode() and WRC.CanSeePlayer(player) then
                 table.insert(focusablePlayers, username)
             end
@@ -956,6 +1042,19 @@ function WRC.Meta.CreateCharacterContext(context, myPlayer)
         local currentStatus = WRC.Meta.GetStatus(getPlayer():getUsername()) or ""
         WRC.MakeShowDialogPrompt("Input your new status", WRC.Commands.SetStatus, currentStatus)()
     end)
+
+    local drunkSpeechStrength = WRC.Meta.GetDrunkSpeechOverrideStrength()
+    local drunkSpeechOption = characterContext:addOption("Drunk Speech Effect", nil, nil)
+    local drunkSpeechContext = characterContext:getNew(characterContext)
+    characterContext:addSubMenu(drunkSpeechOption, drunkSpeechContext)
+    drunkSpeechContext:addOption((drunkSpeechStrength and "Disable" or "Off") .. " Drunk Speech Effect", 0, WRC.Meta.SetDrunkSpeechOverrideStrength)
+    for level=1,4 do
+        local label = "Level " .. level
+        if drunkSpeechStrength == level then
+            label = label .. " (Current)"
+        end
+        drunkSpeechContext:addOption(label, level, WRC.Meta.SetDrunkSpeechOverrideStrength)
+    end
 
     characterContext:addOption("Grow Hair", nil, WRC.Commands.GrowHair)
     characterContext:addOption("Set Hair Color", nil, WRC.MakeColorDialogPrompt("Set Hair Color", WRC.Commands.SetHairColor))

@@ -1,0 +1,4 @@
+Tooltip_EN = {
+    Tooltip_WIN_NewspaperCharter = "Master record for a newspaper.<br>Can be used to create issue drafts.<br>Tracks the next issue number.",
+    Tooltip_WIN_NewspaperDraft = "Editable newspaper issue draft.<br>Write the issue here, then print read-only copies using sheets of paper.",
+}

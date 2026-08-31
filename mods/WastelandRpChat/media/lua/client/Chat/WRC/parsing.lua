@@ -400,58 +400,90 @@ function WRC.Parsing.AdjustForHardOfHearing(parsedMessage, rangeRatio)
     end
 end
 
+
+local function transformWords(text, transformWord)
+    return text:gsub("%S+", function(token)
+        local leading, word, trailing = token:match("^([%p]*)(.-)([%p]*)$")
+        if not word or word == "" then
+            return token
+        end
+        return leading .. transformWord(word) .. trailing
+    end)
+end
+
+local function blankWord(word)
+    return string.rep("-", word:len())
+end
+
 function WRC.Parsing.AdjustForUnknownLanguage(parsedMessage)
     local partialUnderstandingChance = WRC.Meta.GetPartialUnderstandingChance(parsedMessage.language)
+
     for i=1, #parsedMessage.parts do
-        if parsedMessage.parts[i].type == "text" then
-            local len = parsedMessage.parts[i].text:len()
+        local part = parsedMessage.parts[i]
+        if part.type == "text" then
             if parsedMessage.language == "asl" then
+                local len = part.text:len()
                 if len > 100 then
-                    parsedMessage.parts[i] = {
-                        type = "emotemuted",
-                        text = "a lot of ASL"
+                    parsedMessage.parts[i] = { 
+                        type = "emotemuted", 
+                        text = "a lot of ASL" 
                     }
                 elseif len > 50 then
-                    parsedMessage.parts[i] = {
-                        type = "emotemuted",
-                        text = "some ASL"
+                    parsedMessage.parts[i] = { 
+                        type = "emotemuted", 
+                        text = "some ASL" 
                     }
                 else
-                    parsedMessage.parts[i] = {
-                        type = "emotemuted",
-                        text = "a little ASL"
+                    parsedMessage.parts[i] = { 
+                        type = "emotemuted", 
+                        text = "a little ASL" 
                     }
+                end
+            elseif partialUnderstandingChance <= 0 then
+                local originalText = part.text
+                local alwaysUnderstoodWords = WRC.Parsing.GetAlwaysUnderstoodWordsFromMessage(originalText)
+                local randomWords = WRC.Parsing.GetRandomWordsFromMessage(originalText, 10)
+                local understoodWords = WRC.Parsing.MergeUnderstoodWords(alwaysUnderstoodWords, randomWords)
+                local languageName = WRC.Languages[parsedMessage.language].name
+                local amount
+
+                if originalText:len() > 100 then
+                    amount = "a lot of "
+                elseif originalText:len() > 50 then
+                    amount = "some "
+                else
+                    amount = "a little "
+                end
+
+                part.type = "textmuted"
+                part.text = amount .. languageName
+                if #understoodWords > 0 then
+                    part.text = part.text .. " but you picked up: " .. table.concat(understoodWords, ", ")
                 end
             else
-                local understoodText
-                if partialUnderstandingChance > 0 then
-                    local alwaysUnderstoodWords = WRC.Parsing.GetAlwaysUnderstoodWordsFromMessage(parsedMessage.parts[i].text)
-                    local randomWords = WRC.Parsing.GetRandomWordsFromMessage(parsedMessage.parts[i].text, partialUnderstandingChance)
-                    local understoodWords = WRC.Parsing.MergeUnderstoodWords(alwaysUnderstoodWords, randomWords)
-                    if #understoodWords > 0 then
-                        understoodText = " but you picked up: " .. table.concat(understoodWords, ", ")
+                part.text = transformWords(part.text, function(word)
+                    local normalizedWord = normalizeUnderstoodWord(word)
+                    if WRC.Parsing.AlwaysUnderstoodEnglishWords[normalizedWord]
+                    or ZombRand(100) < partialUnderstandingChance then
+                        return word
                     end
-                end
-                if len > 100 then
-                    parsedMessage.parts[i] = {
-                        type = "textmuted",
-                        text = "a lot of " .. WRC.Languages[parsedMessage.language].name
-                    }
-                elseif len > 50 then
-                    parsedMessage.parts[i] = {
-                        type = "textmuted",
-                        text = "some " .. WRC.Languages[parsedMessage.language].name
-                    }
-                else
-                    parsedMessage.parts[i] = {
-                        type = "textmuted",
-                        text = "a little " .. WRC.Languages[parsedMessage.language].name
-                    }
-                end
-                if understoodText then
-                    parsedMessage.parts[i].text = parsedMessage.parts[i].text .. understoodText
-                end
+                    return blankWord(word)
+                end)
             end
+        end
+    end
+end
+
+function WRC.Parsing.AdjustForRadioStatic(parsedMessage, staticChance)
+    for _, part in ipairs(parsedMessage.parts) do
+        if part.type == "text" then
+            part.text = transformWords(part.text, function(word)
+                if ZombRand(100) < staticChance then
+                    -- Escaped because angle brackets are chat formatting delimiters.
+                    return "&lt;bzzt&gt;"
+                end
+                return word
+            end)
         end
     end
 end

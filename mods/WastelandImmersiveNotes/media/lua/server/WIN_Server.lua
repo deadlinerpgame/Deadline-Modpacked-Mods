@@ -22,6 +22,18 @@ function Commands.showPageToPlayers(player, args)
 	end
 end
 
+function Commands.showNewspaperToPlayers(player, args)
+	for _, username in ipairs(args.usernames) do
+		local targetPlayer = WL_Utils.findPlayerFromUsername(username)
+		if targetPlayer then
+			local pageData = {
+				newspaperData = args.newspaperData,
+			}
+			sendServerCommand(targetPlayer, "WastelandImmersiveNotes", "showNewspaper", pageData)
+		end
+	end
+end
+
 local function onClientCommand(module, command, player, args)
 	if module ~= "WastelandImmersiveNotes" then return end
 	if not Commands[command] then return end

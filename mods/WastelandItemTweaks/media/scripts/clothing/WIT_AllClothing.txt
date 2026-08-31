@@ -7331,4 +7331,30 @@ module Base {
         Category:Tailoring,
     }
 
+    recipe Make Friendship Bracelet
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Bracelet_LeftFriendshipTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=4,
+        Category:Tailoring,
+    }
+
+    recipe Make Friendship Bracelet
+    {
+        RippedSheets=8,
+        Thread;3,
+        keep Needle,
+        keep Scissors,
+
+        Result:Bracelet_RightFriendshipTINT,
+        Time:1200.0,
+        SkillRequired:Tailoring=4,
+        Category:Tailoring,
+    }
+
 }

@@ -8,6 +8,7 @@ module Base {
         Time: 200,
         Sound: BottleShake,
         Category: Misc,
+        OnTest: WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Convert to Yellow Hair Dye
     {
@@ -17,6 +18,7 @@ module Base {
         Time: 200,
         Sound: BottleShake,
         Category: Misc,
+        OnTest: WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Convert to Red Hair Dye
     {
@@ -26,6 +28,7 @@ module Base {
         Time: 200,
         Sound: BottleShake,
         Category: Misc,
+        OnTest: WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Convert to Blue Hair Dye
     {
@@ -35,6 +38,7 @@ module Base {
         Time: 200,
         Sound: BottleShake,
         Category: Misc,
+        OnTest: WIT_HairDyeRecipeFix.OnTest,
     }
     recipe Convert to White Hair Dye
     {
@@ -44,6 +48,7 @@ module Base {
         Time: 200,
         Sound: BottleShake,
         Category: Misc,
+        OnTest: WIT_HairDyeRecipeFix.OnTest,
     }
 
     recipe Mix Yellow Dye

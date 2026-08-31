@@ -39,6 +39,16 @@ WIN_LiteratureSkin.NOTEBOOK_TYPES = {
     },
 }
 WIN_LiteratureSkin.DEFAULT_NOTEBOOK_TYPE = "Base.Notebook"
+WIN_LiteratureSkin.ITEM_TYPES = {
+    ["Base.Parchment"] = {
+        name = "Parchment",
+        texture = "media/textures/BlankParchment.png",
+        paddingTop = 20,
+        paddingLeft = 70,
+        paddingRight = 70,
+        paddingBottom = 30,
+    },
+}
 WIN_LiteratureSkin.SHEET_PAPER_TYPES = {
     ["NotebookPage"] = {
         name = "Notebook Page",
@@ -82,6 +92,11 @@ function WIN_LiteratureSkin.findFromKey(typeKey)
         end
     end
     for key, textureName in pairs(WIN_LiteratureSkin.SHEET_PAPER_TYPES) do
+        if typeKey == key then
+            return textureName
+        end
+    end
+    for key, textureName in pairs(WIN_LiteratureSkin.ITEM_TYPES) do
         if typeKey == key then
             return textureName
         end

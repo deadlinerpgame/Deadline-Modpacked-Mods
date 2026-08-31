@@ -1,5 +1,17 @@
 module Base {
 
+    item Parchment
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        Type = Literature,
+        DisplayName = Parchment,
+        Icon = Parchment,
+        CanBeWrite = true,
+        PageToWrite = 1,
+        WorldStaticModel = SheetOfPaper,
+    }
+
     item NotebookLeather
     {
         DisplayCategory = LitW,
@@ -31,6 +43,45 @@ module Base {
         Icon	=	NotebookPink,
         CanBeWrite  =   true,
         PageToWrite =   40,
+    }
+
+    item WIN_NewspaperCharter
+    {
+        DisplayCategory = LitW,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Newspaper Charter,
+        Tooltip = Tooltip_WIN_NewspaperCharter,
+        Icon	=	NewspaperCharter,
+        StaticModel = Newspaper,
+        WorldStaticModel = Newspaper_Ground,
+    }
+
+    item WIN_NewspaperDraft
+    {
+        DisplayCategory = LitW,
+        Weight	=	0.3,
+        Type	=	Literature,
+        DisplayName	=	Newspaper Draft,
+        Tooltip = Tooltip_WIN_NewspaperDraft,
+        Icon	=	NewspaperDraft,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        StaticModel = Newspaper,
+        WorldStaticModel = Newspaper_Ground,
+    }
+
+    item WIN_PlayerNewspaper
+    {
+        DisplayCategory = Literature,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Newspaper Copy,
+        Icon	=	Newspaper,
+        CanBeWrite  =   true,
+        PageToWrite =   1,
+        StaticModel = Newspaper,
+        WorldStaticModel = Newspaper_Ground,
     }
 
 	recipe Make Leatherbound Journal
