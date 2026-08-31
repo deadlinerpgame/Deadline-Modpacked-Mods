@@ -25,7 +25,7 @@ end
 
 --- @param self WLR_Auto.Data
 function WLR_Auto.Data:loadDefinitions()
-    local fileReaderObj = getFileReader("WastelandAutoLootRespawnConfig.json", false)
+    local fileReaderObj = getFileReader("WastelandAutoLootRespawnConfig.txt", false)
     local json = ""
     if fileReaderObj then
         local line = fileReaderObj:readLine()
@@ -52,7 +52,7 @@ function WLR_Auto.Data:loadDefinitions()
     else
         WLR_Auto.InfoLog("No config found, creating default")
         local defaultConfig = WLR_Auto.Definition.GetDefaultConfig()
-        local fileWriterObj = getFileWriter("WastelandAutoLootRespawnConfig.json", true, false)
+        local fileWriterObj = getFileWriter("WastelandAutoLootRespawnConfig.txt", true, false)
         fileWriterObj:write(Json.Encode(defaultConfig))
         fileWriterObj:close()
     end
@@ -659,7 +659,7 @@ function WLR_Auto.Data:writeDefinitionsToFile()
     local Json = require "WLR_Auto_json"
     local jsonString = Json.Encode(definitionsArray)
     
-    local fileWriterObj = getFileWriter("WastelandAutoLootRespawnConfig.json", true, false)
+    local fileWriterObj = getFileWriter("WastelandAutoLootRespawnConfig.txt", true, false)
     if fileWriterObj then
         fileWriterObj:write(jsonString)
         fileWriterObj:close()
@@ -668,4 +668,3 @@ function WLR_Auto.Data:writeDefinitionsToFile()
         WLR_Auto.DebugLog("Failed to write zone definitions to file")
     end
 end
-
