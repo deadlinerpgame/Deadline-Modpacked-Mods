@@ -159,8 +159,9 @@ function WAT_EventsHelper:updateButtons()
     self.zombieRadarButton.backgroundColor = self.zombieRadarEnabled and greenButtonColor or redButtonColor
     self.clearWeatherButton.backgroundColor = self.clearWeatherEnabled and greenButtonColor or redButtonColor
     self.overFill.backgroundColor = WAT_OverFiller.enabled and greenButtonColor or redButtonColor
-    local showEventPreference = WAT and WAT.InvisibleIndicator and WAT.InvisibleIndicator.ShowEventPreference
-    self.eventPref.backgroundColor = showEventPreference and greenButtonColor or redButtonColor
+    -- Show Event Preference button is disabled above, so it has no UI instance.
+    -- local showEventPreference = WAT and WAT.InvisibleIndicator and WAT.InvisibleIndicator.ShowEventPreference
+    -- self.eventPref.backgroundColor = showEventPreference and greenButtonColor or redButtonColor
 
     -- min 5, max 30
     if self.zombieFollowRangeDecreaseButton.enabled and self.zombieFollowRange <= 5 then
