@@ -3,7 +3,7 @@
 $srcMods = Join-Path $PSScriptRoot "mods"
 $srcWorkshop = Join-Path $PSScriptRoot "workshop.txt"
 $srcPreview = Join-Path $PSScriptRoot "preview.png"
-$workshop = Join-Path $env:USERPROFILE "Zomboid\Workshop\Deadline_Modpacked_Mods"
+$workshop = Join-Path $env:USERPROFILE "Zomboid_B41\Workshop\Deadline_Modpacked_Mods"
 $contents = Join-Path $workshop "Contents"
 $dstMods = Join-Path $contents "mods"
 
