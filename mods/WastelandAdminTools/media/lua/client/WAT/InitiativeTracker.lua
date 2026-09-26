@@ -325,4 +325,4 @@ function WAT_InitiativeTracker.onContextMenu(playerId, context)
     eventToolsMenu:addOption("Initiative Tracker", nil, WAT_InitiativeTracker.display)
 end
 
-Events.OnFillWorldObjectContextMenu.Add(WAT_InitiativeTracker.onContextMenu)
+-- Events.OnFillWorldObjectContextMenu.Add(WAT_InitiativeTracker.onContextMenu) -- tracker interaction disabled

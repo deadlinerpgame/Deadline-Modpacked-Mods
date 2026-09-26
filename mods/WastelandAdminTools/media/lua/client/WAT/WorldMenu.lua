@@ -2,11 +2,12 @@ require "WAT/ItemAudit"
 require "WAT/GroundCleaner"
 require "WAT/Coords"
 require "WAT/TimerManager"
-require "WAT/BasementZoneManager"
-require "WAT/BasementTemplateManager"
-require "WAT/BasementCreator"
-require "WAT/BasementList"
-require "WAT/BasementEditor"
+-- Basement UI requires disabled; retained for later restoration.
+-- require "WAT/BasementZoneManager"
+-- require "WAT/BasementTemplateManager"
+-- require "WAT/BasementCreator"
+-- require "WAT/BasementList"
+-- require "WAT/BasementEditor"
 require "WAT/LightbulbChanger"
 require "WAT/WorldTime"
 require "WAT/WorldTimeSync"
@@ -62,7 +63,7 @@ function WAT_WorldMenu.doMenu(playerIdx, context)
     utilitiesMenu:addOption("Zombie Population Debug", nil, newZombiePopulationWindow)
     utilitiesMenu:addOption("Region Debug", nil, IsoRegionsWindow.OnOpenPanel)
     
-    utilitiesMenu:addOption("Player Refund", nil, WAT_ItemRefunder.OnRefundItem)
+    -- utilitiesMenu:addOption("Player Refund", nil, WAT_ItemRefunder.OnRefundItem)
     utilitiesMenu:addOption("Toggle Mouse Coords", nil, WL_MouseCoords.toggle)
 
     if ZZL_URL then
@@ -70,11 +71,13 @@ function WAT_WorldMenu.doMenu(playerIdx, context)
         utilitiesMenu:addOption("Reset Rare Loot (Next: " .. status .. ")", nil, WAT_WorldMenu.resetRareLoot)
     end
     
+    --[[ Reboot interaction disabled.
     if isAdmin() then
         utilitiesMenu:addOption("Reboot Server", nil, function()
             sendClientCommand(getPlayer(), "WAT", "reboot", {})
         end)
     end
+    --]]
     
     -- Event Tools submenu
     local eventToolsMenu = WL_ContextMenuUtils.getOrCreateSubMenu(submenu, "Event Tools")
@@ -91,6 +94,7 @@ function WAT_WorldMenu.doMenu(playerIdx, context)
         worldMgmtMenu:addOption("Set World Time", nil, WAT_WorldTime.show)
     end
     
+    --[[ Basement interactions disabled.
     if WL_Utils.canModerate(getPlayer()) then
         -- New Basement System (template-based)
         local basementMenu = WL_ContextMenuUtils.getOrCreateSubMenu(worldMgmtMenu, "Basements")
@@ -101,6 +105,7 @@ function WAT_WorldMenu.doMenu(playerIdx, context)
             basementMenu:addOption("Template Manager", nil, function() WAT_BasementTemplateManager.show() end)
         end
     end
+    --]]
     
     -- Audits submenu
     if WL_Utils.canModerate(getPlayer()) then
