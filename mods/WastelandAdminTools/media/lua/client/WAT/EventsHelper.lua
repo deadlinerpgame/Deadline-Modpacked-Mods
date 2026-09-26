@@ -31,18 +31,18 @@ function WAT_EventsHelper:display()
         {type="single", id="aoeKillButton", short="AK", tooltip="AOE Kill All", func=self.aoeKill},
         {type="increaseDecrese", tooltip="AOE Kill Range: ", property="aoeKillRange", min=5, max=30},
         {type="single", id="sucideButton", short="SC", tooltip="Instant Sucide", func=self.sucide},
-        {type="single", id="soundboardButton", short="SB", tooltip="Open Soundboard", func=self.soundboard},
+        -- {type="single", id="soundboardButton", short="SB", tooltip="Open Soundboard", func=self.soundboard},
         {type="single", id="itemPickerButton", short="IP", tooltip="Item Picker", func=self.openItemPicker},
         {type="single", id="tilePickerButton", short="TL", tooltip="Tile Picker", func=self.openTilePicker},
         {type="single", id="levelAnayzerButton", short="LA", tooltip="Level Analyzer", func=self.openLevelAnalyzer},
         {type="single", id="makeFire", short="FU", tooltip="Fire UI", func=self.makeFire},
-        {type="single", id="massFactionButton", short="MF", tooltip="Mass Faction", func=self.massFaction},
+        -- {type="single", id="massFactionButton", short="MF", tooltip="Mass Faction", func=self.massFaction},
         {type="single", id="clearCorpseButton", short="CC", tooltip="Clear Corpses", func=self.clearCorpses},
         {type="single", id="clearBloodButton", short="CB", tooltip="Clear Blood", func=self.clearBlood},
         {type="increaseDecrese", tooltip="Clear Size: ", property="clearSize", min=1, max=50},
         {type="single", id="clearWeatherButton", short="CW", tooltip="Toggle Clear Weather", func=self.toggleClearWeather},
         {type="single", id="overFill", tooltip="Allow Container Overfilling", short="OF", func=self.toggleOverfill},
-        {type="single", id="eventPref", tooltip="Show Event Preference", short="EP", func=self.toggleEventPreference},
+        -- {type="single", id="eventPref", tooltip="Show Event Preference", short="EP", func=self.toggleEventPreference},
     }
 
     local numFullBtn = 0

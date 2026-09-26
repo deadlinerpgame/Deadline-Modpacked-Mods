@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require("WF_Sprinkler/WFSprinklerUtilities")
 require("Moveables/ISMoveablesAction")
 require("Moveables/ISMoveableSpriteProps")
@@ -46,3 +47,4 @@ function ISMoveableSpriteProps:getInfoPanelDescription( _square, _object, _playe
 
     return infoTable
 end
+]=]

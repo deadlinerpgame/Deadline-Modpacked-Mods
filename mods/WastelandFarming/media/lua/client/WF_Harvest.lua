@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 local function isHarvestableSquare(sq)
     local plant = CFarmingSystem.instance:getLuaObjectOnSquare(sq)
     return plant and plant:canHarvest()
@@ -107,3 +108,4 @@ function OnPreFillWorldObjectContextMenu(playerIdx, context, worldobjects, test)
 end
 
 Events.OnPreFillWorldObjectContextMenu.Add(OnPreFillWorldObjectContextMenu)
+]=]

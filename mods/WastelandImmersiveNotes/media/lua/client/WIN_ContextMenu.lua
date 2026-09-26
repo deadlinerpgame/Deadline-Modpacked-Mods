@@ -298,9 +298,11 @@ WIN_ContextMenu.createMenu = function(playerID, context, items)
         return -- Not in their inventory
     end
     if writeableItem:getLockedBy() and writeableItem:getLockedBy() ~= playerObj:getUsername() then
+        --[[ Handwriting comparison interaction disabled for locked notes.
         if WIN_Utils.isComparableNote(writeableItem) then
             addHandwritingComparisonMenu(context, writeableItem, playerObj)
         end
+        --]]
         return -- No permissions
     end
 
@@ -345,11 +347,14 @@ WIN_ContextMenu.createMenu = function(playerID, context, items)
         context:addOption("Erase Contents", writeableItem, WIN_ContextMenu.confirmEraseContents, playerID)
     end
 
+    --[[ Handwriting comparison interaction disabled.
     if WIN_Utils.isComparableNote(writeableItem) then
         addHandwritingComparisonMenu(context, writeableItem, playerObj)
     end
+    --]]
 
     local authorUsername = WIN_Utils.getLastAuthorUsername(writeableItem)
+    --[[ Disguise/restore handwriting interactions are disabled.
     if WIN_Utils.canDisguiseHandwriting(playerObj, authorUsername) then
         local optionName = "Disguise Handwriting"
         local callback = WIN_ContextMenu.onDisguiseHandwriting
@@ -360,6 +365,7 @@ WIN_ContextMenu.createMenu = function(playerID, context, items)
         local option = context:addOption(optionName, writeableItem, callback)
         option.iconTexture = getWdcAbilityIconTexture(WDC_Ability.Deception)
     end
+    --]]
 
     addShowToMenu(context, writeableItem)
 end

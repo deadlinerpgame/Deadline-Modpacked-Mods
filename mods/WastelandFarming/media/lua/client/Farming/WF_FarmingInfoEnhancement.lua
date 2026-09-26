@@ -5,10 +5,12 @@ local function getSinceLastTended(plant)
     return round2((CFarmingSystem.instance.hoursElapsed - plant.lastTendHour)) .. " hours ago"
 end
 
+--[[ Grow lamp status disabled.
 local function getGrowLampStatus(plant)
     if not plant.lightEnabled then return "Not Covered" end
     return "Covered"
 end
+--]]
 
 local original_ISFarmingInfo_render = ISFarmingInfo.render
 function ISFarmingInfo:render()
@@ -24,10 +26,7 @@ function ISFarmingInfo:render()
 	self:drawTextRight(getSinceLastTended(self.plant), self.width - 17, y + pady, 1, 1, 1, 1, UIFont.Normal)
     y = y + lineHgt
 
-    self:drawRect(13, y, self.width - 25, lineHgt, 0.05, 1.0, 1.0, 1.0)
-	self:drawText("Grow Lamp : ", 20, y + pady, 1, 1, 1, 1, UIFont.Normal)
-	self:drawTextRight(getGrowLampStatus(self.plant), self.width - 17, y + pady, 1, 1, 1, 1, UIFont.Normal)
-    y = y + lineHgt
+    -- Grow lamp row removed; only tending status remains.
 
     self:drawRectBorder(13, top - 1, self.width - 25, y - top + 2, self.borderColor.a, self.borderColor.r, self.borderColor.g, self.borderColor.b)
 

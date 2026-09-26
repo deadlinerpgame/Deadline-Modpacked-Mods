@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "Farming/farming_vegetableconf"
 
 -- This is a copy of the original function from farming_vegetableconf.lua
@@ -55,3 +56,4 @@ function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGro
     if not plant then return end
     original_badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGrow)
 end
+]=]

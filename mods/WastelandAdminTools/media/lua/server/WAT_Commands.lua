@@ -311,12 +311,14 @@ Events.OnClientCommand.Add(function (module, command, player, args)
         return
     end
 
-    if command == "reboot" then
-        PzWebStats.RequestReboot("", "medium")
-    elseif command == "simpleRepair" then
+    -- Reboot command disabled along with its client interaction.
+    -- if command == "reboot" then
+    --     PzWebStats.RequestReboot("", "medium")
+    if command == "simpleRepair" then
         WAT_simpleRepair(args.vehicle)
     elseif command == "moveHordeToPosition" then
         WAT_moveHordeToPosition(args.x, args.y, args.z, args.d)
+    --[[ Basement management commands disabled with the admin interactions.
     elseif command == "finishBasement" then
         WAT_FinishBasement(args)
     elseif command == "removeBasement" then
@@ -335,6 +337,7 @@ Events.OnClientCommand.Add(function (module, command, player, args)
         WAT_UpdateGridConfig(args, player)
     elseif command == "requestGridConfig" then
         WAT_RequestGridConfig(player)
+    --]]
     elseif command == "setWorldTime" then
         WAT_SetWorldTime(args, player)
     elseif command == "tileUp" then

@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 WFGrowLampPickupAction = ISBaseTimedAction:derive("WFGrowLampPickupAction")
 
 function WFGrowLampPickupAction:isValid()
@@ -51,3 +52,5 @@ function WFGrowLampPickupAction:new(character, growLamp)
     end
     return o
 end
+
+]=]

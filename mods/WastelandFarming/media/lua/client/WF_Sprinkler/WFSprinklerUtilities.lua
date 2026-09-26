@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 WFSprinklerUtilities = {}
 
 function WFSprinklerUtilities.getSprinklerItem(player)
@@ -117,3 +118,4 @@ function WFSprinklerUtilities.sortPlants(a, b)
     end
     return ax1 < bx1
 end
+]=]

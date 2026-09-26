@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "BuildingObjects/ISBuildingObject"
 
 local RemoveCursor = ISBuildingObject:derive("WF_RemoveCursor")
@@ -74,3 +75,4 @@ local function OnFillWorldObjectContextMenu(playerIdx, context, worldobjects, te
 end
 
 Events.OnFillWorldObjectContextMenu.Add(OnFillWorldObjectContextMenu)
+]=]

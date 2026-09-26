@@ -1,3 +1,4 @@
+--[=[ Previous farming extensions disabled; retained for restoration.
 local original_ISObjectClickHandler_doClickLightSwitch = ISObjectClickHandler.doClickLightSwitch
 function ISObjectClickHandler.doClickLightSwitch(object, playerNum, playerObj)
     if WFGrowLampUtilities.isGrowLampLight(object) then
@@ -486,4 +487,86 @@ function SPlantGlobalObject:deadPlant()
         self.deadTime = getTimestamp()
     end
     original_SPlantGlobalObject_deadPlant(self)
+end
+]=]
+-- Plot ownership and plant tending are the only active farming extensions.
+require "Farming/SFarmingSystem"
+require "Farming/SGFarmingSystem"
+if isClient() then return end
+
+Events.OnClientCommand.Add(function(module, command, player, args)
+    if module ~= "farming" or command ~= "tend" then return end
+    local x, y, z = tonumber(args.x), tonumber(args.y), tonumber(args.z)
+    if not x or not y or not z then return end
+    local square = getCell():getGridSquare(x, y, z)
+    if not square then return end
+
+    local plant = SFarmingSystem.instance:getLuaObjectOnSquare(square)
+    if not plant or plant.state ~= "seeded" or plant.nbOfGrow >= 7 then return end
+    local farmingLevel = player:getPerkLevel(Perks.Farming)
+    plant.lastTendHour = SFarmingSystem.instance.hoursElapsed
+    local timeRemaining = plant.nextGrowing - SFarmingSystem.instance.hoursElapsed
+    if timeRemaining > 0 then
+        plant.nextGrowing = SFarmingSystem.instance.hoursElapsed
+            + timeRemaining * (1 - farmingLevel * 0.01)
+    end
+    for _, disease in ipairs({"aphidLvl", "mildewLvl", "fliesLvl"}) do
+        if plant[disease] and plant[disease] > 0 then
+            local removed = math.min(farmingLevel, plant[disease])
+            plant[disease] = math.max(0, plant[disease] - removed)
+            plant.health = math.max(0, plant.health - removed)
+        end
+    end
+    plant:saveData()
+end)
+
+local originalFromModData = SPlantGlobalObject.fromModData
+function SPlantGlobalObject:fromModData(modData)
+    originalFromModData(self, modData)
+    self.lastTendHour = modData.lastTendHour
+end
+
+local originalToModData = SPlantGlobalObject.toModData
+function SPlantGlobalObject:toModData(modData)
+    originalToModData(self, modData)
+    modData.lastTendHour = self.lastTendHour
+end
+
+local originalInitSystem = SFarmingSystem.initSystem
+function SFarmingSystem:initSystem()
+    originalInitSystem(self)
+    self.system:setObjectModDataKeys({
+        'state', 'nbOfGrow', 'typeOfSeed', 'fertilizer', 'mildewLvl',
+        'aphidLvl', 'fliesLvl', 'waterLvl', 'waterNeeded', 'waterNeededMax',
+        'lastWaterHour', 'nextGrowing', 'hasSeed', 'hasVegetable',
+        'health', 'badCare', 'exterior', 'spriteName', 'objectName',
+        'lastTendHour'
+    })
+end
+
+local originalAphid = SPlantGlobalObject.aphid
+function SPlantGlobalObject:aphid()
+    originalAphid(self)
+    if self.lastTendHour and self.aphidLvl == 1
+        and SFarmingSystem.instance.hoursElapsed - self.lastTendHour < 24 then
+        self.aphidLvl = 0
+    end
+end
+
+local originalFlies = SPlantGlobalObject.flies
+function SPlantGlobalObject:flies()
+    originalFlies(self)
+    if self.lastTendHour and self.fliesLvl == 1
+        and SFarmingSystem.instance.hoursElapsed - self.lastTendHour < 24 then
+        self.fliesLvl = 0
+    end
+end
+
+local originalMildew = SPlantGlobalObject.mildew
+function SPlantGlobalObject:mildew()
+    originalMildew(self)
+    if self.lastTendHour and self.mildewLvl == 1
+        and SFarmingSystem.instance.hoursElapsed - self.lastTendHour < 24 then
+        self.mildewLvl = 0
+    end
 end
