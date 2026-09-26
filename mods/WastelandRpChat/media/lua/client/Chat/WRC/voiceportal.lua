@@ -1,3 +1,4 @@
+--[=[ Voice portal disabled.
 if not isClient() then return end -- only in MP
 WRC = WRC or {}
 WRC_VoicePortal = WRC_VoicePortal or {}
@@ -206,3 +207,4 @@ local function onServerCommand(module, command, args)
 end
 
 Events.OnServerCommand.Add(onServerCommand)
+]=]

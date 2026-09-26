@@ -11,7 +11,7 @@ require "Chat/WRC/keepsafe"
 require "Chat/WRC/languages"
 require "Chat/WRC/meta"
 require "Chat/WRC/modifiers"
-require "Chat/WRC/voiceportal"
+-- require "Chat/WRC/voiceportal" -- Voice portal disabled.
 
 -- Must be last in require chain
 require "Chat/WRC/events"

@@ -914,6 +914,7 @@ function WRC.Commands.StopPrivateChat()
     end
 end
 
+--[=[ /coords disabled.
 function WRC.Commands.Coords()
     if not SandboxVars.WastelandRpChat.AllowPlayerCoords and not WRC.Override() then
         WL_Utils.addErrorToChat("Coordinates are disabled.")
@@ -925,6 +926,7 @@ function WRC.Commands.Coords()
     local z = math.floor(player:getZ())
     WL_Utils.addInfoToChat(player:getUsername() .. " is at " .. x .. ", " .. y .. ", " .. z)
 end
+]=]
 
 function WRC.Commands.RadioJammer(args)
     if not WRC.Override() then
@@ -948,6 +950,7 @@ function WRC.Commands.StopSound()
     WL_Utils.addInfoToChat("All sounds stopped. If music was set, it will resume shortly.")
 end
 
+--[=[ Respawn and corpse deletion disabled.
 local deleteCorpse = nil
 local deleteCorpseTries = 0
 local function deleteCorpseCheck()
@@ -990,6 +993,7 @@ function WRC.Commands.Respawn()
         end)
     end)
 end
+]=]
 
 --- Takes a list and some text
 --- if the text is empty it will return the first item in the list

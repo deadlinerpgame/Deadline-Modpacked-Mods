@@ -187,15 +187,15 @@ function ISChat:initialise()
 
     nextStreamId = nextStreamId+1
     nextTabId = nextTabId+1
-    WRC.EventTabId = nextTabId
-    WRC.EventStreamId = nextStreamId
-    ISChat.allChatStreams[nextStreamId] = {name = "Event", command = "/eventchat", tabID = nextTabId+1}
-
-    nextStreamId = nextStreamId+1
-    nextTabId = nextTabId+1
     WRC.OocTabId = nextTabId
     WRC.OocStreamId = nextStreamId
     ISChat.allChatStreams[nextStreamId] = {name = "OOC", command = "/oocchat", tabID = nextTabId+1}
+
+    nextStreamId = nextStreamId+1
+    nextTabId = nextTabId+1
+    WRC.EventTabId = nextTabId
+    WRC.EventStreamId = nextStreamId
+    ISChat.allChatStreams[nextStreamId] = {name = "Event", command = "/eventchat", tabID = nextTabId+1}
 
     nextStreamId = nextStreamId+1
     nextTabId = nextTabId+1
@@ -514,8 +514,8 @@ function ISChat.onTabAdded(title, tabID)
         WRC.ISChatOriginal.onTabAdded("Focused", WRC.FocusTabId)
         WRC.ISChatOriginal.onTabAdded("Private", WRC.PrivateTabId)
         WRC.ISChatOriginal.onTabAdded("Radio", WRC.RadioTabId)
-        WRC.ISChatOriginal.onTabAdded("Event", WRC.EventTabId)
         WRC.ISChatOriginal.onTabAdded("OOC", WRC.OocTabId)
+        WRC.ISChatOriginal.onTabAdded("Event", WRC.EventTabId)
         WRC.ISChatOriginal.onTabAdded("Staff", WRC.StaffTabId)
     elseif tabID == 1 then
         WRC.ISChatOriginal.onTabAdded(title, 6)
@@ -528,12 +528,12 @@ WRC.ISChatOriginal.onTabRemoved = WRC.ISChatOriginal.onTabRemoved or ISChat.onTa
 function ISChat.onTabRemoved(tabTitle, tabID)
     if tabID == 0 then
         WRC.ISChatOriginal.onTabRemoved(tabTitle, tabID)
-        WRC.ISChatOriginal.onTabRemoved("Focus", WRC.FocusTabId)
+        WRC.ISChatOriginal.onTabRemoved("Focused", WRC.FocusTabId)
         WRC.ISChatOriginal.onTabRemoved("Private", WRC.PrivateTabId)
         WRC.ISChatOriginal.onTabRemoved("Radio", WRC.RadioTabId)
-        WRC.ISChatOriginal.onTabRemoved("Event", WRC.EventTabId)
         WRC.ISChatOriginal.onTabRemoved("OOC", WRC.OocTabId)
-        WRC.ISChatOriginal.onTabAdded("Staff", WRC.StaffTabId)
+        WRC.ISChatOriginal.onTabRemoved("Event", WRC.EventTabId)
+        WRC.ISChatOriginal.onTabRemoved("Staff", WRC.StaffTabId)
     elseif tabID == 1 then
         WRC.ISChatOriginal.onTabRemoved(tabTitle, 6)
     else
@@ -631,10 +631,11 @@ function ISChat:focus()
     self.textEntry:ignoreFirstInput()
     self.fade:reset()
     self.fade:update()
-    if ISChat.instance.currentTabID == 5 then
-        self.textEntry:setText(WRC.Meta.IsSaveLastChatEnabled() and WRC.Meta.LastFocus or "/event ")
-    elseif ISChat.instance.currentTabID == 6 then
-        self.textEntry:setText(WRC.Meta.IsSaveLastChatEnabled() and WRC.Meta.LastOoc or "/ooc ")
+    local tabID = self.tabs[self.currentTabID].tabID
+    if tabID == WRC.OocTabId then
+        self.textEntry:setText((WRC.Meta.IsSaveLastChatEnabled() and WRC.Meta.LastOoc) or "/ooc ")
+    elseif tabID == WRC.EventTabId then
+        self.textEntry:setText((WRC.Meta.IsSaveLastChatEnabled() and WRC.Meta.LastFocus) or "/event ")
     elseif ISChat.instance.currentTabID < 8 and self.textEntry:getText() == "" then
         self.textEntry:setText(WRC.Meta.IsSaveLastChatEnabled() and WRC.Meta.LastChat or "")
     end
@@ -1131,4 +1132,3 @@ function WRC.MakeColorDialogPrompt(message, callback)
         return modal
     end
 end
-

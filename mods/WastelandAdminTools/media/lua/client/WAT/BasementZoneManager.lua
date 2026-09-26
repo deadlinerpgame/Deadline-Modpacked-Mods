@@ -80,6 +80,7 @@ function WAT_BasementZoneManager.updateTeleports()
         WL_TriggerZones.addZone(zone1)
         WL_TriggerZones.addZone(zone2)
 
+        --[=[ Voice portal disabled.
         -- Create voice portal for communication between house and basement
         if WRC_VoicePortal then
             local voicePortal = WRC_VoicePortal:register(
@@ -96,6 +97,7 @@ function WAT_BasementZoneManager.updateTeleports()
             )
             WAT_BasementZoneManager.voicePortals[k] = voicePortal
         end
+        ]=]
 
         WAT_BasementZoneManager.tps[k] = {zone1, zone2}
     end
@@ -111,6 +113,7 @@ function WAT_BasementZoneManager.updateTeleports()
         end
     end
 
+    --[=[ Voice portal cleanup disabled with registration.
     -- Clean up voice portals for basements that no longer exist
     for k, _ in pairs(WAT_BasementZoneManager.voicePortals) do
         if not WAT_BasementZoneManager.basementsData[k] then
@@ -118,6 +121,7 @@ function WAT_BasementZoneManager.updateTeleports()
             WAT_BasementZoneManager.voicePortals[k] = nil
         end
     end
+    ]=]
 end
 
 --- Removes a basement by key

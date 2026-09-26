@@ -1,3 +1,4 @@
+--[=[ Voice portal disabled.
 -- Only MP
 if not isServer() or isClient() then return end
 
@@ -49,3 +50,4 @@ local function onClientCommand(module, command, sendingPlayer, args)
 end
 
 Events.OnClientCommand.Add(onClientCommand)
+]=]

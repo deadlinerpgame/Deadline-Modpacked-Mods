@@ -848,6 +848,7 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
     local keepSafeEnabled = WRC.Meta.IsKeepSafeEnabled()
     actionsContext:addOption((keepSafeEnabled and "Disable" or "Enable") .. " Keep Safe", keepSafeEnabled and "off" or "on", WRC.Commands.KeepSafe)
 
+    --[=[ Soundboard action disabled.
     local soundboardOption = actionsContext:addOption("Soundboard", nil, nil)
     local soundboardContext = actionsContext:getNew(actionsContext)
     actionsContext:addSubMenu(soundboardOption, soundboardContext)
@@ -857,6 +858,7 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
 
     local soundboardMusicEnabled = WRC.Meta.IsSoundboardMusicEnabled()
     soundboardContext:addOption((soundboardMusicEnabled and "Disable" or "Enable") .. " Music", not soundboardMusicEnabled, WRC.Meta.SetSoundboardMusicEnabled)
+    ]=]
 
     local languageOption = actionsContext:addOption("Choose Language", nil, nil)
     local languageContext = actionsContext:getNew(actionsContext)
@@ -866,6 +868,7 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
         languageContext:addOption(WRC.Languages[language].name .. " (" .. language .. ")", language, WRC.Commands.SetLang)
     end
 
+    --[=[ Dono Options action disabled.
     local donoOption = actionsContext:addOption("Dono Options", nil, nil)
     local donoContext = actionsContext:getNew(actionsContext)
     actionsContext:addSubMenu(donoOption, donoContext)
@@ -939,6 +942,8 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
             end
         end
     end
+
+    ]=]
 
     local focusablePlayers = {}
     local unfocusablePlayers = {}
@@ -1069,12 +1074,14 @@ function WRC.Meta.CreateCharacterContext(context, myPlayer)
         characterContext:addOption("Enable Hair Growth", "on", WRC.Commands.HairGrowth)
     end
 
+    --[=[ Autoclean and Clean Now actions disabled.
     if WRC.Buffs.IsAutoCleanEnabled() then
         characterContext:addOption("Disable Autoclean", false, WRC.Buffs.SetAutoCleanEnabled)
     else
         characterContext:addOption("Enable Autoclean", true, WRC.Buffs.SetAutoCleanEnabled)
     end
     characterContext:addOption("Clean Now", nil, WRC.Buffs.DoClean)
+    ]=]
 
     local addDirtOption = characterContext:addOption("Add Dirt", nil, nil)
     local addDirtContext = characterContext:getNew(characterContext)
@@ -1145,6 +1152,7 @@ function WRC.Meta.CreateCharacterContext(context, myPlayer)
         end
     end
 
+    --[=[ Respawn action disabled.
     local respawnOption = characterContext:addOption("Respawn", nil, WRC.Commands.Respawn)
     if myPlayer:isDead() then
         respawnOption.notAvailable = true
@@ -1154,6 +1162,7 @@ function WRC.Meta.CreateCharacterContext(context, myPlayer)
     tt:setName("Respawn")
     tt.description = "Will kill your character, deleting your body and all items."
     respawnOption.toolTip = tt
+    ]=]
 end
 
 function WRC.Meta.CreateChatSettingsContext(context)

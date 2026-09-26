@@ -12,6 +12,7 @@ WRC.Buffs.AmountsPerMessage = {
 WRC.Buffs.DelayBetweenBuffs = 30 -- seconds
 WRC.Buffs.LastApplied = 0
 
+--[=[ Automatic cleaning disabled.
 function WRC.Buffs.IsAutoCleanEnabled()
     local md = getPlayer():getModData()
     return md["WRC_Buffs_AutoCleanEnabled"] or false
@@ -24,6 +25,7 @@ function WRC.Buffs.SetAutoCleanEnabled(enabled)
         WRC.Buffs.DoAutoClean()
     end
 end
+]=]
 
 function WRC.Buffs.IsPlayersNearby()
     local players = getOnlinePlayers()
@@ -91,6 +93,7 @@ function WRC.Buffs.ApplyRpBuffs()
     end
 end
 
+--[=[ Automatic cleaning disabled.
 function WRC.Buffs.DoAutoClean()
     if not WRC.Buffs.IsAutoCleanEnabled() then
         return
@@ -98,6 +101,7 @@ function WRC.Buffs.DoAutoClean()
 
     WRC.Buffs.DoClean()
 end
+]=]
 
 local function syncVisuals(player)
     sendVisual(player)
@@ -145,6 +149,7 @@ function WRC.Buffs.DoAddBlood(bodyPartStr)
     syncVisuals(player)
 end
 
+--[=[ Manual cleaning disabled.
 function WRC.Buffs.DoClean()
     local player = getPlayer()
 
@@ -162,6 +167,7 @@ function WRC.Buffs.DoClean()
 
     syncVisuals(player)
 end
+]=]
 
 -- only debug
 

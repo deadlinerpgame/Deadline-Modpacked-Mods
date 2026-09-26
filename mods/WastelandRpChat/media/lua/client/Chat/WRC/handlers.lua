@@ -197,7 +197,11 @@ function WRC.Handlers.CommandEntered(message)
     elseif drunkenness > 85 then
         strength = 4
     end
-    if SandboxVars.WastelandRpChat.EnableDrunkSlurredSpeech and strength > 0 then
+    local overrideStrength = WRC.Meta.GetDrunkSpeechOverrideStrength()
+    if overrideStrength then
+        strength = overrideStrength
+    end
+    if strength > 0 and (SandboxVars.WastelandRpChat.EnableDrunkSlurredSpeech or overrideStrength) then
         message = WRC.Parsing.SlurText(message, strength)
     end
 
@@ -266,7 +270,7 @@ function WRC.Handlers.CommandEntered(message)
         WRC.Meta.LastChat = "/ooc" .. parsedMessage.chatType .. " "
     end
     
-    WRC_VoicePortal:onChatMessage(parsedMessage)
+    -- WRC_VoicePortal:onChatMessage(parsedMessage) -- Voice portal disabled.
     
     for _, callback in ipairs(WRC.CustomChatCallbacks) do
         callback(parsedMessage)

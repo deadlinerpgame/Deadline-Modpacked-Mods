@@ -128,5 +128,5 @@ Events.OnReceiveGlobalModData.Add(WRC.Events.OnReceiveGlobalModData)
 Events.OnConnected.Add(WRC.Events.OnConnected)
 Events.OnServerCommand.Add(WRC.Events.onServerCommand)
 Events.OnTick.Add(WRC.Events.OnTick)
-Events.EveryTenMinutes.Add(WRC.Buffs.DoAutoClean)
+-- Events.EveryTenMinutes.Add(WRC.Buffs.DoAutoClean) -- Autoclean disabled.
 Events.EveryHours.Add(WRC.Events.resetGrowth)
