@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 WFGrowLampPlaceAction = ISBaseTimedAction:derive("WFGrowLampPlaceAction")
 
 function WFGrowLampPlaceAction:isValid()
@@ -45,3 +46,5 @@ function WFGrowLampPlaceAction:new(character, growLamp, square)
     end
     return o
 end
+
+]=]

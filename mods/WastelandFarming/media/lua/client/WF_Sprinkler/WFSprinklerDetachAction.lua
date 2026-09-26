@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "TimedActions/ISBaseTimedAction"
 
 WFSprinklerDetachAction = ISBaseTimedAction:derive("WFSprinklerDetachAction")
@@ -42,3 +43,4 @@ function WFSprinklerDetachAction:new(character, sprinkler, time)
     end
     return o
 end
+]=]

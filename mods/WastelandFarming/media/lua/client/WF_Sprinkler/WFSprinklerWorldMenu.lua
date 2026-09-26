@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require("WF_Sprinkler/WFSprinklerUtilities")
 
 local WFSprinklerWorldMenu = {}
@@ -71,3 +72,5 @@ function WFSprinklerWorldMenu.fillContext(playerIdx, context, worldobjects, test
 end
 
 Events.OnFillWorldObjectContextMenu.Add(WFSprinklerWorldMenu.fillContext)
+
+]=]

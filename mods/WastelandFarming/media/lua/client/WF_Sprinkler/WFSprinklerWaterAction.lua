@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "TimedActions/ISBaseTimedAction"
 
 WFSprinklerWaterAction = ISBaseTimedAction:derive("WFSprinklerWaterAction")
@@ -83,3 +84,4 @@ function WFSprinklerWaterAction:new(character, barrel, targetPlant, maxAmount, t
 	end
 	return o
 end
+]=]

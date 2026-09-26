@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "BuildingObjects/ISBuildingObject"
 
 WFSprinklerData = WFSprinklerData or {}
@@ -101,3 +102,5 @@ function WFWaterCursor:new(character, barrel)
     o.skipWalk2 = true
     return o
 end
+
+]=]

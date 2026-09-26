@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 WFGrowLampUtilities = {}
 
 WFDenyAllItems = function(item)
@@ -123,3 +124,4 @@ function WFGrowLampUtilities.toggleGrowLamp(square, s)
     end
     IsoGenerator.updateGenerator(square)
 end
+]=]

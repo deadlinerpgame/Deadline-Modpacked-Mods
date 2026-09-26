@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 if WFGrowLampMenu then
     Events.OnPreFillWorldObjectContextMenu.Remove(WFGrowLampMenu.OnPreFillWorldObjectContextMenu)
 end
@@ -102,3 +103,4 @@ Events.OnFillWorldObjectContextMenu.Add(function(player, context, worldobjects, 
         context:removeOptionByName(getText("ContextMenu_TurnOn"))
     end
 end)
+]=]

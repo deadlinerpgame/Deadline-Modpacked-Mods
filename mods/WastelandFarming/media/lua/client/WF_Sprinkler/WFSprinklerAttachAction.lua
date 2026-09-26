@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 require "TimedActions/ISBaseTimedAction"
 
 WFSprinklerAttachAction = ISBaseTimedAction:derive("WFSprinklerAttachAction")
@@ -59,3 +60,4 @@ function WFSprinklerAttachAction:new(character, item, barrel, time)
 	end
 	return o
 end
+]=]

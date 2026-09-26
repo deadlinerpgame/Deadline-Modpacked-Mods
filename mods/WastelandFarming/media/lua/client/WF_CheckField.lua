@@ -1,3 +1,4 @@
+--[=[ Disabled: only farming plots and tending remain active.
 local knownPlants = {}
 local numKnownPlants = 0
 
@@ -183,3 +184,4 @@ local function renderPlantData()
 end
 
 Events.OnTick.Add(renderPlantData)
+]=]
