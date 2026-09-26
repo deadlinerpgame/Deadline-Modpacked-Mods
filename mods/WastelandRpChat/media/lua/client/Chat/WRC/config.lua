@@ -250,7 +250,7 @@ WRC.SpecialCommands["/afk"] = {
     help = "Go AFK. Will alert nearby players you are AFK.",
     adminOnly = false,
 }
---[=[ /coords disabled.
+
 WRC.SpecialCommands["/coords"] = {
     handler = "Coords",
     tabHandlers = {},
@@ -258,7 +258,7 @@ WRC.SpecialCommands["/coords"] = {
     help = "Get your current coordinates.",
     adminOnly = false,
 }
-]=]
+
 WRC.SpecialCommands["/growbeard"] = {
     handler = "GrowBeard",
     tabHandlers = {},
