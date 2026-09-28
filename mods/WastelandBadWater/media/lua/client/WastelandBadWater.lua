@@ -16,7 +16,6 @@ ISWorldObjectContextMenu.doFillWaterMenu = function(sink, playerNum, context)
             sink:setTaintedWater(false)
             sink:transmitCompleteItemToServer()
         end
-    end
 
     original_ISWorldObjectContextMenu_doFillWaterMenu(sink, playerNum, context)
 end
