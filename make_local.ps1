@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = "Stop"
 
 $src = Join-Path $PSScriptRoot "mods"
-$workshop = Join-Path $env:USERPROFILE "Zomboid\Workshop\Deadline_Modpacked_Mods_local"
+$workshop = Join-Path $env:USERPROFILE "Zomboid_B41\Workshop\Deadline_Modpacked_Mods_local"
 $contents = Join-Path $workshop "Contents"
 $dst = Join-Path $contents "mods"
 
