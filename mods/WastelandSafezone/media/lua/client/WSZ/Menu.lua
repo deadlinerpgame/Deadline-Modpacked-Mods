@@ -1,5 +1,5 @@
 WSZ_Menu = WSZ_Menu or {}
-require "WSZ/ui/WSZ_ManageSafezone"
+require "WSZ/ui/ManageSafezone"
 
 -- Tooltip helper mirroring SafehouseLimiter behavior
 local function addNegativeTooltip(option, reason)
@@ -79,6 +79,22 @@ function WSZ_Menu.onFillWorldObjectContextMenu(playerNum, context)
         local wlAdmin = WL_ContextMenuUtils.getOrCreateSubMenu(context, "WL Admin")
         local worldMgmtMenu = WL_ContextMenuUtils.getOrCreateSubMenu(wlAdmin, "World Management")
         local safehouseAdmin = WL_ContextMenuUtils.getOrCreateSubMenu(worldMgmtMenu, "Safezones")
+    -- Fix based on WLZones menu.lua
+        local safezones = {}
+        for _, zone in pairs(WSZ_Client.zones) do
+            safezones[#safezones + 1] = zone
+        end
+        table.sort(safezones, function(a, b)
+            local aName = string.lower(tostring(a.name or ""))
+            local bName = string.lower(tostring(b.name or ""))
+            if aName == bName then
+                return tostring(a.id or "") < tostring(b.id or "")
+            end
+            return aName < bName
+        end)
+        for _, zone in ipairs(safezones) do
+            safehouseAdmin:addOption("Manage: " .. tostring(zone.name or "Safezone"), player, WSZ_Menu.onShowInfo, zone)
+        end
         local safehouse = SafeHouse.getSafeHouse(player:getSquare())
         if safehouse then
             safehouseAdmin:addOption("Convert Current Safehouse to Safezone", player, WSZ_Menu.convertSafehouseToSafezone, safehouse)
