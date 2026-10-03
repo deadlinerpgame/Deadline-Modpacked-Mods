@@ -1,5 +1,6 @@
 -- Only MP
 if not isServer() or isClient() then return end
+require "WL_Utils"
 
 local PlayerDB = {}
 local GlobalState = {}
@@ -219,7 +220,15 @@ local function onWRCCommand(module, command, sendingPlayer, args)
             end
         end
     elseif command == "SetGlobalState" then
+        if type(args) ~= "table" then return end
         local key, value = args[1], args[2]
+        if key == "radioInterferenceEnabled" or key == "radioInterferenceStrength" then
+            if not sendingPlayer or not WL_Utils.canModerate(sendingPlayer) then return end
+            if key == "radioInterferenceEnabled" then
+                if type(value) ~= "boolean" then return end
+            elseif value ~= 0.5 and value ~= 1 and value ~= 2 then return end
+        end
+        if type(key) ~= "string" then return end
         GlobalState[key] = value
         ModData.add("WRC_GlobalState", GlobalState)
         ModData.transmit("WRC_GlobalState")

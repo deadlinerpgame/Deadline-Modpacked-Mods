@@ -1215,6 +1215,7 @@ function WRC.Meta.CreateAdminContext(context, myPlayer, players)
     local adminOption = context:insertOptionAfter("RP Chat Settings", "RP Chat Admin", nil, nil)
     local adminContext = context:getNew(context)
     context:addSubMenu(adminOption, adminContext)
+    WRC.RadioInterference.AddAdminOptions(adminContext, myPlayer)
 
     if WRC.Meta.HasAdminHammer(myPlayer:getUsername()) then
         adminContext:addOption("Disable Admin Hammer", "off", WRC.Commands.Hammer)

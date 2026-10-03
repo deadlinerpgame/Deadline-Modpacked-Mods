@@ -1,6 +1,7 @@
 if not isClient() then return end -- only in MP
 WRC = WRC or {}
 WRC.Handlers = WRC.Handlers or {}
+require "Chat/WRC/radiointerference"
 
 function WRC.Handlers.SpecialCommand(message)
     if message:sub(1,1) == "/" then
@@ -479,17 +480,9 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
     end
 
     if parsedMessage.radioFrequency and not isMe then
-        local sourcePos = parsedMessage.pos
-        if chattingPlayer then
-            sourcePos = { x = chattingPlayer:getX(), y = chattingPlayer:getY() }
-        end
-        if sourcePos then
-            local xDist = myPlayer:getX() - sourcePos.x
-            local yDist = myPlayer:getY() - sourcePos.y
-            local distanceSq = xDist * xDist + yDist * yDist
-            if distanceSq > 500 * 500 then
-                WRC.Parsing.AdjustForRadioStatic(parsedMessage, 10)
-            end
+        local chance = WRC.RadioInterference.GetChance(myPlayer, parsedMessage, chattingPlayer)
+        if chance > 0 then
+            WRC.Parsing.AdjustForRadioStatic(parsedMessage, chance)
         end
     end
 
