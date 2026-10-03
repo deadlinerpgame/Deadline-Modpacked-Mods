@@ -289,13 +289,13 @@ local function ProcessAddLanguages() -- Get list of online players first
             local playerName = string.sub(line, 1, commaPos - 1)
             local langCode = string.sub(line, commaPos + 1)
 
-            -- Trim whitespace
-            playerName = playerName:match("^%s*(.-)%s*$")
-            langCode = langCode:match("^%s*(.-)%s*$")
+            -- Trim whitespace - removed, we use spaces in player names
+            -- playerName = playerName:match("^%s*(.-)%s*$")
+            -- langCode = langCode:match("^%s*(.-)%s*$")
 
             -- Check if player is online
             local player = onlinePlayerMap[playerName]
-            if player then
+            if player and player:getModData().DLTutorialKit == "done" then
                 if player:getOnlineID() ~= -1 then
                     print("Adding known language for player:" .. playerName .. " code:" .. langCode)
                     sendServerCommand(player, "WRC", "AddKnownLanguage", {langCode})
@@ -351,6 +351,6 @@ local function OnInitGlobalModData(isNewGame)
 end
 
 Events.EveryHours.Add(ProcessLastSeenTimes)
-Events.EveryOneMinute.Add(ProcessAddLanguages)
+Events.EveryTenMinutes.Add(ProcessAddLanguages)
 Events.OnClientCommand.Add(onWRCCommand)
 Events.OnInitGlobalModData.Add(OnInitGlobalModData)
