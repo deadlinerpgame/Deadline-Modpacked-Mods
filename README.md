@@ -5,15 +5,8 @@ Unless otherwise noted, all copyrights and ownership of the original mods remain
 
 
 ## Included Mods & Permissions
-### WastelandRP
+### WastelandRP - https://wastelandrp.net/
 **Permission:** MIT License / Direct permission granted
--   [Musicians of the Wasteland](https://steamcommunity.com/sharedfiles/filedetails/?id=3301008514)
--   Various WastelandRP mods
-### Jordanal
-**Permission:** Permission granted via Discord DMs
--   [Jordan's Clothing Collection](https://steamcommunity.com/profiles/76561198119546305/myworkshopfiles/?appid=108600)
-### hehehemann
-**Permission:** in workshop page
--   [Vehicle Repair Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=2757712197)
 
-If you are a mod author and believe your work has been included without your permission, please contact a DeadlineRP manager through the DeadlineRP Discord server.
+### Jordanal - https://steamcommunity.com/profiles/76561198119546305/myworkshopfiles/?appid=108600
+**Permission:** Direct permission granted
