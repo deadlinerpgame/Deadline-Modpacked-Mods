@@ -237,8 +237,8 @@ local function ProcessLastSeenTimes()
         PlayerDB.LastSeenTimes[username] = getTimestamp()
     end
     for username, lastSeenTime in pairs(PlayerDB.LastSeenTimes) do
-        -- 60 days
-        if lastSeenTime < getTimestamp() - 60*24*60*60 then
+        -- 10 days - switched to 10 days
+        if lastSeenTime < getTimestamp() - 10*24*60*60 then
             PlayerDB.LastSeenTimes[username] = nil
             PlayerDB.PlayerColors[username] = nil
             PlayerDB.PlayerLanguages[username] = nil
