@@ -85,7 +85,7 @@ end
 --- @return WLR_Auto.Definition|nil
 function WLR_Auto.Data:getDefinitionsReadyInChunk(range)
     local chunkCache = self:_getChunkCache(range)
-        if chunkCache and ((chunkCache.ready and --ZombRand(2) == 0) or WLR_Auto.Config.--AlwaysRespawn) then
+        if chunkCache and ((chunkCache.ready and ZombRand(2) == 0) or WLR_Auto.Config.AlwaysRespawn) then
         local definition = self.definitions[chunkCache.definitionId]
         if definition then
             WLR_Auto.DebugLog("WLR_Auto.Data:getDefinitionsReadyInChunk() - (" .. tostring(range) .. ") respawn is ready: " .. definition.id)
