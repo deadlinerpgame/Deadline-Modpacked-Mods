@@ -4,6 +4,12 @@ if not isServer() or isClient() then return end
 local PlayerDB = {}
 local GlobalState = {}
 
+local function isInTutorialArea(player)
+    local dx = player:getX() - 18989
+    local dy = player:getY() - 1337
+    return player:getZ() == 0 and dx * dx + dy * dy <= 50 * 50
+end
+
 local function canSee(player, otherPlayer, xyRange, zRange)
     if not player or not otherPlayer then return false end
     xyRange = xyRange + .99
@@ -295,7 +301,7 @@ local function ProcessAddLanguages() -- Get list of online players first
 
             -- Check if player is online
             local player = onlinePlayerMap[playerName]
-            if player and player:getModData().DLTutorialKit == "done" then
+            if player and not isInTutorialArea(player) then
                 if player:getOnlineID() ~= -1 then
                     print("Adding known language for player:" .. playerName .. " code:" .. langCode)
                     sendServerCommand(player, "WRC", "AddKnownLanguage", {langCode})
