@@ -13,13 +13,13 @@ WCL_Loadouts.VERSION = 1
 
 -- Default options for restoration
 WCL_Loadouts.DEFAULT_RESTORE_OPTIONS = {
-    removeItems = true,      -- Remove items from inventory before restoring
+    removeItems = false,      -- Remove items from inventory before restoring
     restoreOutfit = true,    -- Restore worn/equipped/attached items (including makeup)
-    restoreItems = true,     -- Restore inventory items
-    restoreIdentity = true,  -- Restore WRC identity data
+    restoreItems = false,     -- Restore inventory items
+    restoreIdentity = false,  -- Restore WRC identity data
     restoreHair = true,      -- Restore hair and beard style/color
     restoreGender = true,    -- Restore character gender
-    restoreCharacteristics = true  -- Restore WastelandDisguises characteristics
+    restoreCharacteristics = false  -- Restore WastelandDisguises characteristics
 }
 
 -- ============================================================================
@@ -678,20 +678,23 @@ end
 -- CAPTURE FUNCTION
 -- ============================================================================
 
---- Capture the entire player inventory as a loadout
+--- Capture the outfit by default, or the entire inventory when outfitOnly is false
 --- @param player IsoPlayer The player to capture from
+--- @param outfitOnly boolean Capture only outfit items (default: true)
 --- @return table The loadout data structure
-function WCL_Loadouts.captureCurrent(player)
+function WCL_Loadouts.captureCurrent(player, outfitOnly)
+    outfitOnly = outfitOnly ~= false
     local inventory = player:getInventory()
     local items = inventory:getItems()
     
     local serializedItems = {}
     
-    -- Serialize all items
+    -- Serialize outfit items unless a full capture was requested
     for i = 0, items:size() - 1 do
         local item = items:get(i)
         local serialized = WCL_Loadouts.serializeItem(item, true)
-        if serialized then
+        if serialized and (not outfitOnly or serialized.equippedLocation or serialized.attachedSlot) then
+            if outfitOnly then serialized.container = nil end
             table.insert(serializedItems, serialized)
         end
     end
@@ -710,6 +713,11 @@ function WCL_Loadouts.captureCurrent(player)
         }
     }
     
+    if outfitOnly then
+        loadout.metadata.gender = nil
+        return loadout
+    end
+
     -- Store WRC Data
     if WRC and WRC.Meta then
         local username = player:getUsername()
@@ -816,8 +824,9 @@ end
 --- @param itemData table Serialized item data
 --- @param container ItemContainer The container to add to
 --- @param player IsoPlayer The player (for equipping)
+--- @param restoreContents boolean Restore container contents (default: true)
 --- @return InventoryItem|nil The created item
-function WCL_Loadouts.restoreItem(itemData, container, player)
+function WCL_Loadouts.restoreItem(itemData, container, player, restoreContents)
     if not itemData or not container then return nil end
     
     -- Create the item
@@ -1069,7 +1078,7 @@ function WCL_Loadouts.restoreItem(itemData, container, player)
     end
     
     -- Restore container contents recursively
-    if itemData.container and item:IsInventoryContainer() then
+    if restoreContents ~= false and itemData.container and item:IsInventoryContainer() then
         local itemContainer = item:getInventory()
         if itemContainer then
             for _, containedItemData in ipairs(itemData.container) do
@@ -1188,7 +1197,7 @@ function WCL_Loadouts.applyInventory(player, loadout, options)
             -- Map itemData to created item instances
             local items = {}
             for i = 1, (itemData.quantity or 1) do
-                local item = WCL_Loadouts.restoreItem(itemData, inventory, player)
+                local item = WCL_Loadouts.restoreItem(itemData, inventory, player, options.restoreItems)
                 if item then
                     table.insert(items, item)
                 end
