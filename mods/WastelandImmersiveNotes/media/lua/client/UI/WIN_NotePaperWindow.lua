@@ -273,6 +273,10 @@ function WIN_NotePaperWindow:onNextPage()
 end
 
 function WIN_NotePaperWindow:getLightLevelToDraw()
+    if self.notebook and WIN_Utils.isTTRPDescriptorExemptFromDarkness(self.notebook:getFullType()) then
+        return 1
+    end
+
     local player = getPlayer()
     if not player then
         return 1

@@ -42,6 +42,23 @@ function WIN_Utils.isPaperSheet(fullType)
     return false
 end
 
+function WIN_Utils.isTTRPDescriptorExemptFromDarkness(fullType)
+    local prefixes = {
+        "TTRPDescriptors.Question",
+        "TTRPDescriptors.Exclamation",
+        "TTRPDescriptors.X",
+        "TTRPDescriptors.O",
+    }
+
+    for _, prefix in ipairs(prefixes) do
+        if string.sub(fullType, 1, #prefix) == prefix then
+            return true
+        end
+    end
+
+    return false
+end
+
 function WIN_Utils.isBook(fullType)
      if fullType == "Base.Notebook"
         or fullType == "Base.Book"

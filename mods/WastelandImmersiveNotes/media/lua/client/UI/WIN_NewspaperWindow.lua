@@ -496,6 +496,10 @@ function WIN_NewspaperWindow:onNextPage()
 end
 
 function WIN_NewspaperWindow:getLightLevelToDraw()
+    if self.newspaperItem and WIN_Utils.isTTRPDescriptorExemptFromDarkness(self.newspaperItem:getFullType()) then
+        return 1
+    end
+
     local player = getPlayer()
     if not player then
         return 1
