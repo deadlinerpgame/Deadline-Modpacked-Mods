@@ -35,14 +35,14 @@ function WF_TokensSystem:getAllowedTokens(player)
     end
     local farmingLevel = player:getPerkLevel(Perks.Farming)
     local allowedTokens = 0
-    if farmingLevel < 6 then
-        allowedTokens = 10
-    elseif farmingLevel < 8 then
+    if farmingLevel < 3 then
+        allowedTokens = 6
+    elseif farmingLevel < 7 then
+        allowedTokens = 16
+    elseif farmingLevel < 9 then
         allowedTokens = 30
-    elseif farmingLevel < 10 then
-        allowedTokens = 50
     else
-        allowedTokens = 100
+        allowedTokens = 32
     end
     return allowedTokens
 end
