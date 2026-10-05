@@ -519,7 +519,7 @@ function WRC.Parsing.FormatPart(part, omitStart)
         return WRC.ChatColors[part.type] .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
     elseif part.type == "ooc" then
         local oocColor = WRC.Meta.GetOocColor()
-        return oocColor .. "OOC " .. text .. WL_Utils.MagicSpace
+        return oocColor .. text .. WL_Utils.MagicSpace
     elseif part.type == "environment" then
         local doColor = WRC.Meta.GetDoColor()
         return doColor .. "[[ " .. text .. " ]]" .. WL_Utils.MagicSpace
