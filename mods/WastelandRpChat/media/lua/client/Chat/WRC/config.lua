@@ -157,7 +157,7 @@ WRC.SpecialCommands["/radiosync"] = {
     tabHandlers = {"RadioFrequencies"},
     usage = "/radiosync",
     help = "Sync one radio station with General Chat.",
-    adminOnly = false,
+    adminOnly = true,
 }
 WRC.SpecialCommands["/lang"] = {
     handler = "SetLang",
@@ -241,7 +241,7 @@ WRC.SpecialCommands["/pm"] = {
     tabHandlers = {"Username"},
     usage = "/pm \"User Name\" <message>",
     help = "Send a private message to a player.",
-    adminOnly = false,
+    adminOnly = true,
 }
 WRC.SpecialCommands["/afk"] = {
     handler = "GoAFK",
