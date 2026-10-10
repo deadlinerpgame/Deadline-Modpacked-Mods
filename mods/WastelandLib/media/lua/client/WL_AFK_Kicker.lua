@@ -4,7 +4,7 @@ WL_AFK_Kicker = {}
 
 WL_AFK_Kicker.enabled = true
 -- Prod
-local timeInMin = 20
+local timeInMin = 40
 WL_AFK_Kicker.kickTime = timeInMin * 60
 WL_AFK_Kicker.warnTimes = {}
 table.insert(WL_AFK_Kicker.warnTimes, (timeInMin - 5) * 60)
