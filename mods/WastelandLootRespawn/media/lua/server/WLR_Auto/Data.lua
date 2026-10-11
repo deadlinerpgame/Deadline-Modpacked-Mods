@@ -133,7 +133,7 @@ function WLR_Auto.Data:_getChunkCache(range)
         local cache = {
             definitionId = definition.id,
             lastRespawn = getTimestamp(), -- If never respawned, assume now
-            ready = false,
+            ready = true, -- on newly created zones, set them to ready - Milo
         }
         self.chunkCache[key] = cache
         return cache
