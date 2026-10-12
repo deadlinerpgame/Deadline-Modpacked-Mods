@@ -33,6 +33,16 @@ local function isFreeItem(spriteName)
     return WWS_TileLists.Free[spriteName] or false
 end
 
+local function isFreeArea(square)
+    local x, y = square:getX(), square:getY()
+    for _, area in ipairs(WWS_TileLists.FreeAreas) do
+        if x >= area.minX and x <= area.maxX and y >= area.minY and y <= area.maxY then
+            return true
+        end
+    end
+    return false
+end
+
 local function isProhibitedItem(spriteName)
     return WWS_TileLists.Prohibited[spriteName] or false
 end
@@ -118,7 +128,7 @@ local function isOpenSquare(player, square, mode, spriteName)
         return false
     end
 
-    if isFreeItem(spriteName) then
+    if isFreeItem(spriteName) or isFreeArea(square) then
         return true
     end
 

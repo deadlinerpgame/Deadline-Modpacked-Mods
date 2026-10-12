@@ -1,6 +1,11 @@
 WWS_TileLists = WWS_TileLists or {}
 WWS_TileLists.Free = WWS_TileLists.Free or {}
 WWS_TileLists.Prohibited = WWS_TileLists.Prohibited or {}
+-- Tiels are free in this area
+WWS_TileLists.FreeAreas = WWS_TileLists.FreeAreas or {
+    { minX = 2961, maxX = 4577, minY = 839, maxY = 2164 }, -- shelter -- /tpto 2961,839,0 /tpto 4577,2164,0
+    { minX = 18290, maxX = 19113, minY = 4577, maxY = 5999 }, -- basements /teleportto 18290,4577,0 /teleportto 19113,5999,0
+}
 
 --- Free Tiles
 WWS_TileLists.Free["appliances_misc_01_0"] = true
