@@ -1,0 +1,9 @@
+VERSION = 1,
+
+option WastelandBadWater.CleanWaterZones
+{
+    type = string,
+    default = ,
+    page = WastelandBadWater,
+    translation = WastelandBadWater.CleanWaterZones,
+}

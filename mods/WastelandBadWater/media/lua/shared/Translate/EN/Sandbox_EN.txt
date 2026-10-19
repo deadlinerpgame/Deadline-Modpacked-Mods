@@ -1,0 +1,5 @@
+Sandbox_EN = {
+    Sandbox_WastelandBadWater = "Unlimited Clean Water Zones",
+    Sandbox_WastelandBadWater.CleanWaterZones = "Unlimited Clean Water Zones",
+    Sandbox_WastelandBadWater.CleanWaterZones_tooltip = "Indoor waterPiped fixtures refill with clean water on right-click inside these zones. Enter X,Y,radius semicoln like 1000,500,50;2000,1000;30 for: free water 50 tiles around 1000,500 and 30 tiles around 2000,1000. Empty disables refill.",
+}
