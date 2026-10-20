@@ -234,12 +234,26 @@ function WRC.Handlers.CommandEntered(message)
     local radiosMuted = {}
     local intoRadioSynced = false
 
+    if isGeneralTab and radioSync then
+        for _, radio in ipairs(radiosOn) do
+            if WRU_Utils.getRadioFrequency(radio) == radioSync then
+                intoRadioSynced = true
+                break
+            end
+        end
+    end
+
+    -- Block ooc, env, ASL from being sent, code similar to below
+    if (isIntoRadioTab or intoRadioSynced) and #radiosOn > 0 then
+        if parsedMessage.chatModifier == "ooc" or parsedMessage.chatModifier == "env" or parsedMessage.language == "asl" then
+            WL_Utils.addErrorToChat("OOC, environment, and ASL messages cannot be transmitted by radio.")
+            return true
+        end
+    end
+
     if shouldDisableRadio then
         for _, radio in ipairs(radiosOn) do
             local isRadioSync = isGeneralTab and WRU_Utils.getRadioFrequency(radio) == radioSync
-            if isRadioSync then
-                intoRadioSynced = true
-            end
             if not isIntoRadioTab or not isRadioSync then
                 WRU_Utils.setRadioBroadcastingInstant(player, radio, false)
                 table.insert(radiosMuted, radio)
