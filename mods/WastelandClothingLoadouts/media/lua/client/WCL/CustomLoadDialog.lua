@@ -35,12 +35,12 @@ function WCL_CustomLoadDialog:new(x, y, width, height, loadoutName, onConfirm)
         "restoreGender"
     }
     
-    -- Default to restoring only the outfit
+    -- Default all options to true
     o.options = {
-        removeItems = false,
+        removeItems = true,
         restoreOutfit = true,
-        restoreItems = false,
-        restoreIdentity = false,
+        restoreItems = true,
+        restoreIdentity = true,
         restoreHair = true,
         restoreGender = true
     }
@@ -74,7 +74,7 @@ function WCL_CustomLoadDialog:createChildren()
     self.optionsTickBox:addOption("Restore Hair")
     self.optionsTickBox:addOption("Restore Gender")
     
-    -- Apply the default option selections
+    -- Set all options to selected by default
     for i = 1, #self.optionNames do
         self.optionsTickBox:setSelected(i, self.options[self.optionNames[i]])
     end
