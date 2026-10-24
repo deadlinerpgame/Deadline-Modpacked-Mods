@@ -1035,6 +1035,29 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
     actionsContext:addOption("List RP Chat Commands", nil, WRC.Commands.ListAllCommands)
 end
 
+-- Recovery option for bandages that cannot be removed through the health panel. - Milo
+function WRC.Meta.RemoveAllBandages()
+    local player = getPlayer()
+
+    local bodyDamage = player:getBodyDamage()
+    local parts = bodyDamage:getBodyParts()
+    local removed = 0
+    for i = 0, parts:size() - 1 do
+        local part = parts:get(i)
+        if part:bandaged() then
+            bodyDamage:SetBandaged(part:getIndex(), false, 0, false, nil)
+            sendBandage(player:getOnlineID(), part:getIndex(), false, 0, false, nil)
+            removed = removed + 1
+        end
+    end
+
+    if removed == 0 then
+        WL_Utils.addInfoToChat("You have no bandages to remove.")
+    else
+        WL_Utils.addInfoToChat("Removed bandages: " .. removed .. ".")
+    end
+end
+
 function WRC.Meta.CreateCharacterContext(context, myPlayer)
     local characterOption = context:insertOptionAfter("Actions", "Character", nil, nil)
     local characterContext = context:getNew(context)
@@ -1060,6 +1083,8 @@ function WRC.Meta.CreateCharacterContext(context, myPlayer)
         end
         drunkSpeechContext:addOption(label, level, WRC.Meta.SetDrunkSpeechOverrideStrength)
     end
+    -- Bandage removal fallback - Milo
+    characterContext:addOption("Delete All Applied Bandages", nil, WRC.Meta.RemoveAllBandages)
 
     characterContext:addOption("Grow Hair", nil, WRC.Commands.GrowHair)
     characterContext:addOption("Set Hair Color", nil, WRC.MakeColorDialogPrompt("Set Hair Color", WRC.Commands.SetHairColor))
