@@ -1051,6 +1051,28 @@ function WRC.Meta.RemoveAllBandages()
         end
     end
 
+    -- Worn bugged bandage removal - Milo
+    local wornItems = player:getWornItems()
+    local inventory = player:getInventory()
+    local clothingRemoved = 0
+    for i = wornItems:size() - 1, 0, -1 do
+        local item = wornItems:getItemByIndex(i)
+        if item:getBodyLocation() == "Bandage" then
+            wornItems:remove(item)
+            inventory:Remove(item)
+            clothingRemoved = clothingRemoved + 1
+        end
+    end
+    if clothingRemoved > 0 then
+        player:resetModelNextFrame()
+        player:onWornItemsChanged()
+        sendClothing(player)
+        triggerEvent("OnClothingUpdated", player)
+        inventory:setDrawDirty(true)
+        ISInventoryPage.renderDirty = true
+        removed = removed + clothingRemoved
+    end
+
     if removed == 0 then
         WL_Utils.addInfoToChat("You have no bandages to remove.")
     else
